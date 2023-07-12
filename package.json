@@ -1,0 +1,9 @@
+{
+  "name": "metal-icons",
+  "version": "0.1.0",
+  "description": "A flexible React icon set",
+  "main": "index.js",
+  "author": "Jason Melgoza",
+  "license": "MIT",
+  "private": false
+}
