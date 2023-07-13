@@ -7,8 +7,12 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "optimize": "rimraf ./optimized & svgo -q -p 8 -f ./raw -o ./optimized",
-    "build": "svgr -- raw"
+    "optimize": "yarn optimize:line && yarn optimize:solid",
+    "build": "yarn build:line && yarn build:solid",
+    "optimize:line": "rimraf ./optimized/line & svgo -q -p 8 -f ./raw/line -o ./optimized/line",
+    "optimize:solid": "rimraf ./optimized/solid & svgo -q -p 8 -f ./raw/line -o ./optimized/solid",
+    "build:line": "svgr --out-dir src/line -- optimized/line",
+    "build:solid": "svgr --out-dir src/solid -- optimized/solid"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
