@@ -6,3 +6,7 @@ export { default as AlignCenter16 } from "./AlignCenter16";
 export { default as AlignCenter24 } from "./AlignCenter24";
 export { default as AlignJustify16 } from "./AlignJustify16";
 export { default as AlignJustify24 } from "./AlignJustify24";
+export { default as AlignLeft16 } from "./AlignLeft16";
+export { default as AlignLeft24 } from "./AlignLeft24";
+export { default as AlignRight16 } from "./AlignRight16";
+export { default as AlignRight24 } from "./AlignRight24";
