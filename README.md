@@ -2,4 +2,14 @@
 
 v0.1.0
 
-A flexable set of icons built for React.
+A flexible set of icons built for React.
+
+## Goals
+
+- Design an icon set with two base sizes: 16px and 24px, providing an outline and a solid version of each.
+- Build a easy-to-use JavaScript icon library for React projects.
+
+## Inspiration
+
+- [Heroicons](https://heroicons.com/)
+- [Feather](https://feathericons.com/)
