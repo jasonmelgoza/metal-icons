@@ -1,5 +1,5 @@
 import * as React from "react";
-const SvgAlert16 = (props) => (
+const SvgAlert = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -14,4 +14,4 @@ const SvgAlert16 = (props) => (
     />
   </svg>
 );
-export default SvgAlert16;
+export default SvgAlert;

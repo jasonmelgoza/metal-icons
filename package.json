@@ -7,12 +7,16 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "optimize": "yarn optimize:line && yarn optimize:solid",
-    "build": "yarn build:line && yarn build:solid",
-    "optimize:line": "rimraf ./optimized/line & svgo -q -p 8 -f ./raw/line -o ./optimized/line",
-    "optimize:solid": "rimraf ./optimized/solid & svgo -q -p 8 -f ./raw/line -o ./optimized/solid",
-    "build:line": "svgr --out-dir src/line -- optimized/line",
-    "build:solid": "svgr --out-dir src/solid -- optimized/solid"
+    "optimize": "yarn optimize:line:16 && yarn optimize:line:24 && yarn optimize:solid:16 && yarn optimize:solid:24",
+    "build": "yarn build:line:16 && yarn build:line:24 && yarn build:solid:16 && yarn build:solid:24",
+    "optimize:line:16": "rimraf ./optimized/line/16 & svgo -q -p 8 -f ./raw/line/16 -o ./optimized/line/16",
+    "optimize:line:24": "rimraf ./optimized/line/24 & svgo -q -p 8 -f ./raw/line/24 -o ./optimized/line/24",
+    "optimize:solid:16": "rimraf ./optimized/solid/16 & svgo -q -p 8 -f ./raw/solid/16 -o ./optimized/solid/16",
+    "optimize:solid:24": "rimraf ./optimized/solid/24 & svgo -q -p 8 -f ./raw/solid/24 -o ./optimized/solid/24",
+    "build:line:16": "svgr --out-dir src/line/16 -- optimized/line/16",
+    "build:line:24": "svgr --out-dir src/line/24 -- optimized/line/24",
+    "build:solid:16": "svgr --out-dir src/solid/16 -- optimized/solid/16",
+    "build:solid:24": "svgr --out-dir src/solid/24 -- optimized/solid/24"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

@@ -1,5 +1,5 @@
 import * as React from "react";
-const SvgActivity24 = (props) => (
+const SvgActivity = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -15,4 +15,4 @@ const SvgActivity24 = (props) => (
     />
   </svg>
 );
-export default SvgActivity24;
+export default SvgActivity;

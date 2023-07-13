@@ -1,5 +1,5 @@
 import * as React from "react";
-const SvgAlignJustify16 = (props) => (
+const SvgAlignJustify = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -11,4 +11,4 @@ const SvgAlignJustify16 = (props) => (
     <path d="M1.75 3a.75.75 0 0 0 0 1.5h12.5a.75.75 0 1 0 0-1.5H1.75Zm0 3a.75.75 0 0 0 0 1.5h12.5a.75.75 0 1 0 0-1.5H1.75ZM1 9.75A.75.75 0 0 1 1.75 9h12.5a.75.75 0 1 1 0 1.5H1.75A.75.75 0 0 1 1 9.75ZM1.75 12a.75.75 0 1 0 0 1.5h12.5a.75.75 0 1 0 0-1.5H1.75Z" />
   </svg>
 );
-export default SvgAlignJustify16;
+export default SvgAlignJustify;
