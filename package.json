@@ -7,10 +7,17 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "optimize": "rimraf ./optimized & svgo -q -p 8 -f ./raw -o ./optimized"
+    "optimize": "rimraf ./optimized & svgo -q -p 8 -f ./raw -o ./optimized",
+    "build": "svgr -- raw"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@svgr/cli": "^8.0.1",
+    "@svgr/core": "^8.0.0",
+    "camelcase": "^7.0.1",
     "rimraf": "^5.0.1",
-    "svgo": "^3.0.2"
+    "svgo": "^3.0.2",
+    "terser": "^5.19.0"
   }
 }
