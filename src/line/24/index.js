@@ -1,6 +1,7 @@
-export { default as Activity24 } from "./Activity24";
-export { default as Alert24 } from "./Alert24";
-export { default as AlignCenter24 } from "./AlignCenter24";
-export { default as AlignJustify24 } from "./AlignJustify24";
-export { default as AlignLeft24 } from "./AlignLeft24";
-export { default as AlignRight24 } from "./AlignRight24";
+export { default as Activity } from './Activity'
+export { default as Alert } from './Alert'
+export { default as AlignCenter } from './AlignCenter'
+export { default as AlignJustify } from './AlignJustify'
+export { default as AlignLeft } from './AlignLeft'
+export { default as AlignRight } from './AlignRight'
+export { default as Folder } from './Folder'
