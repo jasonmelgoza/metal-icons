@@ -9,22 +9,31 @@ module.exports = {
       name: 'preset-default',
       params: {
         overrides: {
-          removeViewBox: false
-        }
-      }
+          removeViewBox: false,
+        },
+      },
     },
     'removeStyleElement',
     {
       name: 'convertColors',
       params: {
-        currentColor: true
-      }
+        currentColor: true,
+      },
     },
     {
       name: 'removeAttrs',
       params: {
-        attrs: ['xmlns:xlink', 'id', 'class', 'data-name', 'transform', 'href', 'clip-path', 'clip-rule']
-      }
-    }
-  ]
-};
+        attrs: [
+          'xmlns:xlink',
+          'id',
+          'class',
+          'data-name',
+          'transform',
+          'href',
+          'clip-path',
+          'clip-rule',
+        ],
+      },
+    },
+  ],
+}
