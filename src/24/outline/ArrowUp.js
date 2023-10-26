@@ -2,15 +2,15 @@ import * as React from 'react'
 const SvgArrowUp = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={16}
+    height={16}
     fill="none"
-    viewBox="0 0 24 24"
+    viewBox="0 0 16 16"
     {...props}
   >
     <path
       fill="currentColor"
-      d="M5.04 10.771A.75.75 0 0 1 3.96 9.73l7.25-7.5a.751.751 0 0 1 1.08 0l7.25 7.5a.751.751 0 0 1-1.08 1.042L12.5 4.605V20.25a.75.75 0 1 1-1.5 0V4.605l-5.96 6.166Z"
+      d="M4.045 7.765a.75.75 0 1 1-1.09-1.03l4.25-4.5a.75.75 0 0 1 1.09 0l4.25 4.5a.75.75 0 0 1-1.09 1.03L8.5 4.636v8.614a.75.75 0 1 1-1.5 0V4.636L4.045 7.765Z"
     />
   </svg>
 )
