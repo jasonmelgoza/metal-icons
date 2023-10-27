@@ -6,7 +6,9 @@
   "author": "Jason Melgoza",
   "license": "MIT",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "module": "dist/index.esm.js",
   "scripts": {
     "clean": "rimraf package *.tgz",
