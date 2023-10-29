@@ -4,7 +4,8 @@
   "description": "A flexible React icon set",
   "author": "Jason Melgoza",
   "license": "MIT",
-  "module": "dist/index.esm.js",
+  "type": "module",
+  "exports": "./dist/16/outline/index.esm.js",
   "files": ["dist"],
   "scripts": {
     "clean": "rimraf package *.tgz",
