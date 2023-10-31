@@ -4,8 +4,14 @@
   "description": "A flexible React icon set",
   "author": "Jason Melgoza",
   "license": "MIT",
-  "type": "module",
-  "exports": "./dist/16/outline/index.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/16/outline/index.esm.js"
+    },
+    "./24/solid": {
+      "import": "./dist/24/solid/index.esm.js"
+    }
+  },
   "files": ["dist"],
   "scripts": {
     "clean": "rimraf package *.tgz",
@@ -17,10 +23,10 @@
     "optimize:line:24": "rimraf ./optimized/24/outline && svgo -q -p 8 -f ./raw/24/outline -o ./optimized/24/outline",
     "optimize:solid:16": "rimraf ./optimized/16/solid && svgo -q -p 8 -f ./raw/16/solid -o ./optimized/16/solid",
     "optimize:solid:24": "rimraf ./optimized/24/solid && svgo -q -p 8 -f ./raw/24/solid -o ./optimized/24/solid",
-    "construct:line:16": "svgr --out-dir src/16/outline -- optimized/16/outline",
-    "construct:line:24": "svgr --out-dir src/24/outline -- optimized/16/outline",
-    "construct:solid:16": "svgr --out-dir src/16/solid -- optimized/16/solid",
-    "construct:solid:24": "svgr --out-dir src/24/solid -- optimized/24/solid"
+    "construct:line:16": "rimraf ./src/16/outline && svgr --out-dir src/16/outline -- optimized/16/outline",
+    "construct:line:24": "rimraf ./src/24/outline && svgr --out-dir src/24/outline -- optimized/24/outline",
+    "construct:solid:16": "rimraf ./src/16/solid && svgr --out-dir src/16/solid -- optimized/16/solid",
+    "construct:solid:24": "rimraf ./src/24/solid && svgr --out-dir src/24/solid -- optimized/24/solid"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.23.2",
