@@ -5,7 +5,6 @@ const SvgAlert = (props) => (
     width={24}
     height={24}
     fill="currentColor"
-    viewBox="0 0 24 24"
     {...props}
   >
     <path d="M11 17a1 1 0 0 1 1-1h.01a1 1 0 0 1 0 2H12a1 1 0 0 1-1-1Zm1.75-8.25a.75.75 0 1 0-1.5 0v4.5a.75.75 0 1 0 1.5 0v-4.5Z" />

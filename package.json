@@ -6,7 +6,16 @@
   "license": "MIT",
   "exports": {
     ".": {
+      "import": "./dist/16/solid/index.esm.js"
+    },
+    "./16/outline": {
       "import": "./dist/16/outline/index.esm.js"
+    },
+    "./16/solid": {
+      "import": "./dist/16/solid/index.esm.js"
+    },
+    "./24/outline": {
+      "import": "./dist/24/outline/index.esm.js"
     },
     "./24/solid": {
       "import": "./dist/24/solid/index.esm.js"
@@ -19,10 +28,10 @@
     "construct": "yarn construct:line:16 && yarn construct:line:24 && yarn construct:solid:16 && yarn construct:solid:24",
     "prebuild": "rimraf dist",
     "build": "rollup -c --bundleConfigAsCjs",
-    "optimize:line:16": "rimraf ./optimized/16/outline && svgo -q -p 8 -f ./raw/16/outline -o ./optimized/16/outline",
-    "optimize:line:24": "rimraf ./optimized/24/outline && svgo -q -p 8 -f ./raw/24/outline -o ./optimized/24/outline",
-    "optimize:solid:16": "rimraf ./optimized/16/solid && svgo -q -p 8 -f ./raw/16/solid -o ./optimized/16/solid",
-    "optimize:solid:24": "rimraf ./optimized/24/solid && svgo -q -p 8 -f ./raw/24/solid -o ./optimized/24/solid",
+    "optimize:line:16": "rimraf ./optimized/16/outline && svgo --config=svgo.config.mjs -q -p 8 -f ./raw/16/outline -o ./optimized/16/outline",
+    "optimize:line:24": "rimraf ./optimized/24/outline && svgo --config=svgo.config.mjs -q -p 8 -f ./raw/24/outline -o ./optimized/24/outline",
+    "optimize:solid:16": "rimraf ./optimized/16/solid && svgo --config=svgo.config.mjs -q -p 8 -f ./raw/16/solid -o ./optimized/16/solid",
+    "optimize:solid:24": "rimraf ./optimized/24/solid && svgo --config=svgo.config.mjs -q -p 8 -f ./raw/24/solid -o ./optimized/24/solid",
     "construct:line:16": "rimraf ./src/16/outline && svgr --out-dir src/16/outline -- optimized/16/outline",
     "construct:line:24": "rimraf ./src/24/outline && svgr --out-dir src/24/outline -- optimized/24/outline",
     "construct:solid:16": "rimraf ./src/16/solid && svgr --out-dir src/16/solid -- optimized/16/solid",
