@@ -1,4 +1,5 @@
 export { default as Activity } from './Activity'
+export { default as Alarm } from './Alarm'
 export { default as Alert } from './Alert'
 export { default as Annotation } from './Annotation'
 export { default as Archive } from './Archive'
