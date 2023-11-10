@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `.codesandbox` tasks and `.devcontainer` config files.
 - Added At icons.
+- Add Battery icons.
 
 ## [0.1.3] - 2023-11-04
 
