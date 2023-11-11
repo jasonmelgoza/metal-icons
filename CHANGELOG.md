@@ -7,15 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.4] - 2023-11-10
+## [0.1.4] - 2023-11-11
 
 ### Added
 
 - Added `.codesandbox` tasks and `.devcontainer` config files.
 - Added At icons.
-- Add Battery icons.
-- Add Book Closed icons.
-- Add Book Open icons.
+- Added Battery icons.
+- Added Book Closed icons.
+- Added Book Open icons.
+- Added Beaker and Bell icons.
+- Added Bookmark and Bookmark Plus icons.
 
 ## [0.1.3] - 2023-11-04
 
