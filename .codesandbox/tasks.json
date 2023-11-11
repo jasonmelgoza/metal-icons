@@ -1,0 +1,78 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "clean": {
+      "name": "clean",
+      "command": "yarn clean",
+      "runAtStart": false
+    },
+    "optimize": {
+      "name": "optimize",
+      "command": "yarn optimize",
+      "runAtStart": false
+    },
+    "construct": {
+      "name": "construct",
+      "command": "yarn construct",
+      "runAtStart": false
+    },
+    "prebuild": {
+      "name": "prebuild",
+      "command": "yarn prebuild",
+      "runAtStart": false
+    },
+    "build": {
+      "name": "build",
+      "command": "yarn build",
+      "runAtStart": false
+    },
+    "optimize:line:16": {
+      "name": "optimize:line:16",
+      "command": "yarn optimize:line:16",
+      "runAtStart": false
+    },
+    "optimize:line:24": {
+      "name": "optimize:line:24",
+      "command": "yarn optimize:line:24",
+      "runAtStart": false
+    },
+    "optimize:solid:16": {
+      "name": "optimize:solid:16",
+      "command": "yarn optimize:solid:16",
+      "runAtStart": false
+    },
+    "optimize:solid:24": {
+      "name": "optimize:solid:24",
+      "command": "yarn optimize:solid:24",
+      "runAtStart": false
+    },
+    "construct:line:16": {
+      "name": "construct:line:16",
+      "command": "yarn construct:line:16",
+      "runAtStart": false
+    },
+    "construct:line:24": {
+      "name": "construct:line:24",
+      "command": "yarn construct:line:24",
+      "runAtStart": false
+    },
+    "construct:solid:16": {
+      "name": "construct:solid:16",
+      "command": "yarn construct:solid:16",
+      "runAtStart": false
+    },
+    "construct:solid:24": {
+      "name": "construct:solid:24",
+      "command": "yarn construct:solid:24",
+      "runAtStart": false
+    }
+  }
+}
