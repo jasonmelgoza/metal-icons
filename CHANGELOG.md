@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added Briefcase icons.
+- Added Building icons.
+- Added Bulb icons.
+- Added Calendar icons.
 - Added Camera icons.
 - Added Cash icons.
 - Added Chart Bar icons.
