@@ -1,6 +1,6 @@
 {
   "name": "metal-icons",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A flexible React icon set",
   "author": "Jason Melgoza",
   "license": "MIT",
@@ -21,7 +21,9 @@
       "import": "./dist/24/solid/index.esm.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf package *.tgz",
     "optimize": "yarn optimize:line:16 && yarn optimize:line:24 && yarn optimize:solid:16 && yarn optimize:solid:24",
