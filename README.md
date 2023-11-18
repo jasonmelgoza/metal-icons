@@ -1,6 +1,6 @@
 # Metal Icons
 
-v0.1.8
+v0.1.9
 
 A flexible set of icons built for React.
 
