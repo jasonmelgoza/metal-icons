@@ -1,4 +1,4 @@
-<p align="center"
+<h1 align="center"
   style="
     font-size: 3.25rem;
     margin: 0;
@@ -7,8 +7,8 @@
   ">
   <span>
     🤘
-  </span
-</p>
+  </span>
+</h1>
 
 <h3 align="center" style="margin-top: 0.5rem;">Metal Icons</h3>
 
