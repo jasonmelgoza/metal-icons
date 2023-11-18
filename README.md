@@ -1,8 +1,16 @@
-# Metal Icons
+<p align="center">
+  <span>
+    🤘
+  </span
+</p>
 
-v0.1.10
+<h3 align="center">Metal Icons</h3>
 
-A flexible set of icons built for React.
+<p align="center">
+  A flexible set of icons built for React.
+  <br>
+  v0.1.10
+</p>
 
 ## Basic Usage
 
