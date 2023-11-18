@@ -1,21 +1,9 @@
-<h1 align="center"
-  style="
-    font-size: 3.25rem;
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-  ">
-  <span>
-    🤘
-  </span>
-</h1>
-
 <h3 align="center" style="margin-top: 0.5rem;">Metal Icons</h3>
 
 <p align="center">
   A flexible set of icons built for React.
   <br>
-  <small>v0.1.10</small>
+  v0.1.10
 </p>
 
 ## Basic Usage
