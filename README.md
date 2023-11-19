@@ -1,33 +1,10 @@
-<h3 align="center" style="margin-top: 0.5rem;">Metal Icons</h3>
+<h3 align="center">Metal Icons</h3>
 
 <p align="center">
   A flexible set of icons built for React.
   <br>
   v0.1.10
 </p>
-
-## Basic Usage
-
-First, install `metal-icons` from npm:
-
-```bash
-yarn add metal-icons
-```
-
-Now, you can import each icon individually as a React component.
-
-```JavaScript
-import { Folder } from 'metal-icons'
-
-function Button() {
-  return (
-    <button>
-      <Folder />
-      <span>Add Folder</span>
-    </button>
-  )
-}
-```
 
 ## Goals
 
