@@ -1,0 +1,39 @@
+.layout {
+  display: flex;
+}
+
+.logo {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0 4rem 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer p {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert(0) drop-shadow(0 0 0.3rem #ffffff55);
+  }
+}
