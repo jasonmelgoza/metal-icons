@@ -1,8 +1,6 @@
-<h3 align="center">Metal Icons Site</h3>
+# Metal Icons Site
 
-<p align="center">
-  This is the source code of the Metal-Icons site.
-</p>
+This is the source code of the Metal-Icons site.
 
 ---
 

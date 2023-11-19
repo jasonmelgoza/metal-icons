@@ -1,6 +1,12 @@
 # Metal Icons
 
+A flexible set of icons built for React.
+
+---
+
 ## Basic Usage
+
+All icons are available as individual React components.
 
 First, install `metal-icons` from npm:
 
@@ -8,7 +14,7 @@ First, install `metal-icons` from npm:
 yarn add metal-icons
 ```
 
-Now, you can import each icon individually as a React component.
+Now, you can import each icon individually as a React component:
 
 ```JavaScript
 import { Folder } from 'metal-icons'
