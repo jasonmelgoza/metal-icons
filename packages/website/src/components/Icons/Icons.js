@@ -46,6 +46,7 @@ import {
   ChevronsRight,
   ChevronsUp,
   ChevronUp,
+  CircleAdd,
   Folder,
 } from "metal-icons";
 
@@ -101,6 +102,7 @@ export default function Icons({}) {
       <ChevronsLeft />
       <ChevronsRight />
       <ChevronsUp />
+      <CircleAdd />
       <Folder />
     </div>
   );
