@@ -4,10 +4,6 @@
     {
       "name": "Install Dependencies",
       "command": "yarn install"
-    },
-    {
-      "name": "Start Website",
-      "command": "yarn workspace website dev"
     }
   ],
 
