@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: center;
+
+  grid-template-columns: repeat(10, minmax(10%, auto));
+  justify-items: center;
+  gap: 2rem 1rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .grid {
+    max-width: 320px;
+    margin-bottom: 120px;
+
+    grid-template-columns: repeat(3, 33.3%);
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(4, 25%);
+  }
+}

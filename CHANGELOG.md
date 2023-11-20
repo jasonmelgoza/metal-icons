@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.10] - 2023-11-19
+
+### Added
+
+- Added Circle Add
+- Added website package
+
+### Changed
+
+- Restructured to a monorepo.
+
+- Restructured to utilize workspaces.
+
 ## [0.1.9] - 2023-11-18
 
 ### Fixed
