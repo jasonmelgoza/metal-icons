@@ -4,6 +4,10 @@
     {
       "name": "Install Dependencies",
       "command": "yarn install"
+    },
+    {
+      "name": "Start Website",
+      "command": "yarn workspace website dev"
     }
   ],
 
@@ -19,9 +23,9 @@
       "command": "yarn optimize",
       "runAtStart": false
     },
-    "construct": {
-      "name": "construct",
-      "command": "yarn construct",
+    "icons": {
+      "name": "icons",
+      "command": "yarn icons",
       "runAtStart": false
     },
     "prebuild": {
