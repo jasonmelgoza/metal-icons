@@ -1,7 +1,7 @@
 {
   "name": "metal-icons",
   "private": false,
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A flexible React icon set",
   "license": "MIT",
   "files": [
