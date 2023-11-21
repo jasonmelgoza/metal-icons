@@ -1,5 +1,5 @@
 import * as React from 'react'
-const SvgCircleCaretUp = (props) => (
+const SvgCircleCaretLeft = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -13,4 +13,4 @@ const SvgCircleCaretUp = (props) => (
     />
   </svg>
 )
-export default SvgCircleCaretUp
+export default SvgCircleCaretLeft
