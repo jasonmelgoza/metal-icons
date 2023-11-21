@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.11] - 2023-11-20
+
+### Added
+
+- Added Circle Arrow Down
+- Added Circle Arrow Left
+- Added Circle Arrow Right
+- Added Circle Arrow Up
+
 ## [0.1.10] - 2023-11-19
 
 ### Added
@@ -17,7 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Restructured to a monorepo.
-
 - Restructured to utilize workspaces.
 
 ## [0.1.9] - 2023-11-18
