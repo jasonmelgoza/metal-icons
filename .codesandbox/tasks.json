@@ -28,13 +28,9 @@
       "name": "icons",
       "command": "yarn icons"
     },
-    "prebuild": {
-      "name": "prebuild",
-      "command": "yarn prebuild"
-    },
     "build": {
       "name": "build",
-      "command": "yarn build"
+      "command": "yarn workspace metal-icons build"
     },
     "optimize:line:16": {
       "name": "optimize:line:16",
