@@ -31,38 +31,6 @@
     "build": {
       "name": "build",
       "command": "yarn workspace metal-icons build"
-    },
-    "optimize:line:16": {
-      "name": "optimize:line:16",
-      "command": "yarn optimize:line:16"
-    },
-    "optimize:line:24": {
-      "name": "optimize:line:24",
-      "command": "yarn optimize:line:24"
-    },
-    "optimize:solid:16": {
-      "name": "optimize:solid:16",
-      "command": "yarn optimize:solid:16"
-    },
-    "optimize:solid:24": {
-      "name": "optimize:solid:24",
-      "command": "yarn optimize:solid:24"
-    },
-    "construct:line:16": {
-      "name": "construct:line:16",
-      "command": "yarn construct:line:16"
-    },
-    "construct:line:24": {
-      "name": "construct:line:24",
-      "command": "yarn construct:line:24"
-    },
-    "construct:solid:16": {
-      "name": "construct:solid:16",
-      "command": "yarn construct:solid:16"
-    },
-    "construct:solid:24": {
-      "name": "construct:solid:24",
-      "command": "yarn construct:solid:24"
     }
   }
 }
