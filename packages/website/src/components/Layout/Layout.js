@@ -34,7 +34,7 @@ export default function Layout({ children }) {
             <a href="https://www.npmjs.com/package/metal-icons?activeTab=readme">
               metal-icons
             </a>{" "}
-            v0.1.10
+            v0.1.11
           </p>
         </footer>
       </div>

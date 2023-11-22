@@ -47,6 +47,18 @@ import {
   ChevronsUp,
   ChevronUp,
   CircleAdd,
+  CircleAlert,
+  CircleArrowDown,
+  CircleArrowLeft,
+  CircleArrowRight,
+  CircleArrowUp,
+  CircleCaretDown,
+  CircleCaretLeft,
+  CircleCaretRight,
+  CircleCaretUp,
+  CircleCheck,
+  CircleClose,
+  CircleHelp,
   Folder,
 } from "metal-icons";
 
@@ -103,6 +115,18 @@ export default function Icons({}) {
       <ChevronsRight />
       <ChevronsUp />
       <CircleAdd />
+      <CircleAlert />
+      <CircleArrowDown />
+      <CircleArrowLeft />
+      <CircleArrowRight />
+      <CircleArrowUp />
+      <CircleCaretDown />
+      <CircleCaretLeft />
+      <CircleCaretRight />
+      <CircleCaretUp />
+      <CircleCheck />
+      <CircleClose />
+      <CircleHelp />
       <Folder />
     </div>
   );
