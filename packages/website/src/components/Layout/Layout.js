@@ -32,7 +32,10 @@ export default function Layout({ children }) {
         <footer className={styles.footer}>
           <div>
             <span>metal-icons v0.1.11</span>
-            <a href="https://github.com/jasonmelgoza/metal-icons">
+            <a
+              href="https://github.com/jasonmelgoza/metal-icons"
+              target="_blank"
+            >
               <Image
                 src="/github.svg"
                 alt="Metal-Icon Github Repo"
@@ -41,7 +44,7 @@ export default function Layout({ children }) {
                 priority
               />
             </a>{' '}
-            <a href="https://www.npmjs.com/package/metal-icons">
+            <a href="https://www.npmjs.com/package/metal-icons" target="_blank">
               <Image
                 src="/npm.svg"
                 alt="Metal-Icon NPM Package"
