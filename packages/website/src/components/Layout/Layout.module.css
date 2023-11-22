@@ -25,11 +25,15 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+  color: #ccc;
 }
 
-.footer p {
+.footer > div {
   font-size: 0.75rem;
   opacity: 0.75;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "./Layout.module.css";
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from './Layout.module.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Layout({ children }) {
   return (
@@ -30,14 +30,29 @@ export default function Layout({ children }) {
         </header>
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
-          <p>
-            <a href="https://www.npmjs.com/package/metal-icons?activeTab=readme">
-              metal-icons
-            </a>{" "}
-            v0.1.11
-          </p>
+          <div>
+            <span>metal-icons v0.1.11</span>
+            <a href="https://github.com/jasonmelgoza/metal-icons">
+              <Image
+                src="/github.svg"
+                alt="Metal-Icon Github Repo"
+                width={24}
+                height={24}
+                priority
+              />
+            </a>{' '}
+            <a href="https://www.npmjs.com/package/metal-icons">
+              <Image
+                src="/npm.svg"
+                alt="Metal-Icon NPM Package"
+                width={24}
+                height={24}
+                priority
+              />
+            </a>{' '}
+          </div>
         </footer>
       </div>
     </>
-  );
+  )
 }
