@@ -9,70 +9,28 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
+    "website": {
+      "name": "website",
+      "command": "yarn workspace website dev",
+      "preview": {
+        "port": 3000
+      }
+    },
     "clean": {
       "name": "clean",
-      "command": "yarn clean",
-      "runAtStart": false
+      "command": "yarn clean"
     },
     "optimize": {
       "name": "optimize",
-      "command": "yarn optimize",
-      "runAtStart": false
+      "command": "yarn optimize"
     },
-    "construct": {
-      "name": "construct",
-      "command": "yarn construct",
-      "runAtStart": false
-    },
-    "prebuild": {
-      "name": "prebuild",
-      "command": "yarn prebuild",
-      "runAtStart": false
+    "icons": {
+      "name": "icons",
+      "command": "yarn icons"
     },
     "build": {
       "name": "build",
-      "command": "yarn build",
-      "runAtStart": false
-    },
-    "optimize:line:16": {
-      "name": "optimize:line:16",
-      "command": "yarn optimize:line:16",
-      "runAtStart": false
-    },
-    "optimize:line:24": {
-      "name": "optimize:line:24",
-      "command": "yarn optimize:line:24",
-      "runAtStart": false
-    },
-    "optimize:solid:16": {
-      "name": "optimize:solid:16",
-      "command": "yarn optimize:solid:16",
-      "runAtStart": false
-    },
-    "optimize:solid:24": {
-      "name": "optimize:solid:24",
-      "command": "yarn optimize:solid:24",
-      "runAtStart": false
-    },
-    "construct:line:16": {
-      "name": "construct:line:16",
-      "command": "yarn construct:line:16",
-      "runAtStart": false
-    },
-    "construct:line:24": {
-      "name": "construct:line:24",
-      "command": "yarn construct:line:24",
-      "runAtStart": false
-    },
-    "construct:solid:16": {
-      "name": "construct:solid:16",
-      "command": "yarn construct:solid:16",
-      "runAtStart": false
-    },
-    "construct:solid:24": {
-      "name": "construct:solid:24",
-      "command": "yarn construct:solid:24",
-      "runAtStart": false
+      "command": "yarn workspace metal-icons build"
     }
   }
 }

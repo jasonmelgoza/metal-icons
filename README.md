@@ -2,8 +2,6 @@
 
 <p align="center">
   A flexible set of icons built for React.
-  <br>
-  v0.1.10
 </p>
 
 ## Goals
