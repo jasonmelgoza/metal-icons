@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Circle Close
 - Added Circle Help
 
+### Changed
+
+- Updated `tasks.json` for CodeSandbox.
+
 ## [0.1.10] - 2023-11-19
 
 ### Added
