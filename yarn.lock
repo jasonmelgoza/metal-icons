@@ -1867,6 +1867,13 @@ mdn-data@2.0.30:
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.30.tgz"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
+"metal-icons@workspace:^":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/metal-icons/-/metal-icons-0.1.11.tgz#0b0e0c63bed1221967b38122d6cd83aea29b54c8"
+  integrity sha512-6U9pJo+3YgTgnhIG1stMwwWpvgDB35PZEcw6xOM6j5r2KYrvm7vcjeSOrDDHwRUC5vRQ+4pI/jp9xtT/eJBnbg==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
+
 minimatch@^5.0.1:
   version "5.1.6"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-5.1.6.tgz"

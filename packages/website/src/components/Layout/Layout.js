@@ -39,8 +39,8 @@ export default function Layout({ children }) {
               <Image
                 src="/github.svg"
                 alt="Metal-Icon Github Repo"
-                width={24}
-                height={24}
+                width={16}
+                height={16}
                 priority
               />
             </a>{' '}
@@ -48,8 +48,8 @@ export default function Layout({ children }) {
               <Image
                 src="/npm.svg"
                 alt="Metal-Icon NPM Package"
-                width={24}
-                height={24}
+                width={16}
+                height={16}
                 priority
               />
             </a>{' '}
