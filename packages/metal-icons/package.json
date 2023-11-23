@@ -1,8 +1,12 @@
 {
   "name": "metal-icons",
   "private": false,
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "A flexible React icon set",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonmelgoza/metal-icons.git"
+  },
   "license": "MIT",
   "files": [
     "dist"
