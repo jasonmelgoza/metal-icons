@@ -31,7 +31,7 @@ export default function Layout({ children }) {
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           <div>
-            <span>metal-icons v0.1.11</span>
+            <span>metal-icons v0.1.12</span>
             <a
               href="https://github.com/jasonmelgoza/metal-icons"
               target="_blank"

@@ -59,6 +59,15 @@ import {
   CircleCheck,
   CircleClose,
   CircleHelp,
+  CircleInfo,
+  CircleMinus,
+  Clipboard,
+  ClipboardCheck,
+  Clock,
+  Close,
+  CloudDownload,
+  CloudUpload,
+  Cog,
   Folder,
 } from "metal-icons";
 
@@ -127,6 +136,15 @@ export default function Icons({}) {
       <CircleCheck />
       <CircleClose />
       <CircleHelp />
+      <CircleInfo />
+      <CircleMinus />
+      <Clipboard />
+      <ClipboardCheck />
+      <Clock />
+      <Close />
+      <CloudDownload />
+      <CloudUpload />
+      <Cog />
       <Folder />
     </div>
   );
