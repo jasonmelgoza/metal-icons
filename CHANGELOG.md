@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.12] - 2023-11-23
+
+### Added
+
+- Added Circle Info
+- Added Circle Minus
+- Added Clipboard,
+- Added Clipboard Check,
+- Added Clock,
+- Added Close,
+- Added Cloud Download,
+- Added Cloud Upload,
+- Added Cog,
+
+### Changed
+
+- Added `preserveModules` to `rollup.config.js`.
+
 ## [0.1.11] - 2023-11-20
 
 ### Added

@@ -11,6 +11,7 @@ const config = {
     dir: 'dist',
     entryFileNames: '[name].js',
     format: 'esm',
+    preserveModules: true,
   },
   external: [/@babel\/runtime/, 'react'],
   plugins: [
