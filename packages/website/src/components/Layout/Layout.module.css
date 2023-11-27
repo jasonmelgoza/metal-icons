@@ -1,26 +1,27 @@
-.layout {
+.Layout {
   display: flex;
+  flex-direction: column;
 }
 
-.logo {
+.Logo {
   position: relative;
 }
 
-.header {
+.Header {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 6rem 0 4rem 0;
 }
 
-.main {
+.Main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.footer {
+.Footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +29,7 @@
   color: var(--foreground);
 }
 
-.footer > div {
+.Footer > div {
   font-size: 0.75rem;
   opacity: 0.75;
   display: flex;
@@ -37,7 +38,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo {
+  .Logo {
     filter: invert(0) drop-shadow(0 0 0.3rem #ffffff55);
   }
 }

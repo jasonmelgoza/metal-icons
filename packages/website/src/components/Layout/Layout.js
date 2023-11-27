@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from './Layout.module.css'
+import Styles from './Layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,10 +17,10 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={`${inter.className}`}>
-        <header className={styles.header}>
+      <div className={`${inter.className} ${Styles.Layout}`}>
+        <header className={Styles.Header}>
           <Image
-            className={styles.logo}
+            className={Styles.Logo}
             src="/horns.svg"
             alt="Metal Icons"
             width={36}
@@ -28,8 +28,8 @@ export default function Layout({ children }) {
             priority
           />
         </header>
-        <main className={styles.main}>{children}</main>
-        <footer className={styles.footer}>
+        <main className={Styles.Main}>{children}</main>
+        <footer className={Styles.Footer}>
           <div>
             <span>metal-icons v0.1.12</span>
             <a
