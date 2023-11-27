@@ -1,3 +1,23 @@
+/* Tabs */
+.TabsRoot {
+  width: 100%;
+}
+
+.TabsList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0 0 2rem;
+}
+
+.TabsList button {
+  font-size: 1rem;
+}
+
+/* Grid */
 .grid {
   display: grid;
   justify-content: center;
@@ -8,6 +28,8 @@
   grid-template-columns: repeat(10, minmax(10%, auto));
   justify-items: center;
   gap: 2rem 1rem;
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* Mobile */
