@@ -1,151 +1,34 @@
-import {
-  Activity,
-  Alarm,
-  Alert,
-  AlignBottom,
-  AlignTop,
-  Annotation,
-  Archive,
-  ArrowDown,
-  ArrowDownLeft,
-  ArrowDownRight,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowUpLeft,
-  ArrowUpRight,
-  At,
-  Battery,
-  Beaker,
-  Bell,
-  BookClosed,
-  Bookmark,
-  BookmarkPlus,
-  BookOpen,
-  Briefcase,
-  Building,
-  Bulb,
-  Calendar,
-  Camera,
-  Cash,
-  ChartBar,
-  ChatBubbleRound,
-  ChatBubbleRoundDots,
-  ChatBubbleRoundText,
-  ChatBubbleSquare,
-  ChatBubbleSquareDots,
-  ChatBubbleSquareText,
-  ChatBubblesRound,
-  ChatBubblesSquare,
-  Check,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronsDown,
-  ChevronsLeft,
-  ChevronsRight,
-  ChevronsUp,
-  ChevronUp,
-  CircleAdd,
-  CircleAlert,
-  CircleArrowDown,
-  CircleArrowLeft,
-  CircleArrowRight,
-  CircleArrowUp,
-  CircleCaretDown,
-  CircleCaretLeft,
-  CircleCaretRight,
-  CircleCaretUp,
-  CircleCheck,
-  CircleClose,
-  CircleHelp,
-  CircleInfo,
-  CircleMinus,
-  Clipboard,
-  ClipboardCheck,
-  Clock,
-  Close,
-  CloudDownload,
-  CloudUpload,
-  Cog,
-  Folder,
-} from "metal-icons";
-
-import styles from "./Icons.module.css";
+import * as Tabs from '@radix-ui/react-tabs'
+import IconsSmallSolid from './IconsSmallSolid'
+import IconsSmallOutline from './IconsSmallOutline'
+import Styles from './Icons.module.css'
 
 export default function Icons({}) {
   return (
-    <div className={styles.grid}>
-      <Activity />
-      <Alarm />
-      <Alert />
-      <AlignBottom />
-      <AlignTop />
-      <Annotation />
-      <Archive />
-      <ArrowDown />
-      <ArrowDownLeft />
-      <ArrowDownRight />
-      <ArrowLeft />
-      <ArrowRight />
-      <ArrowUp />
-      <ArrowUpLeft />
-      <ArrowUpRight />
-      <At />
-      <Battery />
-      <Beaker />
-      <Bell />
-      <BookClosed />
-      <Bookmark />
-      <BookmarkPlus />
-      <BookOpen />
-      <Briefcase />
-      <Building />
-      <Bulb />
-      <Calendar />
-      <Camera />
-      <Cash />
-      <ChartBar />
-      <ChatBubbleRound />
-      <ChatBubbleRoundDots />
-      <ChatBubbleRoundText />
-      <ChatBubbleSquare />
-      <ChatBubbleSquareDots />
-      <ChatBubbleSquareText />
-      <ChatBubblesRound />
-      <ChatBubblesSquare />
-      <Check />
-      <ChevronDown />
-      <ChevronLeft />
-      <ChevronRight />
-      <ChevronUp />
-      <ChevronsDown />
-      <ChevronsLeft />
-      <ChevronsRight />
-      <ChevronsUp />
-      <CircleAdd />
-      <CircleAlert />
-      <CircleArrowDown />
-      <CircleArrowLeft />
-      <CircleArrowRight />
-      <CircleArrowUp />
-      <CircleCaretDown />
-      <CircleCaretLeft />
-      <CircleCaretRight />
-      <CircleCaretUp />
-      <CircleCheck />
-      <CircleClose />
-      <CircleHelp />
-      <CircleInfo />
-      <CircleMinus />
-      <Clipboard />
-      <ClipboardCheck />
-      <Clock />
-      <Close />
-      <CloudDownload />
-      <CloudUpload />
-      <Cog />
-      <Folder />
-    </div>
-  );
+    <>
+      <Tabs.Root className={Styles.TabsRoot} defaultValue="tab1">
+        <Tabs.List
+          className={Styles.TabsList}
+          aria-label="Choose an icon style to view"
+        >
+          <Tabs.Trigger className={Styles.TabsTrigger} value="tab1">
+            Solid
+          </Tabs.Trigger>
+          <Tabs.Trigger className={Styles.TabsTrigger} value="tab2">
+            Outline
+          </Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content className={Styles.TabsContent} value="tab1">
+          <div className={Styles.Grid}>
+            <IconsSmallSolid />
+          </div>
+        </Tabs.Content>
+        <Tabs.Content className={Styles.TabsContent} value="tab2">
+          <div className={Styles.Grid}>
+            <IconsSmallOutline />
+          </div>
+        </Tabs.Content>
+      </Tabs.Root>
+    </>
+  )
 }

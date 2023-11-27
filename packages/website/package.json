@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "metal-icons": "0.1.12",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "metal-icons": "^0.1.13",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"

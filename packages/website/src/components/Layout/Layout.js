@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from './Layout.module.css'
+import Styles from './Layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,12 +15,15 @@ export default function Layout({ children }) {
           content="Introducing Metal Icons: a versatile icon library designed for your upcoming Figma or React projects."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤘</text></svg>"
+        />
       </Head>
-      <div className={`${inter.className}`}>
-        <header className={styles.header}>
+      <div className={`${inter.className} ${Styles.Layout}`}>
+        <header className={Styles.Header}>
           <Image
-            className={styles.logo}
+            className={Styles.Logo}
             src="/horns.svg"
             alt="Metal Icons"
             width={36}
@@ -28,10 +31,10 @@ export default function Layout({ children }) {
             priority
           />
         </header>
-        <main className={styles.main}>{children}</main>
-        <footer className={styles.footer}>
+        <main className={Styles.Main}>{children}</main>
+        <footer className={Styles.Footer}>
           <div>
-            <span>metal-icons v0.1.12</span>
+            <span>metal-icons v0.1.13</span>
             <a
               href="https://github.com/jasonmelgoza/metal-icons"
               target="_blank"
