@@ -145,25 +145,25 @@ import {
   Folder as OutlineFolder,
 } from 'metal-icons/16/outline'
 
-import styles from './Icons.module.css'
+import Styles from './Icons.module.css'
 
 export default function Icons({}) {
   return (
     <>
-      <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
+      <Tabs.Root className={Styles.TabsRoot} defaultValue="tab1">
         <Tabs.List
-          className={styles.TabsList}
+          className={Styles.TabsList}
           aria-label="Choose an icon style to view"
         >
-          <Tabs.Trigger className="TabsTrigger" value="tab1">
+          <Tabs.Trigger className={Styles.TabsTrigger} value="tab1">
             Solid
           </Tabs.Trigger>
-          <Tabs.Trigger className="TabsTrigger" value="tab2">
+          <Tabs.Trigger className={Styles.TabsTrigger} value="tab2">
             Outline
           </Tabs.Trigger>
         </Tabs.List>
-        <Tabs.Content className="TabsContent" value="tab1">
-          <div className={styles.grid}>
+        <Tabs.Content className={Styles.TabsContent} value="tab1">
+          <div className={Styles.Grid}>
             <Activity />
             <Alarm />
             <Alert />
@@ -236,8 +236,8 @@ export default function Icons({}) {
             <Folder />
           </div>
         </Tabs.Content>
-        <Tabs.Content className="TabsContent" value="tab2">
-          <div className={styles.grid}>
+        <Tabs.Content className={Styles.TabsContent} value="tab2">
+          <div className={Styles.Grid}>
             <OutlineActivity />
             <OutlineAlarm />
             <OutlineAlert />
