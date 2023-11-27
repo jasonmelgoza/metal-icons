@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.13] - 2023-11-27
+
+### Added
+
+### Changed
+
+- Added Tabs component to website package to display outline variants.
+
 ## [0.1.12] - 2023-11-23
 
 ### Added
