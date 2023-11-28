@@ -1992,6 +1992,13 @@ mdn-data@2.0.30:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
+"metal-icons@workspace:^":
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/metal-icons/-/metal-icons-0.1.13.tgz#cfec3d00f84b878aa3762f563715c16c9c3070b9"
+  integrity sha512-r1wPRT97P6nwCKrnZnQHALZlXQ2EfHujMHjT0AN/WtVETfwFmdiz0yk442RmbsrMPMKwKtHvTNzFLQ8Q55RbYQ==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
+
 minimatch@^5.0.1:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.6.tgz#1cfcb8cf5522ea69952cd2af95ae09477f122a96"
