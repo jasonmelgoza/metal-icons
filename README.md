@@ -1,3 +1,5 @@
+<img width="830" alt="metal-hero" src="https://github.com/jasonmelgoza/metal-icons/assets/89980/ea6a51fc-e999-4427-b074-d9df321ca48c">
+
 <h3 align="center">Metal Icons</h3>
 
 <p align="center">
