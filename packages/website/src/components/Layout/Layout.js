@@ -34,7 +34,7 @@ export default function Layout({ children }) {
         <main className={Styles.Main}>{children}</main>
         <footer className={Styles.Footer}>
           <div>
-            <span>metal-icons v0.1.13</span>
+            <span>metal-icons v0.1.14</span>
             <a
               href="https://github.com/jasonmelgoza/metal-icons"
               target="_blank"

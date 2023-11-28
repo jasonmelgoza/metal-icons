@@ -11,7 +11,7 @@
   "tasks": {
     "website": {
       "name": "website",
-      "command": "yarn workspace website dev",
+      "command": "yarn --cwd ./packages/website dev",
       "preview": {
         "port": 3000
       }
