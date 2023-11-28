@@ -17,3 +17,9 @@
 
 - [Heroicons](https://heroicons.com/)
 - [Feather](https://feathericons.com/)
+
+## License
+
+Licensed under the MIT License. Copyright © 2023-present Jason Melgoza.
+
+See [LICENSE](./LICENSE) for more information.
