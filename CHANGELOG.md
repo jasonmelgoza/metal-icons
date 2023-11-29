@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.14] - 2023-11-28
+
+### Added
+
+- Added Disabled icon
+- Added Dashboard icon
+- Added Currency Dollar icon
+- Added Credit Card icon
+- Added Corner Down Right icon
+- Added Corner Down Left icon
+
+### Changed
+
+- Updated the main `README` with a new hero and revised copy.
+
 ## [0.1.13] - 2023-11-27
 
 ### Added
