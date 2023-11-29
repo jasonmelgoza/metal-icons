@@ -3,7 +3,7 @@
 <h3 align="center">Metal Icons</h3>
 
 <p align="center">
-  A versatile collection of icons designed for your upcoming Figma or React project.
+  A versatile collection of icons designed for your next Figma or React project.
 </p>
 
 ## Goals
