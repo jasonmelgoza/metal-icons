@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.15] - 2023-11-30
+
+### Added
+
+- Added Document icon
+- Added Document minus icon
+- Added Document plus icon
+- Added Documents icon
+
 ## [0.1.14] - 2023-11-28
 
 ### Added
