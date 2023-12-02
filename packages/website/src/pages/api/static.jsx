@@ -10,8 +10,8 @@ export default async function handler() {
       <div
         style={{
           fontSize: 120,
-          color: 'black',
-          background: 'white',
+          color: 'white',
+          background: 'black',
           width: '100%',
           height: '100%',
           padding: '50px 200px',
