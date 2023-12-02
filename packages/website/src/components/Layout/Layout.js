@@ -11,6 +11,10 @@ export default function Layout({ children }) {
       <Head>
         <title>Metal Icons</title>
         <meta
+          property="og:image"
+          content="https://metal-icons-site.vercel.app/api/static"
+        />
+        <meta
           name="description"
           content="Introducing Metal Icons: a versatile icon library designed for your upcoming Figma or React projects."
         />
