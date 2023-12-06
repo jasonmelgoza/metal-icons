@@ -44,6 +44,7 @@ export default function Layout({ children }) {
               target="_blank"
             >
               <Image
+                className={Styles.FooterIcon}
                 src="/github.svg"
                 alt="Metal-Icon Github Repo"
                 width={16}
@@ -53,8 +54,22 @@ export default function Layout({ children }) {
             </a>{' '}
             <a href="https://www.npmjs.com/package/metal-icons" target="_blank">
               <Image
+                className={Styles.FooterIcon}
                 src="/npm.svg"
                 alt="Metal-Icon NPM Package"
+                width={16}
+                height={16}
+                priority
+              />
+            </a>{' '}
+            <a
+              href="https://www.figma.com/community/file/1275692756020345515/metal-icons"
+              target="_blank"
+            >
+              <Image
+                className={Styles.FooterIcon}
+                src="/figma.svg"
+                alt="Metal-Icon Figma Community Library"
                 width={16}
                 height={16}
                 priority

@@ -38,8 +38,21 @@
   gap: 0.5rem;
 }
 
+.Footer > div a {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.Footer > div a:hover {
+  opacity: 60%;
+}
+
 @media (prefers-color-scheme: dark) {
   .Logo {
     filter: invert(0) drop-shadow(0 0 0.3rem #ffffff55);
+  }
+  .FooterIcon {
+    filter: invert(100%);
   }
 }
