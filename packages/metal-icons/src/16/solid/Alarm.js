@@ -9,7 +9,7 @@ const SvgAlarm = (props) => (
   >
     <path
       fill="currentColor"
-      d="M5.558 1.909a7.5 7.5 0 0 0-3.702 2.79L.628 3.837A9 9 0 0 1 5.07.49l.488 1.419Z"
+      d="M5.558 1.909a7.5 7.5 0 0 0-3.702 2.79L.628 3.837A9 9 0 0 1 5.07.49z"
     />
     <path
       fill="currentColor"
