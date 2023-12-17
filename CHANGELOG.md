@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.16] - 2023-12-16
+
+### Added
+
+- Added Folder plus icon
+- Added Folder minus icon
+- Added Floppy icon
+- Added Flag icon
+- Added Filter icon
+- Added External link icon
+- Added Edit box icon
+- Added Duplicate icon
+- Added Download icon
+
 ## [0.1.15] - 2023-11-30
 
 ### Added
