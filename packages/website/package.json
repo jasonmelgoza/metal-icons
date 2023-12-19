@@ -11,7 +11,7 @@
   "dependencies": {
     "@radix-ui/react-tabs": "^1.0.4",
     "@vercel/og": "^0.5.20",
-    "metal-icons": "^0.1.16",
+    "metal-icons": "^0.1.17",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
