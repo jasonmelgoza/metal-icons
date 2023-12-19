@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.17] - 2023-12-18
+
+### Added
+
+- Added Globe icon
+- Added Grid icon
+- Added Hash icon
+- Added Headphones icon
+- Added Heart icon
+- Added Inbox icon
+- Added Layers icon
+- Added Layout columns icon
+- Added Layout rows icon
+- Added Link icon
+
 ## [0.1.16] - 2023-12-16
 
 ### Added
