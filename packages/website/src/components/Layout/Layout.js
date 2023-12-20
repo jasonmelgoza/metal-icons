@@ -26,19 +26,18 @@ export default function Layout({ children }) {
       </Head>
       <div className={`${inter.className} ${Styles.Layout}`}>
         <header className={Styles.Header}>
-          <Image
-            className={Styles.Logo}
-            src="/horns.svg"
-            alt="Metal Icons"
-            width={36}
-            height={36}
-            priority
-          />
-        </header>
-        <main className={Styles.Main}>{children}</main>
-        <footer className={Styles.Footer}>
-          <div>
-            <span>metal-icons v0.1.17</span>
+          <h1 className={Styles.Brand}>
+            <Image
+              className={Styles.Logo}
+              src="/horns.svg"
+              alt="Metal Icons"
+              width={36}
+              height={36}
+              priority
+            />
+            <span>Metal Icons</span>
+          </h1>
+          <nav className={Styles.Nav}>
             <a
               href="https://github.com/jasonmelgoza/metal-icons"
               target="_blank"
@@ -75,6 +74,22 @@ export default function Layout({ children }) {
                 priority
               />
             </a>{' '}
+          </nav>
+        </header>
+        <main className={Styles.Main}>{children}</main>
+        <footer className={Styles.Footer}>
+          <div>
+            <a
+              href="https://github.com/jasonmelgoza/metal-icons"
+              target="_blank"
+            >
+              metal-icons v0.1.17
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/jasonmelgoza" target="_blank">
+              Built by @jasonmelgoza
+            </a>
           </div>
         </footer>
       </div>

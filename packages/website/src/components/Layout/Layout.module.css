@@ -11,8 +11,37 @@
 .Header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 6rem 0 4rem 0;
+  justify-content: space-between;
+  gap: 0.25rem;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 0 4rem 0;
+}
+
+.Brand {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.3;
+  font-size: 1.4rem;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Nav > a {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.Nav > a:hover {
+  opacity: 60%;
 }
 
 .Main {
@@ -25,26 +54,28 @@
 .Footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding: 4rem 0;
   color: var(--foreground);
 }
 
 .Footer > div {
-  font-size: 0.75rem;
-  opacity: 0.75;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.Footer > div a {
+.Footer a {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.Footer > div a:hover {
+.Footer a:hover {
   opacity: 60%;
 }
 
