@@ -1,9 +1,9 @@
 import * as Tabs from '@radix-ui/react-tabs'
-import { Cog as IconCog } from 'metal-icons'
 import IconsSmallSolid from './IconsSmallSolid'
 import IconsLargeSolid from './IconsLargeSolid'
 import IconsSmallOutline from './IconsSmallOutline'
 import IconsLargeOutline from './IconsLargeOutline'
+import Popover from '../Popover'
 import Styles from './Icons.module.css'
 
 export default function Icons({}) {
@@ -22,9 +22,7 @@ export default function Icons({}) {
               Outline
             </Tabs.Trigger>
           </Tabs.List>
-          <button className={Styles.ToolbarButton}>
-            <IconCog />
-          </button>
+          <Popover />
         </div>
         <Tabs.Content className={Styles.TabsContent} value="tab1">
           <section className={Styles.Section}>
