@@ -83,7 +83,7 @@
   .Logo {
     filter: invert(0) drop-shadow(0 0 0.3rem #ffffff55);
   }
-  .FooterIcon {
+  .NavIcon {
     filter: invert(100%);
   }
 }
