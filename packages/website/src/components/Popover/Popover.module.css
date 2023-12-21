@@ -21,6 +21,9 @@
 }
 
 .PopoverContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   padding: 1.25rem;
   width: 420px;
   background-color: var(--control);
@@ -52,6 +55,47 @@
 }
 .PopoverContent[data-state='open'][data-side='left'] {
   animation-name: slideRightAndFade;
+}
+
+.PopoverContent h2 {
+  font-size: 0.875rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.PopoverContent h2:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.PopoverContent p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.PopoverContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.PopoverContent ul > li {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.PopoverContent a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.PopoverContent a:hover {
+  opacity: 0.5;
 }
 
 @keyframes slideUpAndFade {
