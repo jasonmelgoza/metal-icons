@@ -7,6 +7,7 @@
   --background: #fff;
   --surface: #f0f0f0;
   --control: #fff;
+  --border: rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --background: #000;
     --surface: #111111;
     --control: #222222;
+    --border: rgba(255, 255, 255, 0.07);
   }
 }
 

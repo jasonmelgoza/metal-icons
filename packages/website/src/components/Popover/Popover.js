@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 const IconInfoPopover = () => (
   <Popover.Root>
     <Popover.Trigger asChild>
-      <button className={Styles.ToolbarButton} aria-label="Update dimensions">
+      <button className={Styles.PopoverButton} aria-label="Update dimensions">
         <IconCog />
       </button>
     </Popover.Trigger>
