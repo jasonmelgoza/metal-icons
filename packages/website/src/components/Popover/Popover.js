@@ -1,10 +1,11 @@
 import * as Popover from '@radix-ui/react-popover'
 import { Cog as IconCog } from 'metal-icons'
+import Styles from './Popover.module.css'
 
 const IconInfoPopover = () => (
   <Popover.Root>
     <Popover.Trigger asChild>
-      <button className="IconButton" aria-label="Update dimensions">
+      <button className={Styles.ToolbarButton} aria-label="Update dimensions">
         <IconCog />
       </button>
     </Popover.Trigger>

@@ -3,3 +3,25 @@
   flex-direction: column;
   padding: 0 3rem;
 }
+
+.ToolbarButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 0.75rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: var(--foreground);
+  user-select: none;
+  cursor: pointer;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+}
+
+.ToolbarButton:hover {
+  background-color: var(--control);
+}
+
+.ToolbarButton:where([data-state='open']) {
+  background-color: var(--control);
+}
