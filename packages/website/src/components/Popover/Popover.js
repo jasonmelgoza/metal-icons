@@ -18,6 +18,8 @@ const IconInfoPopover = () => (
         sideOffset={5}
         align="end"
       >
+        <h2>Foo content</h2>
+        <div>Foo content</div>
         <div>Foo content</div>
       </Popover.Content>
     </Popover.Portal>
