@@ -85,17 +85,22 @@ export default function Layout({ children }) {
         <main className={Styles.Main}>{children}</main>
         <footer className={Styles.Footer}>
           <div>
-            <a
-              href="https://github.com/jasonmelgoza/metal-icons"
-              target="_blank"
-            >
-              metal-icons v0.1.17
-            </a>
+            <p>
+              <a
+                href="https://github.com/jasonmelgoza/metal-icons"
+                target="_blank"
+              >
+                metal-icons v0.1.17
+              </a>
+            </p>
           </div>
           <div>
-            <a href="https://twitter.com/jasonmelgoza" target="_blank">
-              Built by @jasonmelgoza
-            </a>
+            <p>
+              Built by{' '}
+              <a href="https://twitter.com/jasonmelgoza" target="_blank">
+                @jasonmelgoza
+              </a>
+            </p>
           </div>
         </footer>
       </div>

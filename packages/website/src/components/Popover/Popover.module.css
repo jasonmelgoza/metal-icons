@@ -98,6 +98,14 @@
   opacity: 0.5;
 }
 
+.PopoverContent pre {
+  margin-top: 1rem;
+  background-color: var(--surface);
+  color: var(--foreground);
+  padding: 0.875rem 1rem;
+  border-radius: 6px;
+}
+
 @keyframes slideUpAndFade {
   from {
     opacity: 0;
