@@ -7,7 +7,9 @@
   --background: #fff;
   --surface: #f0f0f0;
   --control: #fff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(0, 0, 0, 0.1375);
+  --shadow: rgba(140, 149, 159, 0.2) 0 8px 24px 0,
+    rgba(140, 149, 159, 0.1) 0 1px 2px 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +19,7 @@
     --surface: #111111;
     --control: #222222;
     --border: rgba(255, 255, 255, 0.05);
+    --shadow: rgb(1, 4, 9) 0 8px 24px 0, rgb(1, 4, 9) 0 1px 2px 0;
   }
 }
 
