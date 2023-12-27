@@ -3,23 +3,27 @@ import IconsSmallSolid from './IconsSmallSolid'
 import IconsLargeSolid from './IconsLargeSolid'
 import IconsSmallOutline from './IconsSmallOutline'
 import IconsLargeOutline from './IconsLargeOutline'
+import Popover from '../Popover'
 import Styles from './Icons.module.css'
 
 export default function Icons({}) {
   return (
     <>
       <Tabs.Root className={Styles.TabsRoot} defaultValue="tab1">
-        <Tabs.List
-          className={Styles.TabsList}
-          aria-label="Choose an icon style to view"
-        >
-          <Tabs.Trigger className={Styles.TabsTrigger} value="tab1">
-            Solid
-          </Tabs.Trigger>
-          <Tabs.Trigger className={Styles.TabsTrigger} value="tab2">
-            Outline
-          </Tabs.Trigger>
-        </Tabs.List>
+        <div className={Styles.Toolbar}>
+          <Tabs.List
+            className={Styles.TabsList}
+            aria-label="Choose an icon style to view"
+          >
+            <Tabs.Trigger className={Styles.TabsTrigger} value="tab1">
+              Solid
+            </Tabs.Trigger>
+            <Tabs.Trigger className={Styles.TabsTrigger} value="tab2">
+              Outline
+            </Tabs.Trigger>
+          </Tabs.List>
+          <Popover />
+        </div>
         <Tabs.Content className={Styles.TabsContent} value="tab1">
           <section className={Styles.Section}>
             <header className={Styles.Header}>

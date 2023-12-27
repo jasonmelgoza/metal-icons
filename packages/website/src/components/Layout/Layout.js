@@ -26,55 +26,81 @@ export default function Layout({ children }) {
       </Head>
       <div className={`${inter.className} ${Styles.Layout}`}>
         <header className={Styles.Header}>
-          <Image
-            className={Styles.Logo}
-            src="/horns.svg"
-            alt="Metal Icons"
-            width={36}
-            height={36}
-            priority
-          />
-        </header>
-        <main className={Styles.Main}>{children}</main>
-        <footer className={Styles.Footer}>
-          <div>
-            <span>metal-icons v0.1.17</span>
+          <h1 className={Styles.Brand}>
+            <Image
+              className={Styles.Logo}
+              src="/horns.svg"
+              alt="Metal Icons"
+              width={36}
+              height={36}
+              priority
+            />
+            <span>Metal Icons</span>
+          </h1>
+          <nav className={Styles.Nav}>
             <a
               href="https://github.com/jasonmelgoza/metal-icons"
               target="_blank"
+              title="Github Repo"
             >
               <Image
-                className={Styles.FooterIcon}
+                className={Styles.NavIcon}
                 src="/github.svg"
                 alt="Metal-Icon Github Repo"
-                width={16}
-                height={16}
+                width={20}
+                height={20}
                 priority
               />
             </a>{' '}
-            <a href="https://www.npmjs.com/package/metal-icons" target="_blank">
+            <a
+              href="https://www.npmjs.com/package/metal-icons"
+              target="_blank"
+              title="NPM Package"
+            >
               <Image
-                className={Styles.FooterIcon}
+                className={Styles.NavIcon}
                 src="/npm.svg"
                 alt="Metal-Icon NPM Package"
-                width={16}
-                height={16}
+                width={20}
+                height={20}
                 priority
               />
             </a>{' '}
             <a
               href="https://www.figma.com/community/file/1275692756020345515/metal-icons"
               target="_blank"
+              title="Figma Library"
             >
               <Image
-                className={Styles.FooterIcon}
+                className={Styles.NavIcon}
                 src="/figma.svg"
                 alt="Metal-Icon Figma Community Library"
-                width={16}
-                height={16}
+                width={20}
+                height={20}
                 priority
               />
             </a>{' '}
+          </nav>
+        </header>
+        <main className={Styles.Main}>{children}</main>
+        <footer className={Styles.Footer}>
+          <div>
+            <p>
+              <a
+                href="https://github.com/jasonmelgoza/metal-icons"
+                target="_blank"
+              >
+                metal-icons v0.1.17
+              </a>
+            </p>
+          </div>
+          <div>
+            <p>
+              Built by{' '}
+              <a href="https://twitter.com/jasonmelgoza" target="_blank">
+                @jasonmelgoza
+              </a>
+            </p>
           </div>
         </footer>
       </div>
