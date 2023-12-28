@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.18] - 2023-12-28
+
+### Added
+
+- Added List icon
+- Added Location icon
+- Added Lock icon
+- Added Login icon
+- Added Logout icon
+- Added Mail icon
+- Added Maximize icon
+- Added Minimize icon
+- Added Monitor icon
+- Added More icon
+
+### Changed
+
+- Updated the website popover component with additional documentation.
+
 ## [0.1.17] - 2023-12-18
 
 ### Added
