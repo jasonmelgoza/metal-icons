@@ -46,6 +46,11 @@ export default function InfoPopover() {
             'metal-icons'
           </code>
         </pre>
+        <p>
+          <a href="https://github.com/jasonmelgoza/metal-icons" target="_blank">
+            Documentation
+          </a>
+        </p>
       </section>
       <section>
         <h2>Links</h2>
@@ -82,9 +87,7 @@ export default function InfoPopover() {
       </section>
       <section>
         <h2>Version</h2>
-        <p>
-          <code>0.1.17</code>
-        </p>
+        <p>0.1.17</p>
       </section>
     </MetalPopover>
   )
