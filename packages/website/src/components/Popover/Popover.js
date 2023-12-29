@@ -87,7 +87,7 @@ export default function InfoPopover() {
       </section>
       <section>
         <h2>Version</h2>
-        <p>0.1.18</p>
+        <p>0.1.19</p>
       </section>
     </MetalPopover>
   )
