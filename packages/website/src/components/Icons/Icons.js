@@ -27,7 +27,7 @@ export default function Icons({}) {
         <Tabs.Content className={Styles.TabsContent} value="tab1">
           <section className={Styles.Section}>
             <header className={Styles.Header}>
-              <h3>16px</h3>
+              <h3>16x16</h3>
             </header>
             <div className={Styles.Grid}>
               <IconsSmallSolid />
@@ -35,7 +35,7 @@ export default function Icons({}) {
           </section>
           <section className={Styles.Section}>
             <header className={Styles.Header}>
-              <h3>24px</h3>
+              <h3>24x24</h3>
             </header>
             <div className={Styles.Grid}>
               <IconsLargeSolid />
@@ -45,7 +45,7 @@ export default function Icons({}) {
         <Tabs.Content className={Styles.TabsContent} value="tab2">
           <section className={Styles.Section}>
             <header className={Styles.Header}>
-              <h3>16px</h3>
+              <h3>16x16</h3>
             </header>
             <div className={Styles.Grid}>
               <IconsSmallOutline />
@@ -53,7 +53,7 @@ export default function Icons({}) {
           </section>
           <section className={Styles.Section}>
             <header className={Styles.Header}>
-              <h3>24px</h3>
+              <h3>24x24</h3>
             </header>
             <div className={Styles.Grid}>
               <IconsLargeOutline />

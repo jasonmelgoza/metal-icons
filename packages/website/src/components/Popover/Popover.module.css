@@ -52,10 +52,10 @@
 }
 
 .PopoverContent h2 {
+  margin-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.3;
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
 .PopoverContent h2:not(:first-child) {
@@ -75,6 +75,7 @@
 .PopoverContent ul > li {
   font-size: 0.875rem;
   line-height: 1.5;
+  margin-bottom: 0.25rem;
 }
 
 .PopoverContent a {
@@ -94,6 +95,7 @@
 
 .PopoverContent pre {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: var(--surface);
   color: var(--foreground);
   padding: 0.875rem 1rem;
