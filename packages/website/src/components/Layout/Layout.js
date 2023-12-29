@@ -90,7 +90,7 @@ export default function Layout({ children }) {
                 href="https://github.com/jasonmelgoza/metal-icons"
                 target="_blank"
               >
-                metal-icons v0.1.19
+                metal-icons v0.1.20
               </a>
             </p>
           </div>
