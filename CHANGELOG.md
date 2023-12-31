@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added More alt icon
+- Added Paperclip icon
+- Added Pen icon
+- Added Pen line icon
+- Added Phone icon
+- Added Pin icon
+- Added Plus icon
+- Added Redirect icon
+- Added Refresh icon
+- Added Reload icon
+
 ## [0.1.19] - 2023-12-28
 
 ### Fixed
