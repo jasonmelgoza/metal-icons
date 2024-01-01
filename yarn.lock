@@ -2248,10 +2248,8 @@ mdn-data@2.0.30:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
-"metal-icons@workspace:^":
+"metal-icons@link:packages/metal-icons":
   version "0.1.20"
-  resolved "https://registry.yarnpkg.com/metal-icons/-/metal-icons-0.1.20.tgz#98f9ceb40831bff15f1623ecdadb5444b71b871e"
-  integrity sha512-QocTGpE60WdQpb9PRwJT9ziYtZVONPzWxaSqNVyxOPDYO4CipKWtmj7PLKPfzI0bLLGSfgj6t1T5ydHaRPR/gQ==
   dependencies:
     "@babel/runtime" "^7.23.2"
 
