@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.21] - 2023-03-10
+
+### Added
+
+- Added Rows icon
+- Added Search icon
+- Added Share icon
+- Added Shield icon
+- Added Shield alert icon
+- Added Shield check icon
+- Added Shield x icon
+- Added Shopping bag and Shopping cart icons
+
+
 ## [0.1.20] - 2023-12-28
 
 ### Added
