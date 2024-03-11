@@ -2,12 +2,12 @@
   "name": "metal-icons",
   "private": false,
   "version": "0.1.22",
-  "description": "A flexible React icon set",
+  "description": "A flexible React icon library.",
   "keywords": [
+    "icon-library",
     "icons",
-    "svg",
-    "design",
-    "react"
+    "react",
+    "svg"
   ],
   "repository": {
     "type": "git",
