@@ -1,5 +1,5 @@
 import * as React from 'react'
-const SvgSmartform = (props) => (
+const SvgSmartphone = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -14,4 +14,4 @@ const SvgSmartform = (props) => (
     />
   </svg>
 )
-export default SvgSmartform
+export default SvgSmartphone
