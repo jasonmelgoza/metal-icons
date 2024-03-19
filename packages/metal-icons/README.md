@@ -28,3 +28,7 @@ function Button() {
   )
 }
 ```
+
+## License
+
+Licensed under the MIT License, Copyright © 2023-present Jason Melgoza.
