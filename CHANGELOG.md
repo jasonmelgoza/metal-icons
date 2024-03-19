@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added slash icon
+- Added slider icon
+- Added smart phone icon
+- Added star icon
+- Added swap horizontal icon
+- Added swap vertical icon
+- Added tablet icon
+- Added tag icon
+- Added text icon
+- Added text align center icon
+
 ## [0.1.21] - 2023-03-10
 
 ### Added
