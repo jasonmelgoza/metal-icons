@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added text icon
 - Added text align center icon
 
+### Changed
+
+- Updated the license information in the icon package readme.
+
 ## [0.1.21] - 2023-03-10
 
 ### Added
