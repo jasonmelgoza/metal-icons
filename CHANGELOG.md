@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added text align justify icon
+- Added text align left icon
+- Added text align right icon
+- Added thumbs down icon
+- Added thumbs up icon
+- Added trash icon
+- Added upload icon
+- Added user icon
+- Added view icon
+
 ## [0.1.22] - 2023-03-10
 
 ### Added
