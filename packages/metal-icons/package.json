@@ -3,17 +3,22 @@
   "private": false,
   "version": "0.1.25",
   "description": "A flexible React icon library.",
+  "homepage": "https://metalicons.com",
   "keywords": [
     "icon-library",
     "icons",
     "react",
     "svg"
   ],
+  "license": "MIT",
+  "author": "Jason Melgoza",
   "repository": {
     "type": "git",
     "url": "https://github.com/jasonmelgoza/metal-icons.git"
   },
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonmelgoza/metal-icons/issues"
+  },
   "files": [
     "dist"
   ],
@@ -47,7 +52,7 @@
     "rimraf": "^5.0.1",
     "rollup": "^4.1.4"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.23.2"
+  "peerDependencies": {
+    "react": ">= 16"
   }
 }
