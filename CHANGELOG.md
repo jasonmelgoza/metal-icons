@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- The icon build scripts have been moved from the metal-icons package to the parent package.json.
+- The `@babel/runtime` dependency has been removed from the metal-icons package.
 
 ## [0.1.24] - 2023-03-21
 
