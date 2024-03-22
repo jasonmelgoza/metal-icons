@@ -131,7 +131,7 @@ export default async function handler() {
               color: 'white',
             }}
           >
-            v0.1.5
+            v0.1.25
           </div>
         </div>
         <div

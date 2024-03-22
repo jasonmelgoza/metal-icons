@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.25] - 2023-03-22
+
+### Changed
+
+- The icon build scripts have been moved from the metal-icons package to the parent package.json.
+
 ## [0.1.24] - 2023-03-21
 
 ### Added
