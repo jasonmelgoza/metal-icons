@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.24] - 2023-03-21
+
+### Added
+
+- Added zoom in icon
+
+- Added zoom in icon
+
 ## [0.1.23] - 2023-03-19
 
 ### Added
