@@ -1,7 +1,7 @@
 {
   "name": "metal-icons",
   "private": false,
-  "version": "0.1.24",
+  "version": "0.1.26",
   "description": "A flexible React icon library.",
   "keywords": [
     "icon-library",
