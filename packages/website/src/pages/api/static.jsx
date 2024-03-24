@@ -13,6 +13,7 @@ import {
   DocumentPlus,
   Documents,
 } from 'metal-icons/24/outline'
+import versionData from '@/data/version.json'
 
 export const config = {
   runtime: 'edge',
@@ -131,7 +132,7 @@ export default async function handler() {
               color: 'white',
             }}
           >
-            v0.1.5
+            {versionData.version}
           </div>
         </div>
         <div

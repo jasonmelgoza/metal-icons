@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.26] - 2023-03-23
+
+### Added
+
+- Added `metal-icons` version number to the website package for display.
+
+### Fixed
+
+- Re-added the `@babel/runtime` dependency to the metal-icons package.json for the time being.
+
+## [0.1.25] - 2023-03-22
+
+### Changed
+
+- Removed the `@babel/runtime` dependency in the metal-icons package.json.
+
 ## [0.1.24] - 2023-03-21
 
 ### Added

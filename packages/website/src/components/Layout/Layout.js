@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import versionData from '@/data/version.json'
 import Styles from './Layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -90,7 +91,7 @@ export default function Layout({ children }) {
                 href="https://github.com/jasonmelgoza/metal-icons"
                 target="_blank"
               >
-                metal-icons v0.1.24
+                metal-icons {versionData.version}
               </a>
             </p>
           </div>
