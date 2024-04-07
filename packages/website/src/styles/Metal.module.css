@@ -154,3 +154,25 @@
 .footer a:hover {
   text-decoration: none;
 }
+
+.footer > div {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.footer a > img {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.footer a:hover > img {
+  opacity: 0.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navIcon {
+    filter: invert(100%);
+  }
+}

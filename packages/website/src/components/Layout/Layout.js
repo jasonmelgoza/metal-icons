@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import versionData from '../../../data/version.json'
 import styles from '@/styles/Metal.module.css'
@@ -32,6 +33,56 @@ export default function Layout({ children }) {
               <p>
                 <a href="https://github.com/jasonmelgoza/metal-icons" target="_blank">
                   metal-icons {versionData.version}
+                </a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a
+                  href="https://github.com/jasonmelgoza/metal-icons"
+                  target="_blank"
+                  title="Github Repo"
+                >
+                  <Image
+                    className={styles.navIcon}
+                    src="/github.svg"
+                    alt="Metal-Icon Github Repo"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://www.npmjs.com/package/metal-icons"
+                  target="_blank"
+                  title="NPM Package"
+                >
+                  <Image
+                    className={styles.navIcon}
+                    src="/npm.svg"
+                    alt="Metal-Icon NPM Package"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://www.figma.com/community/file/1275692756020345515/metal-icons"
+                  target="_blank"
+                  title="Figma Library"
+                >
+                  <Image
+                    className={styles.navIcon}
+                    src="/figma.svg"
+                    alt="Metal-Icon Figma Library"
+                    width={20}
+                    height={20}
+                    priority
+                  />
                 </a>
               </p>
             </div>

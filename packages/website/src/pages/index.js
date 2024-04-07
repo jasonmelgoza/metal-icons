@@ -362,7 +362,7 @@ export default function Home({ icons }) {
         {filteredIcons.length > 0 ? (
           filteredIcons.map((icon) => (
             <div className={styles.tile} key={icon.id}>
-              <Icon name={icon.name} />
+              <Icon name={icon.name} style={{}} />
               <p>{icon.name}</p>
             </div>
           ))
