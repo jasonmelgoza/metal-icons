@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://heroicons.com" target="_blank">
+  <a href="https://metalicons.com" target="_blank">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-light.svg">
