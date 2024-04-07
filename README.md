@@ -34,12 +34,12 @@ yarn add metal-icons
 Then, import an icon from the `metal-icons` library at the beginning of a component and then utilize it in the render function.
 
 ```javascript
-import { Folder } from `metal-icons/16/solid`
+import { FolderIcon } from `metal-icons/16/solid`
 
 export default function MyComponent() {
   return (
     <button>
-      <Folder />
+      <FolderIcon />
       Add Folder
     </button>
   )
