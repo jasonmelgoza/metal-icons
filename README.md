@@ -1,4 +1,12 @@
-<img width="830" alt="metal-hero" src="https://github.com/jasonmelgoza/metal-icons/assets/89980/4206f2f9-851f-45af-8120-f6b42933a24b">
+<p align="center">
+  <a href="https://metalicons.com" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-light.svg">
+      <img alt="Metal Icons Banner" width="830" height="200" style="max-width: 100%" src="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-light.svg">
+    </picture>
+  </a>
+</p>
 
 <h3 align="center">Metal Icons</h3>
 
@@ -26,12 +34,12 @@ yarn add metal-icons
 Then, import an icon from the `metal-icons` library at the beginning of a component and then utilize it in the render function.
 
 ```javascript
-import { Folder } from `metal-icons`
+import { FolderIcon } from `metal-icons/16/solid`
 
 export default function MyComponent() {
   return (
     <button>
-      <Folder />
+      <FolderIcon />
       Add Folder
     </button>
   )

@@ -16,14 +16,14 @@ yarn add metal-icons
 
 Now, you can import each icon individually as a React component:
 
-```JavaScript
-import { Folder } from 'metal-icons'
+```javascript
+import { FolderIcon } from `metal-icons/16/solid`
 
-function Button() {
+export default function MyComponent() {
   return (
     <button>
-      <Folder />
-      <span>Add Folder</span>
+      <FolderIcon />
+      Add Folder
     </button>
   )
 }

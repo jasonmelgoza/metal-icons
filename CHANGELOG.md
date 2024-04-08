@@ -2,10 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+- Nothing yet!
+
+## [0.2.0] - 2024-04-08
+
+- New build script and refactored website ([#33](https://github.com/jasonmelgoza/metal-icons/pull/33))
 
 ## [0.1.26] - 2023-03-23
 
