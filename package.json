@@ -15,9 +15,7 @@
     "build-outline-24": "rimraf ./24/outline ./24/optimized/outline && svgo --config=svgo.config.mjs -q -p 8 -f ./src/24/outline -o ./optimized/24/outline",
     "build-solid-24": "rimraf ./24/solid ./24/optimized/solid && svgo --config=svgo.config.mjs -q -p 8 -f ./src/24/solid -o ./optimized/24/solid",
     "dev": "yarn --cwd ./packages/website dev",
-    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/ && rm yarn.lock && yarn cache clean",
-    "release-channel": "node ./scripts/release-channel.js",
-    "release-notes": "node ./scripts/release-notes.js"
+    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/ && rm yarn.lock && yarn cache clean"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
