@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.2] - 2024-04-11
 
-- Update website package responsive styles ([#35](prlink))
+- Updated website package responsive styles ([#35](https://github.com/jasonmelgoza/metal-icons/pull/35))
 
 ## [0.2.1] - 2024-04-10
 
