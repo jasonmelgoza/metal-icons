@@ -200,6 +200,22 @@
   opacity: 0.5;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer > div,
+  .footer > div:nth-child(2),
+  .footer > div:nth-child(3) {
+    justify-content: center;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .navIcon {
     filter: invert(100%);
