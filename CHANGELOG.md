@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet!
 
+## [0.2.2] - 2024-04-11
+
+- Update website package responsive styles ([#35](prlink))
+
 ## [0.2.1] - 2024-04-10
 
 - Updated metal-icons packet readme ([#34](https://github.com/jasonmelgoza/metal-icons/pull/34))
