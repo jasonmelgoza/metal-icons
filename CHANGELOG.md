@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.1] - 2024-04-10
 
-- Updated metal-icons packet readme ([#34](prlink))
+- Updated metal-icons packet readme ([#34](https://github.com/jasonmelgoza/metal-icons/pull/34))
 
 ## [0.2.0] - 2024-04-08
 
