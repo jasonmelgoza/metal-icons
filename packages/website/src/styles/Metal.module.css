@@ -41,9 +41,19 @@
   margin-top: 1.5rem;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.75rem;
+  line-height: 1.5;
   color: rgb(var(--fg-muted-rgb));
   text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .header h1 {
+    font-size: 2.25rem;
+  }
+  .header p {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+  }
 }
 
 .install {
@@ -117,7 +127,7 @@
 
 @media screen and (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(5, minmax(20%, auto));
+    grid-template-columns: repeat(4, minmax(25%, auto));
   }
 }
 
