@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.3] - 2024-04-21
 
-- Added Sparkles icon ([#36](https://github.com/jasonmelgoza/metal-icons/pull/36))
+- Added Sparkles icon ([#37](https://github.com/jasonmelgoza/metal-icons/pull/37))
 
 ## [0.2.2] - 2024-04-11
 
