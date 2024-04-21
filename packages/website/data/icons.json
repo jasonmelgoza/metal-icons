@@ -598,5 +598,9 @@
   {
     "id": 150,
     "name": "zoom-in"
+  },
+  {
+    "id": 151,
+    "name": "sparkles"
   }
 ]
