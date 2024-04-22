@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet!
 
+## [0.2.3] - 2024-04-21
+
+- Added Sparkles icon ([#37](https://github.com/jasonmelgoza/metal-icons/pull/37))
+
 ## [0.2.2] - 2024-04-11
 
 - Updated website package responsive styles ([#35](https://github.com/jasonmelgoza/metal-icons/pull/35))
