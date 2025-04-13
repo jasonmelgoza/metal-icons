@@ -1,8 +1,5 @@
-// Import necessary modules and components
-import fs from 'fs'
-import path from 'path'
-import { useState } from 'react'
-import { Layout } from '@/components'
+// src/components/Icon.tsx
+import { ReactElement } from 'react';
 import {
   ActivityIcon,
   AlarmIcon,
@@ -156,11 +153,17 @@ import {
   UserIcon,
   ViewIcon,
   ZoomInIcon,
-} from 'metal-icons/16/solid'
-import styles from '@/styles/Metal.module.css'
+} from 'metal-icons/16/solid';
+
+// Type for the icon names (keys of IconMap)
+export type IconName = keyof typeof IconMap;
+
+// Interface for Icon component props
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  name: IconName;
+}
 
 // Mapping of icon names to their corresponding components
-// Currently, all icons are mapped to the same FolderIcon for demonstration purposes
 const IconMap = {
   activity: ActivityIcon,
   alarm: AlarmIcon,
@@ -314,81 +317,10 @@ const IconMap = {
   user: UserIcon,
   view: ViewIcon,
   "zoom-in": ZoomInIcon,
-}
+};
 
 // Icon component that takes a name prop and renders the corresponding icon
-// If the icon does not exist in the map, it renders nothing
-export function Icon({ name, ...props }) {
-  const IconWrapper = IconMap[name]
-  return IconWrapper ? <IconWrapper {...props} /> : null
-}
-
-// Home component that maps over the icons prop and renders an Icon component for each one
-// It also includes a search functionality that filters the icons based on the user's input
-export default function Home({ icons }) {
-  // State for the search term
-  const [searchTerm, setSearchTerm] = useState('')
-
-  // Handler for the search input's change event
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value)
-  }
-
-  // Filter the icons based on the search term
-  const filteredIcons = icons.filter((icon) =>
-    icon.name.toLowerCase().includes(searchTerm.toLowerCase()),
-  )
-
-  return (
-    <Layout>
-      <div className={styles.install}>
-        {/* Input field with the installation command, which gets selected on click */}
-        <input
-          readOnly
-          type="text"
-          value="yarn add metal-icons"
-          onClick={(e) => e.target.select()}
-        />
-      </div>
-      <div className={styles.filter}>
-        {/* Search input */}
-        <input
-          id="search"
-          name="search"
-          type="text"
-          placeholder="Search icons..."
-          value={searchTerm}
-          onChange={handleSearch}
-        />
-      </div>
-      <div className={styles.grid}>
-        {/* Render the filtered icons */}
-        {filteredIcons.length > 0 ? (
-          filteredIcons.map((icon) => (
-            <div className={styles.tile} key={icon.id}>
-              <Icon name={icon.name} style={{}} />
-              <p>{icon.name}</p>
-            </div>
-          ))
-        ) : (
-          <div className={styles.empty}>No icons found</div>
-        )}
-      </div>
-    </Layout>
-  )
-}
-
-// getStaticProps function to read the icons data from a JSON file
-// It reads the file synchronously, parses the JSON data into a JavaScript object,
-// and returns the icons data as a prop to the Home component
-export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'data', 'icons.json')
-  const jsonData = fs.readFileSync(filePath, 'utf8')
-  const icons = JSON.parse(jsonData)
-
-  return {
-    props: {
-      icons,
-    },
-  }
+export function Icon({ name, ...props }: IconProps): ReactElement | null {
+  const IconComponent = IconMap[name];
+  return IconComponent ? <IconComponent {...props} /> : null;
 }
