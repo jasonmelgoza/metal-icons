@@ -1,7 +1,7 @@
 {
   "name": "metal-icons",
   "license": "MIT",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A flexible React icon library.",
   "keywords": [
     "design",
@@ -153,6 +153,6 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": ">= 16"
+    "react": "^16.x || ^17.x || ^18.x || ^19.0.0 || ^19.0.0-rc"
   }
 }
