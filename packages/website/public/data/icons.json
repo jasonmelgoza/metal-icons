@@ -606,5 +606,9 @@
   {
     "id": 152,
     "name": "zoom-in"
+  },
+  {
+    "id": 153,
+    "name": "clipboard-x"
   }
 ]
