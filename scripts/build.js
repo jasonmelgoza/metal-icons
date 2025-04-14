@@ -1,8 +1,7 @@
 // Importing required modules
 const fs = require('fs').promises
-const camelcase = require('camelcase')
-const { promisify } = require('util')
-const rimraf = promisify(require('rimraf'))
+const { default: camelcase } = require('camelcase')
+const { rimraf } = require('rimraf')
 const svgr = require('@svgr/core').default
 const babel = require('@babel/core')
 const { dirname } = require('path')
@@ -32,7 +31,7 @@ async function getIcons(style, size) {
     files.map(async (file) => ({
       svg: await fs.readFile(`./optimized/${size}/${style}/${file}`, 'utf8'),
       componentName: `${camelcase(file.replace(/\.svg$/, ''), {
-        pascalCase: true,
+        pascalCase: true
       })}Icon`,
     }))
   )

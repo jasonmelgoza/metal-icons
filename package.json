@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.2.5",
+  "version": "0.2.6",
   "workspaces": [
     "packages/*"
   ],
@@ -21,9 +21,9 @@
     "@babel/core": "^7.12.10",
     "@babel/plugin-transform-react-jsx": "^7.12.12",
     "@svgr/core": "^5.5.0",
-    "camelcase": "^6.0.0",
-    "prettier": "^2.8.7",
-    "rimraf": "^3.0.2",
+    "camelcase": "^8.0.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
     "svgo": "^3.2.0"
   }
 }
