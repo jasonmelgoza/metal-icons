@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "metal-icons": "^0.2.5",
+    "metal-icons": "^0.2.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
