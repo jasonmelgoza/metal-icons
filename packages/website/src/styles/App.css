@@ -96,7 +96,6 @@
   justify-content: center;
   width: 100%;
   max-width: var(--max-width);
-  margin-top: 4rem;
 }
 
 .filter input[type="text"] {
@@ -120,6 +119,7 @@
 .controls {
   display: flex;
   align-items: center;
+  margin-top: 4rem;
   margin-bottom: 1rem;
   gap: 1rem;
 }
