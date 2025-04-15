@@ -2,6 +2,20 @@ import { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
 
+const SizeSelector = ({ value, onChange }: {
+  value: '16' | '24';
+  onChange: (size: '16' | '24') => void;
+}) => (
+  <select
+    value={value}
+    onChange={(e) => onChange(e.target.value as '16' | '24')}
+    aria-label="Icon size"
+  >
+    <option value="16">16px</option>
+    <option value="24">24px</option>
+  </select>
+);
+
 interface IconObject {
   id: string;
   name: IconName;
@@ -43,6 +57,7 @@ const SearchInput = ({ value, onChange }: {
 );
 
 function Home(): React.ReactElement {
+  const [iconSize, setIconSize] = useState<'16' | '24'>('16');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [icons, setIcons] = useState<IconObject[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -99,12 +114,15 @@ function Home(): React.ReactElement {
   return (
     <Layout>
       <InstallCommand command="yarn add metal-icons" />
-      <SearchInput value={searchTerm} onChange={handleSearch} />
+      <div className="controls">
+        <SearchInput value={searchTerm} onChange={handleSearch} />
+        <SizeSelector value={iconSize} onChange={setIconSize} />
+      </div>
       <div className="grid" role="grid">
         {filteredIcons.length > 0 ? (
           filteredIcons.map((icon) => (
             <div className="tile" key={icon.id} role="gridcell">
-              <Icon name={icon.name} aria-hidden="true" />
+              <Icon name={icon.name} size={iconSize} aria-hidden="true" />
               <p>{icon.name}</p>
             </div>
           ))

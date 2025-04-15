@@ -117,6 +117,19 @@
   outline-offset: 2px;
 }
 
+.controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.controls select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .grid {
   display: grid;
   align-items: center;
