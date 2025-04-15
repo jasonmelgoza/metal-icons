@@ -257,354 +257,358 @@
   },
   {
     "id": 65,
-    "name": "clock"
+    "name": "clipboard-x"
   },
   {
     "id": 66,
-    "name": "close"
+    "name": "clock"
   },
   {
     "id": 67,
-    "name": "cloud-download"
+    "name": "close"
   },
   {
     "id": 68,
-    "name": "cloud-upload"
+    "name": "cloud-download"
   },
   {
     "id": 69,
-    "name": "cog"
+    "name": "cloud-upload"
   },
   {
     "id": 70,
-    "name": "columns"
+    "name": "cog"
   },
   {
     "id": 71,
-    "name": "corner-down-left"
+    "name": "columns"
   },
   {
     "id": 72,
-    "name": "corner-down-right"
+    "name": "corner-down-left"
   },
   {
     "id": 73,
-    "name": "credit-card"
+    "name": "corner-down-right"
   },
   {
     "id": 74,
-    "name": "currency-dollar"
+    "name": "credit-card"
   },
   {
     "id": 75,
-    "name": "dashboard"
+    "name": "currency-dollar"
   },
   {
     "id": 76,
-    "name": "disabled"
+    "name": "dashboard"
   },
   {
     "id": 77,
-    "name": "document"
+    "name": "disabled"
   },
   {
     "id": 78,
-    "name": "document-minus"
+    "name": "document"
   },
   {
     "id": 79,
-    "name": "document-plus"
+    "name": "document-minus"
   },
   {
     "id": 80,
-    "name": "documents"
+    "name": "document-plus"
   },
   {
     "id": 81,
-    "name": "download"
+    "name": "documents"
   },
   {
     "id": 82,
-    "name": "duplicate"
+    "name": "download"
   },
   {
     "id": 83,
-    "name": "edit-box"
+    "name": "duplicate"
   },
   {
     "id": 84,
-    "name": "external-link"
+    "name": "edit-box"
   },
   {
     "id": 85,
-    "name": "filter"
+    "name": "external-link"
   },
   {
     "id": 86,
-    "name": "flag"
+    "name": "filter"
   },
   {
     "id": 87,
-    "name": "floppy"
+    "name": "flag"
   },
   {
     "id": 88,
-    "name": "folder"
+    "name": "floppy"
   },
   {
     "id": 89,
-    "name": "folder-minus"
+    "name": "folder"
   },
   {
     "id": 90,
-    "name": "folder-plus"
+    "name": "folder-minus"
   },
   {
     "id": 91,
-    "name": "globe"
+    "name": "folder-plus"
   },
   {
     "id": 92,
-    "name": "grid"
+    "name": "globe"
   },
   {
     "id": 93,
-    "name": "hash"
+    "name": "grid"
   },
   {
     "id": 94,
-    "name": "headphones"
+    "name": "hash"
   },
   {
     "id": 95,
-    "name": "heart"
+    "name": "headphones"
   },
   {
     "id": 96,
-    "name": "inbox"
+    "name": "heart"
   },
   {
     "id": 97,
-    "name": "layers"
+    "name": "inbox"
   },
   {
     "id": 98,
-    "name": "layout-columns"
+    "name": "layers"
   },
   {
     "id": 99,
-    "name": "layout-rows"
+    "name": "layout-columns"
   },
   {
     "id": 100,
-    "name": "link"
+    "name": "layout-rows"
   },
   {
     "id": 101,
-    "name": "list"
+    "name": "link"
   },
   {
     "id": 102,
-    "name": "location"
+    "name": "list"
   },
   {
     "id": 103,
-    "name": "lock"
+    "name": "location"
   },
   {
     "id": 104,
-    "name": "login"
+    "name": "lock"
   },
   {
     "id": 105,
-    "name": "logout"
+    "name": "login"
   },
   {
     "id": 106,
-    "name": "mail"
+    "name": "logout"
   },
   {
     "id": 107,
-    "name": "maximize"
+    "name": "mail"
   },
   {
     "id": 108,
-    "name": "minimize"
+    "name": "maximize"
   },
   {
     "id": 109,
-    "name": "monitor"
+    "name": "minimize"
   },
   {
     "id": 110,
-    "name": "more"
+    "name": "monitor"
   },
   {
     "id": 111,
-    "name": "more-alt"
+    "name": "more"
   },
   {
     "id": 112,
-    "name": "page"
+    "name": "more-alt"
   },
   {
     "id": 113,
-    "name": "paperclip"
+    "name": "page"
   },
   {
     "id": 114,
-    "name": "pen"
+    "name": "paperclip"
   },
   {
     "id": 115,
-    "name": "pen-line"
+    "name": "pen"
   },
   {
     "id": 116,
-    "name": "phone"
+    "name": "pen-line"
   },
   {
     "id": 117,
-    "name": "pin"
+    "name": "phone"
   },
   {
     "id": 118,
-    "name": "plus"
+    "name": "pin"
   },
   {
     "id": 119,
-    "name": "redirect"
+    "name": "plus"
   },
   {
     "id": 120,
-    "name": "reload"
+    "name": "redirect"
   },
   {
     "id": 121,
-    "name": "repeat"
+    "name": "reload"
   },
   {
     "id": 122,
-    "name": "rows"
+    "name": "repeat"
   },
   {
     "id": 123,
-    "name": "search"
+    "name": "rows"
   },
   {
     "id": 124,
-    "name": "send"
+    "name": "search"
   },
   {
     "id": 125,
-    "name": "share"
+    "name": "send"
   },
   {
     "id": 126,
-    "name": "shield"
+    "name": "share"
   },
   {
     "id": 127,
-    "name": "shield-alert"
+    "name": "shield"
   },
   {
     "id": 128,
-    "name": "shield-check"
+    "name": "shield-alert"
   },
   {
     "id": 129,
-    "name": "shield-x"
+    "name": "shield-check"
   },
   {
     "id": 130,
-    "name": "shopping-bag"
+    "name": "shield-x"
   },
   {
     "id": 131,
-    "name": "shopping-cart"
+    "name": "shopping-bag"
   },
   {
     "id": 132,
-    "name": "slash"
+    "name": "shopping-cart"
   },
   {
     "id": 133,
-    "name": "slider"
+    "name": "slash"
   },
   {
     "id": 134,
-    "name": "smartphone"
+    "name": "slider"
   },
   {
     "id": 135,
-    "name": "sparkles"
+    "name": "smartphone"
   },
   {
     "id": 136,
-    "name": "star"
+    "name": "sparkles"
   },
   {
     "id": 137,
-    "name": "swap-horizontal"
+    "name": "star"
   },
   {
     "id": 138,
-    "name": "swap-vertical"
+    "name": "swap-horizontal"
   },
   {
     "id": 139,
-    "name": "tablet"
+    "name": "swap-vertical"
   },
   {
     "id": 140,
-    "name": "tag"
+    "name": "tablet"
   },
   {
     "id": 141,
-    "name": "text"
+    "name": "tag"
   },
   {
     "id": 142,
-    "name": "text-align-center"
+    "name": "text"
   },
   {
     "id": 143,
-    "name": "text-align-justify"
+    "name": "text-align-center"
   },
   {
     "id": 144,
-    "name": "text-align-left"
+    "name": "text-align-justify"
   },
   {
     "id": 145,
-    "name": "text-align-right"
+    "name": "text-align-left"
   },
   {
     "id": 146,
-    "name": "thumbs-down"
+    "name": "text-align-right"
   },
   {
     "id": 147,
-    "name": "thumbs-up"
+    "name": "thumbs-down"
   },
   {
     "id": 148,
-    "name": "trash"
+    "name": "thumbs-up"
   },
   {
     "id": 149,
-    "name": "upload"
+    "name": "trash"
   },
   {
     "id": 150,
-    "name": "user"
+    "name": "upload"
   },
   {
     "id": 151,
-    "name": "view"
+    "name": "user"
   },
   {
     "id": 152,
+    "name": "view"
+  },
+  {
+    "id": 153,
     "name": "zoom-in"
   }
 ]

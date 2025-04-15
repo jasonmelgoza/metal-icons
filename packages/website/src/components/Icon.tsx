@@ -65,6 +65,7 @@ import {
   CircleMinusIcon,
   ClipboardCheckIcon,
   ClipboardIcon,
+  ClipboardXIcon,
   ClockIcon,
   CloseIcon,
   CloudDownloadIcon,
@@ -153,7 +154,7 @@ import {
   UserIcon,
   ViewIcon,
   ZoomInIcon,
-} from 'metal-icons/16/solid';
+} from 'metal-icons/16/solid'; // Adjust the import path as necessary
 
 // Type for the icon names (keys of IconMap)
 export type IconName = keyof typeof IconMap;
@@ -228,6 +229,7 @@ const IconMap = {
   'circle-info': CircleInfoIcon,
   'circle-minus': CircleMinusIcon,
   'clipboard-check': ClipboardCheckIcon,
+  'clipboard-x': ClipboardXIcon,
   clipboard: ClipboardIcon,
   clock: ClockIcon,
   close: CloseIcon,
