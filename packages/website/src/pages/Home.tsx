@@ -26,14 +26,16 @@ interface InstallCommandProps {
 
 // UI Components
 const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
-  <select
-    value={value}
-    onChange={(e) => onChange(e.target.value as IconSize)}
-    aria-label="Icon size"
-  >
-    <option value="16">16px</option>
-    <option value="24">24px</option>
-  </select>
+  <div className="menu">
+    <select
+      value={value}
+      onChange={(e) => onChange(e.target.value as IconSize)}
+      aria-label="Icon size"
+    >
+      <option value="16">16px</option>
+      <option value="24">24px</option>
+    </select>
+  </div>
 );
 
 const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
