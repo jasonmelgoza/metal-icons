@@ -1,328 +1,77 @@
-// src/components/Icon.tsx
-import { ReactElement } from 'react';
-import {
-  ActivityIcon,
-  AlarmIcon,
-  AlertIcon,
-  AlignBottomIcon,
-  AlignTopIcon,
-  AnnotationIcon,
-  ArchiveIcon,
-  ArrowDownIcon,
-  ArrowDownLeftIcon,
-  ArrowDownRightIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  ArrowUpIcon,
-  ArrowUpLeftIcon,
-  ArrowUpRightIcon,
-  AtIcon,
-  BatteryIcon,
-  BeakerIcon,
-  BellIcon,
-  BookClosedIcon,
-  BookmarkIcon,
-  BookmarkPlusIcon,
-  BookOpenIcon,
-  BriefcaseIcon,
-  BuildingIcon,
-  BulbIcon,
-  CalendarIcon,
-  CameraIcon,
-  CashIcon,
-  ChartBarIcon,
-  ChatBubbleRoundDotsIcon,
-  ChatBubbleRoundIcon,
-  ChatBubbleRoundTextIcon,
-  ChatBubbleSquareDotsIcon,
-  ChatBubbleSquareIcon,
-  ChatBubbleSquareTextIcon,
-  ChatBubblesRoundIcon,
-  ChatBubblesSquareIcon,
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ChevronsDownIcon,
-  ChevronsLeftIcon,
-  ChevronsRightIcon,
-  ChevronsUpIcon,
-  ChevronUpIcon,
-  CircleAddIcon,
-  CircleAlertIcon,
-  CircleArrowDownIcon,
-  CircleArrowLeftIcon,
-  CircleArrowRightIcon,
-  CircleArrowUpIcon,
-  CircleCaretDownIcon,
-  CircleCaretLeftIcon,
-  CircleCaretRightIcon,
-  CircleCaretUpIcon,
-  CircleCheckIcon,
-  CircleCloseIcon,
-  CircleHelpIcon,
-  CircleInfoIcon,
-  CircleMinusIcon,
-  ClipboardCheckIcon,
-  ClipboardIcon,
-  ClipboardXIcon,
-  ClockIcon,
-  CloseIcon,
-  CloudDownloadIcon,
-  CloudUploadIcon,
-  CogIcon,
-  ColumnsIcon,
-  CornerDownLeftIcon,
-  CornerDownRightIcon,
-  CreditCardIcon,
-  CurrencyDollarIcon,
-  DashboardIcon,
-  DisabledIcon,
-  DocumentIcon,
-  DocumentMinusIcon,
-  DocumentPlusIcon,
-  DocumentsIcon,
-  DownloadIcon,
-  DuplicateIcon,
-  EditBoxIcon,
-  ExternalLinkIcon,
-  FilterIcon,
-  FlagIcon,
-  FloppyIcon,
-  FolderIcon,
-  FolderMinusIcon,
-  FolderPlusIcon,
-  GlobeIcon,
-  GridIcon,
-  HashIcon,
-  HeadphonesIcon,
-  HeartIcon,
-  InboxIcon,
-  LayersIcon,
-  LayoutColumnsIcon,
-  LayoutRowsIcon,
-  LinkIcon,
-  ListIcon,
-  LocationIcon,
-  LockIcon,
-  LoginIcon,
-  LogoutIcon,
-  MailIcon,
-  MaximizeIcon,
-  MinimizeIcon,
-  MonitorIcon,
-  MoreAltIcon,
-  MoreIcon,
-  PageIcon,
-  PaperclipIcon,
-  PenIcon,
-  PenLineIcon,
-  PhoneIcon,
-  PinIcon,
-  PlusIcon,
-  RedirectIcon,
-  ReloadIcon,
-  RepeatIcon,
-  RowsIcon,
-  SearchIcon,
-  SendIcon,
-  ShareIcon,
-  ShieldAlertIcon,
-  ShieldCheckIcon,
-  ShieldIcon,
-  ShieldXIcon,
-  ShoppingBagIcon,
-  ShoppingCartIcon,
-  SlashIcon,
-  SliderIcon,
-  SmartphoneIcon,
-  SparklesIcon,
-  StarIcon,
-  SwapHorizontalIcon,
-  SwapVerticalIcon,
-  TabletIcon,
-  TagIcon,
-  TextAlignCenterIcon,
-  TextAlignJustifyIcon,
-  TextAlignLeftIcon,
-  TextAlignRightIcon,
-  TextIcon,
-  ThumbsDownIcon,
-  ThumbsUpIcon,
-  TrashIcon,
-  UploadIcon,
-  UserIcon,
-  ViewIcon,
-  ZoomInIcon,
-} from 'metal-icons/16/solid'; // Adjust the import path as necessary
+import * as Icons16 from 'metal-icons/16/solid';
+import * as Icons24 from 'metal-icons/24/solid';
+import { ReactElement, useMemo } from 'react';
 
-// Type for the icon names (keys of IconMap)
-export type IconName = keyof typeof IconMap;
+// Constants
+const ICON_SIZES = ['16', '24'] as const;
+const DEFAULT_SIZE = '16';
+const ICON_SUFFIX = 'Icon';
 
-// Interface for Icon component props
-interface IconProps extends React.SVGProps<SVGSVGElement> {
-  name: IconName;
+// Types
+type IconSize = typeof ICON_SIZES[number];
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+export type IconName = keyof typeof Icons16;
+
+// Interfaces
+interface IconSetType {
+  [key: string]: IconComponent;
 }
 
-// Mapping of icon names to their corresponding components
-const IconMap = {
-  activity: ActivityIcon,
-  alarm: AlarmIcon,
-  alert: AlertIcon,
-  'align-bottom': AlignBottomIcon,
-  'align-top': AlignTopIcon,
-  annotation: AnnotationIcon,
-  archive: ArchiveIcon,
-  'arrow-down': ArrowDownIcon,
-  'arrow-down-left': ArrowDownLeftIcon,
-  'arrow-down-right': ArrowDownRightIcon,
-  'arrow-left': ArrowLeftIcon,
-  'arrow-right': ArrowRightIcon,
-  'arrow-up': ArrowUpIcon,
-  'arrow-up-left': ArrowUpLeftIcon,
-  'arrow-up-right': ArrowUpRightIcon,
-  at: AtIcon,
-  battery: BatteryIcon,
-  beaker: BeakerIcon,
-  bell: BellIcon,
-  'book-closed': BookClosedIcon,
-  'book-open': BookOpenIcon,
-  'bookmark-plus': BookmarkPlusIcon,
-  bookmark: BookmarkIcon,
-  briefcase: BriefcaseIcon,
-  building: BuildingIcon,
-  bulb: BulbIcon,
-  calendar: CalendarIcon,
-  camera: CameraIcon,
-  cash: CashIcon,
-  'chart-bar': ChartBarIcon,
-  'chat-bubble-round-dots': ChatBubbleRoundDotsIcon,
-  'chat-bubble-round-text': ChatBubbleRoundTextIcon,
-  'chat-bubble-round': ChatBubbleRoundIcon,
-  'chat-bubble-square-dots': ChatBubbleSquareDotsIcon,
-  'chat-bubble-square-text': ChatBubbleSquareTextIcon,
-  'chat-bubble-square': ChatBubbleSquareIcon,
-  'chat-bubbles-round': ChatBubblesRoundIcon,
-  'chat-bubbles-square': ChatBubblesSquareIcon,
-  check: CheckIcon,
-  'chevron-down': ChevronDownIcon,
-  'chevron-left': ChevronLeftIcon,
-  'chevron-right': ChevronRightIcon,
-  'chevron-up': ChevronUpIcon,
-  'chevrons-down': ChevronsDownIcon,
-  'chevrons-left': ChevronsLeftIcon,
-  'chevrons-right': ChevronsRightIcon,
-  'chevrons-up': ChevronsUpIcon,
-  'circle-add': CircleAddIcon,
-  'circle-alert': CircleAlertIcon,
-  'circle-arrow-down': CircleArrowDownIcon,
-  'circle-arrow-left': CircleArrowLeftIcon,
-  'circle-arrow-right': CircleArrowRightIcon,
-  'circle-arrow-up': CircleArrowUpIcon,
-  'circle-caret-down': CircleCaretDownIcon,
-  'circle-caret-left': CircleCaretLeftIcon,
-  'circle-caret-right': CircleCaretRightIcon,
-  'circle-caret-up': CircleCaretUpIcon,
-  'circle-check': CircleCheckIcon,
-  'circle-close': CircleCloseIcon,
-  'circle-help': CircleHelpIcon,
-  'circle-info': CircleInfoIcon,
-  'circle-minus': CircleMinusIcon,
-  'clipboard-check': ClipboardCheckIcon,
-  'clipboard-x': ClipboardXIcon,
-  clipboard: ClipboardIcon,
-  clock: ClockIcon,
-  close: CloseIcon,
-  'cloud-download': CloudDownloadIcon,
-  'cloud-upload': CloudUploadIcon,
-  cog: CogIcon,
-  columns: ColumnsIcon,
-  "corner-down-left": CornerDownLeftIcon,
-  "corner-down-right": CornerDownRightIcon,
-  "credit-card": CreditCardIcon,
-  "currency-dollar": CurrencyDollarIcon,
-  dashboard: DashboardIcon,
-  disabled: DisabledIcon,
-  "document-minus": DocumentMinusIcon,
-  "document-plus": DocumentPlusIcon,
-  document: DocumentIcon,
-  documents: DocumentsIcon,
-  download: DownloadIcon,
-  duplicate: DuplicateIcon,
-  "edit-box": EditBoxIcon,
-  "external-link": ExternalLinkIcon,
-  filter: FilterIcon,
-  flag: FlagIcon,
-  floppy: FloppyIcon,
-  "folder-minus": FolderMinusIcon,
-  "folder-plus": FolderPlusIcon,
-  folder: FolderIcon,
-  globe: GlobeIcon,
-  grid: GridIcon,
-  hash: HashIcon,
-  headphones: HeadphonesIcon,
-  heart: HeartIcon,
-  inbox: InboxIcon,
-  layers: LayersIcon,
-  "layout-columns": LayoutColumnsIcon,
-  "layout-rows": LayoutRowsIcon,
-  link: LinkIcon,
-  list: ListIcon,
-  location: LocationIcon,
-  lock: LockIcon,
-  login: LoginIcon,
-  logout: LogoutIcon,
-  mail: MailIcon,
-  maximize: MaximizeIcon,
-  minimize: MinimizeIcon,
-  monitor: MonitorIcon,
-  "more-alt": MoreAltIcon,
-  more: MoreIcon,
-  page: PageIcon,
-  paperclip: PaperclipIcon,
-  pen: PenIcon,
-  "pen-line": PenLineIcon,
-  phone: PhoneIcon,
-  pin: PinIcon,
-  plus: PlusIcon,
-  redirect: RedirectIcon,
-  reload: ReloadIcon,
-  repeat: RepeatIcon,
-  rows: RowsIcon,
-  search: SearchIcon,
-  send: SendIcon,
-  share: ShareIcon,
-  "shield-alert": ShieldAlertIcon,
-  "shield-check": ShieldCheckIcon,
-  "shield-x": ShieldXIcon,
-  shield: ShieldIcon,
-  "shopping-bag": ShoppingBagIcon,
-  "shopping-cart": ShoppingCartIcon,
-  slash: SlashIcon,
-  slider: SliderIcon,
-  smartphone: SmartphoneIcon,
-  sparkles: SparklesIcon,
-  star: StarIcon,
-  "swap-horizontal": SwapHorizontalIcon,
-  "swap-vertical": SwapVerticalIcon,
-  tablet: TabletIcon,
-  tag: TagIcon,
-  "text-align-center": TextAlignCenterIcon,
-  "text-align-justify": TextAlignJustifyIcon,
-  "text-align-left": TextAlignLeftIcon,
-  "text-align-right": TextAlignRightIcon,
-  text: TextIcon,
-  "thumbs-down": ThumbsDownIcon,
-  "thumbs-up": ThumbsUpIcon,
-  trash: TrashIcon,
-  upload: UploadIcon,
-  user: UserIcon,
-  view: ViewIcon,
-  "zoom-in": ZoomInIcon,
+interface IconSetsType {
+  [size: string]: IconSetType;
+}
+
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  /** Name of the icon to render */
+  name: IconName;
+  /** Size variant of the icon (16px or 24px) */
+  size?: IconSize;
+}
+
+// Icon set configuration
+const IconSets: IconSetsType = {
+  '16': Icons16,
+  '24': Icons24,
 };
 
-// Icon component that takes a name prop and renders the corresponding icon
-export function Icon({ name, ...props }: IconProps): ReactElement | null {
-  const IconComponent = IconMap[name];
-  return IconComponent ? <IconComponent {...props} /> : null;
+/**
+ * Formats a kebab-case string to PascalCase
+ * @example arrow-left -> ArrowLeft
+ */
+const formatIconName = (name: string): string => {
+  return name
+    .split('-')
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('');
+};
+
+/**
+ * Icon component that renders SVG icons from the metal-icons library
+ */
+export function Icon({ 
+  name, 
+  size = DEFAULT_SIZE, 
+  ...props 
+}: IconProps): ReactElement | null {
+  const IconComponent = useMemo(() => {
+    try {
+      if (!ICON_SIZES.includes(size)) {
+        console.warn(`Invalid icon size: ${size}. Using default size: ${DEFAULT_SIZE}`);
+        size = DEFAULT_SIZE;
+      }
+
+      const IconSet = IconSets[size];
+      const formattedName = formatIconName(name);
+      return IconSet[`${formattedName}${ICON_SUFFIX}`] as IconComponent;
+    } catch (error) {
+      console.error(`Failed to load icon: ${name}`, error);
+      return null;
+    }
+  }, [name, size]);
+
+  if (!IconComponent) {
+    return null;
+  }
+
+  return <IconComponent {...props} />;
 }
