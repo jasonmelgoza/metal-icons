@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
+import { ChevronDownIcon } from 'metal-icons/16/solid';
 
 // Type definitions
 type IconSize = '16' | '24';
@@ -35,6 +36,7 @@ const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
       <option value="16">16px</option>
       <option value="24">24px</option>
     </select>
+    <ChevronDownIcon className="icon-chevron" aria-hidden="true" />
   </div>
 );
 
