@@ -14,7 +14,7 @@ interface IconObject {
 
 interface SizeSelectorProps {
   value: IconSize;
-  onChange: (size: IconSize) => void;
+  onChange: (value: IconSize) => void;
 }
 
 interface SearchInputProps {
