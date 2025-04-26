@@ -1,7 +1,7 @@
 // src/components/Layout.tsx
 import React, { ReactNode } from 'react';
 import versionData from '../data/version.json';
-import '../styles/App.css';
+import Styles from '../styles/App.module.css';
 
 const SOCIAL_LINKS = [
   {
@@ -30,16 +30,16 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps): React.ReactElement {
   return (
-    <div className="layout">
-      <div className="container">
-        <header className="header">
+    <div className={Styles.layout}>
+      <div className={Styles.container}>
+        <header className={Styles.header}>
           <h1>Metal Icons</h1>
           <p>A flexible and simple set of icons for your next project.</p>
         </header>
-        <main className="main">
+        <main className={Styles.main}>
           {children}
         </main>
-        <footer className="footer">
+        <footer className={Styles.footer}>
           <div>
             <p>
               <a href="https://github.com/jasonmelgoza/metal-icons" target="_blank" rel="noopener noreferrer">
