@@ -1,8 +1,7 @@
 // src/components/Layout.tsx
 import React, { ReactNode } from 'react';
 import versionData from '../data/version.json';
-import Styles from '../styles/Layout.module.css';
-import '../styles/App.css';
+import Styles from '../styles/App.module.css';
 
 const SOCIAL_LINKS = [
   {

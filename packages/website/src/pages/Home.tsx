@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
 import { ChevronDownIcon } from 'metal-icons/16/solid';
+import Styles from '../styles/App.module.css';
 
 // Type definitions
 type IconSize = '16' | '24';
@@ -27,7 +28,7 @@ interface InstallCommandProps {
 
 // UI Components
 const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
-  <div className="menu">
+  <div className={Styles.size}>
     <select
       value={value}
       onChange={(e) => onChange(e.target.value as IconSize)}
@@ -41,7 +42,7 @@ const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
 );
 
 const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
-  <div className="filter">
+  <div className={Styles.search}>
     <input
       id="search"
       name="search"
@@ -55,7 +56,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
 );
 
 const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
-  <div className="install">
+  <div className={Styles.install}>
     <input
       readOnly
       type="text"
@@ -67,16 +68,16 @@ const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
 );
 
 const IconGrid: React.FC<{ icons: IconObject[]; iconSize: IconSize }> = ({ icons, iconSize }) => (
-  <div className="grid" role="grid">
+  <div className={Styles.grid} role="grid">
     {icons.length > 0 ? (
       icons.map((icon) => (
-        <div className="tile" key={icon.id} role="gridcell">
+        <div className={Styles.tile} key={icon.id} role="gridcell">
           <Icon name={icon.name} size={iconSize} aria-hidden="true" />
           <p>{icon.name}</p>
         </div>
       ))
     ) : (
-      <div className="empty" role="status">
+      <div className={Styles.empty} role="status">
         No icons found
       </div>
     )}
@@ -127,7 +128,7 @@ const Home: React.FC = () => {
   if (loading) {
     return (
       <Layout>
-        <div role="status" aria-live="polite" className="loading-state">
+        <div role="status" aria-live="polite" className={Styles.loading}>
           Loading icons...
         </div>
       </Layout>
@@ -148,7 +149,7 @@ const Home: React.FC = () => {
   return (
     <Layout>
       <InstallCommand command="yarn add metal-icons" />
-      <div className="controls">
+      <div className={Styles.controls}>
         <SearchInput value={searchTerm} onChange={handleSearch} />
         <SizeSelector value={iconSize} onChange={setIconSize} />
       </div>
