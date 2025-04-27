@@ -465,150 +465,158 @@
   },
   {
     "id": 117,
-    "name": "phone"
+    "name": "pencil"
   },
   {
     "id": 118,
-    "name": "pin"
+    "name": "pencil-line"
   },
   {
     "id": 119,
-    "name": "plus"
+    "name": "phone"
   },
   {
     "id": 120,
-    "name": "redirect"
+    "name": "pin"
   },
   {
     "id": 121,
-    "name": "reload"
+    "name": "plus"
   },
   {
     "id": 122,
-    "name": "repeat"
+    "name": "redirect"
   },
   {
     "id": 123,
-    "name": "rows"
+    "name": "reload"
   },
   {
     "id": 124,
-    "name": "search"
+    "name": "repeat"
   },
   {
     "id": 125,
-    "name": "send"
+    "name": "rows"
   },
   {
     "id": 126,
-    "name": "share"
+    "name": "search"
   },
   {
     "id": 127,
-    "name": "shield"
+    "name": "send"
   },
   {
     "id": 128,
-    "name": "shield-alert"
+    "name": "share"
   },
   {
     "id": 129,
-    "name": "shield-check"
+    "name": "shield"
   },
   {
     "id": 130,
-    "name": "shield-x"
+    "name": "shield-alert"
   },
   {
     "id": 131,
-    "name": "shopping-bag"
+    "name": "shield-check"
   },
   {
     "id": 132,
-    "name": "shopping-cart"
+    "name": "shield-x"
   },
   {
     "id": 133,
-    "name": "slash"
+    "name": "shopping-bag"
   },
   {
     "id": 134,
-    "name": "slider"
+    "name": "shopping-cart"
   },
   {
     "id": 135,
-    "name": "smartphone"
+    "name": "slash"
   },
   {
     "id": 136,
-    "name": "sparkles"
+    "name": "slider"
   },
   {
     "id": 137,
-    "name": "star"
+    "name": "smartphone"
   },
   {
     "id": 138,
-    "name": "swap-horizontal"
+    "name": "sparkles"
   },
   {
     "id": 139,
-    "name": "swap-vertical"
+    "name": "star"
   },
   {
     "id": 140,
-    "name": "tablet"
+    "name": "swap-horizontal"
   },
   {
     "id": 141,
-    "name": "tag"
+    "name": "swap-vertical"
   },
   {
     "id": 142,
-    "name": "text"
+    "name": "tablet"
   },
   {
     "id": 143,
-    "name": "text-align-center"
+    "name": "tag"
   },
   {
     "id": 144,
-    "name": "text-align-justify"
+    "name": "text"
   },
   {
     "id": 145,
-    "name": "text-align-left"
+    "name": "text-align-center"
   },
   {
     "id": 146,
-    "name": "text-align-right"
+    "name": "text-align-justify"
   },
   {
     "id": 147,
-    "name": "thumbs-down"
+    "name": "text-align-left"
   },
   {
     "id": 148,
-    "name": "thumbs-up"
+    "name": "text-align-right"
   },
   {
     "id": 149,
-    "name": "trash"
+    "name": "thumbs-down"
   },
   {
     "id": 150,
-    "name": "upload"
+    "name": "thumbs-up"
   },
   {
     "id": 151,
-    "name": "user"
+    "name": "trash"
   },
   {
     "id": 152,
-    "name": "view"
+    "name": "upload"
   },
   {
     "id": 153,
+    "name": "user"
+  },
+  {
+    "id": 154,
+    "name": "view"
+  },
+  {
+    "id": 155,
     "name": "zoom-in"
   }
 ]
