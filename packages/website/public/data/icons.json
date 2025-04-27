@@ -610,5 +610,13 @@
   {
     "id": 153,
     "name": "zoom-in"
+  },
+  {
+    "id": 154,
+    "name": "pencil"
+  },
+  {
+    "id": 155,
+    "name": "pencil-line"
   }
 ]
