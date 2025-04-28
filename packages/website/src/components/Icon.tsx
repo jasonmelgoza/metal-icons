@@ -1,16 +1,21 @@
-import * as Icons16 from 'metal-icons/16/solid';
-import * as Icons24 from 'metal-icons/24/solid';
+import * as Icons16Solid from 'metal-icons/16/solid';
+import * as Icons24Solid from 'metal-icons/24/solid';
+import * as Icons16Outline from 'metal-icons/16/outline';
+import * as Icons24Outline from 'metal-icons/24/outline';
 import { ReactElement, useMemo } from 'react';
 
 // Constants
 const ICON_SIZES = ['16', '24'] as const;
+const ICON_VARIANTS = ['solid', 'outline'] as const;
 const DEFAULT_SIZE = '16';
+const DEFAULT_VARIANT = 'solid';
 const ICON_SUFFIX = 'Icon';
 
 // Types
 type IconSize = typeof ICON_SIZES[number];
+type IconVariant = typeof ICON_VARIANTS[number];
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
-export type IconName = keyof typeof Icons16;
+export type IconName = keyof typeof Icons16Solid;
 
 // Interfaces
 interface IconSetType {
@@ -18,7 +23,9 @@ interface IconSetType {
 }
 
 interface IconSetsType {
-  [size: string]: IconSetType;
+  [size: string]: {
+    [variant: string]: IconSetType;
+  };
 }
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
@@ -26,12 +33,20 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
   name: IconName;
   /** Size variant of the icon (16px or 24px) */
   size?: IconSize;
+  /** Style variant of the icon (solid or outline) */
+  variant?: IconVariant;
 }
 
 // Icon set configuration
 const IconSets: IconSetsType = {
-  '16': Icons16,
-  '24': Icons24,
+  '16': {
+    'solid': Icons16Solid,
+    'outline': Icons16Outline,
+  },
+  '24': {
+    'solid': Icons24Solid,
+    'outline': Icons24Outline,
+  }
 };
 
 /**
@@ -50,7 +65,8 @@ const formatIconName = (name: string): string => {
  */
 export function Icon({ 
   name, 
-  size = DEFAULT_SIZE, 
+  size = DEFAULT_SIZE,
+  variant = DEFAULT_VARIANT,
   ...props 
 }: IconProps): ReactElement | null {
   const IconComponent = useMemo(() => {
@@ -60,14 +76,19 @@ export function Icon({
         size = DEFAULT_SIZE;
       }
 
-      const IconSet = IconSets[size];
+      if (!ICON_VARIANTS.includes(variant)) {
+        console.warn(`Invalid icon variant: ${variant}. Using default variant: ${DEFAULT_VARIANT}`);
+        variant = DEFAULT_VARIANT;
+      }
+
+      const IconSet = IconSets[size][variant];
       const formattedName = formatIconName(name);
       return IconSet[`${formattedName}${ICON_SUFFIX}`] as IconComponent;
     } catch (error) {
       console.error(`Failed to load icon: ${name}`, error);
       return null;
     }
-  }, [name, size]);
+  }, [name, size, variant]);
 
   if (!IconComponent) {
     return null;
