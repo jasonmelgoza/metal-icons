@@ -141,6 +141,24 @@
   }
 }
 
+/* Controls */
+
+.controls {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  gap: 1rem;
+}
+
 /* Size control */
 
 .size {
@@ -284,15 +302,6 @@
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: 0.875rem;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  height: 58px;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-  gap: 1rem;
 }
 
 /* Grid */
