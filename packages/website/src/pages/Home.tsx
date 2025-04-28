@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
-import { ChevronDownIcon } from 'metal-icons/16/solid';
+import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid';
 import Styles from '../styles/App.module.css';
 
 // Type definitions
 type IconSize = '16' | '24';
+type IconVariant = 'solid' | 'outline';
 
 interface IconObject {
   id: string;
@@ -15,6 +16,11 @@ interface IconObject {
 interface SizeSelectorProps {
   value: IconSize;
   onChange: (value: IconSize) => void;
+}
+
+interface VariantSelectorProps {
+  value: IconVariant;
+  onChange: (value: IconVariant) => void;
 }
 
 interface SearchInputProps {
@@ -41,6 +47,20 @@ const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
   </div>
 );
 
+const VariantSelector: React.FC<VariantSelectorProps> = ({ value, onChange }) => (
+  <div className={Styles.variant}>
+    <select
+      value={value}
+      onChange={(e) => onChange(e.target.value as IconVariant)}
+      aria-label="Icon variant"
+    >
+      <option value="solid">Solid</option>
+      <option value="outline">Outline</option>
+    </select>
+    <ChevronDownIcon className="icon-chevron" aria-hidden="true" />
+  </div>
+);
+
 const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
   <div className={Styles.search}>
     <input
@@ -52,6 +72,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
       onChange={onChange}
       aria-label="Search icons"
     />
+    <SearchIcon className="icon-search" aria-hidden="true" />
   </div>
 );
 
@@ -67,12 +88,17 @@ const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
   </div>
 );
 
-const IconGrid: React.FC<{ icons: IconObject[]; iconSize: IconSize }> = ({ icons, iconSize }) => (
+// Update IconGrid to support the variant prop
+const IconGrid: React.FC<{ 
+  icons: IconObject[]; 
+  iconSize: IconSize;
+  iconVariant: IconVariant;
+}> = ({ icons, iconSize, iconVariant }) => (
   <div className={Styles.grid} role="grid">
     {icons.length > 0 ? (
       icons.map((icon) => (
         <div className={Styles.tile} key={icon.id} role="gridcell">
-          <Icon name={icon.name} size={iconSize} aria-hidden="true" />
+          <Icon name={icon.name} size={iconSize} variant={iconVariant} aria-hidden="true" />
           <p>{icon.name}</p>
         </div>
       ))
@@ -86,8 +112,9 @@ const IconGrid: React.FC<{ icons: IconObject[]; iconSize: IconSize }> = ({ icons
 
 // Main component
 const Home: React.FC = () => {
-  // State
+  // Updated state to include variant
   const [iconSize, setIconSize] = useState<IconSize>('16');
+  const [iconVariant, setIconVariant] = useState<IconVariant>('solid');
   const [searchTerm, setSearchTerm] = useState('');
   const [icons, setIcons] = useState<IconObject[]>([]);
   const [loading, setLoading] = useState(true);
@@ -151,9 +178,12 @@ const Home: React.FC = () => {
       <InstallCommand command="yarn add metal-icons" />
       <div className={Styles.controls}>
         <SearchInput value={searchTerm} onChange={handleSearch} />
-        <SizeSelector value={iconSize} onChange={setIconSize} />
+        <div className={Styles.options}>
+          <SizeSelector value={iconSize} onChange={setIconSize} />
+          <VariantSelector value={iconVariant} onChange={setIconVariant} />
+        </div>
       </div>
-      <IconGrid icons={filteredIcons} iconSize={iconSize} />
+      <IconGrid icons={filteredIcons} iconSize={iconSize} iconVariant={iconVariant} />
     </Layout>
   );
 };

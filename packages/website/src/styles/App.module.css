@@ -141,6 +141,24 @@
   }
 }
 
+/* Controls */
+
+.controls {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  gap: 1rem;
+}
+
 /* Size control */
 
 .size {
@@ -184,7 +202,50 @@
   color: rgb(var(--fg-rgb));
 }
 
-/* Search controls */
+/* Varant control */
+
+.variant {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+}
+
+.variant select {
+  height: 100%;
+  padding: 1rem;
+  padding-right: 2.5em;
+  border: 1px solid rgb(var(--border-rgb));
+  border-radius: 0.5rem;
+  color: rgb(var(--fg-muted-rgb));
+  background-color: rgb(var(--surface-rgb));
+  font-size: 1rem;
+  appearance: none;
+}
+
+.variant select:focus {
+  --border-rgb: var(--fg-rgb);
+  border-color: rgba(var(--border-rgb), 0.25);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.variant svg {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  color: rgb(var(--fg-muted-rgb));
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.variant select:focus+svg {
+  color: rgb(var(--fg-rgb));
+}
+
+/* Search control */
 
 .search {
   position: relative;
@@ -202,9 +263,10 @@
   max-width: 640px;
   height: 100%;
   padding: 1rem;
+  padding-left: 2.5em;
   border: 1px solid rgb(var(--border-rgb));
   border-radius: 0.5rem;
-  color: rgb(var(--fg-muted-rgb));
+  color: rgb(var(--fg-rgb));
   background-color: rgb(var(--surface-rgb));
   font-size: 1rem;
 }
@@ -214,6 +276,23 @@
   border-color: rgba(var(--border-rgb), 0.25);
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.search svg {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  color: rgb(var(--fg-muted-rgb));
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search input[type="text"]:focus+svg {
+  color: rgb(var(--fg-rgb));
+}
+
+.search input[type="text"]::placeholder {
+  color: rgba(var(--fg-muted-rgb), 0.5);
 }
 
 /* Install */
@@ -241,15 +320,6 @@
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: 0.875rem;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  height: 58px;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-  gap: 1rem;
 }
 
 /* Grid */
