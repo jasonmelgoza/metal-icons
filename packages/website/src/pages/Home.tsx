@@ -177,10 +177,8 @@ const Home: React.FC = () => {
       <InstallCommand command="yarn add metal-icons" />
       <div className={Styles.controls}>
         <SearchInput value={searchTerm} onChange={handleSearch} />
-        <div className={Styles.options}>
-          <SizeSelector value={iconSize} onChange={setIconSize} />
-          <VariantSelector value={iconVariant} onChange={setIconVariant} />
-        </div>
+        <SizeSelector value={iconSize} onChange={setIconSize} />
+        <VariantSelector value={iconVariant} onChange={setIconVariant} />
       </div>
       <IconGrid icons={filteredIcons} iconSize={iconSize} iconVariant={iconVariant} />
     </Layout>
