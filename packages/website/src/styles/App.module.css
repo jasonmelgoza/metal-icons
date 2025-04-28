@@ -263,9 +263,10 @@
   max-width: 640px;
   height: 100%;
   padding: 1rem;
+  padding-left: 2.5em;
   border: 1px solid rgb(var(--border-rgb));
   border-radius: 0.5rem;
-  color: rgb(var(--fg-muted-rgb));
+  color: rgb(var(--fg-rgb));
   background-color: rgb(var(--surface-rgb));
   font-size: 1rem;
 }
@@ -275,6 +276,23 @@
   border-color: rgba(var(--border-rgb), 0.25);
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.search svg {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  color: rgb(var(--fg-muted-rgb));
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search input[type="text"]:focus+svg {
+  color: rgb(var(--fg-rgb));
+}
+
+.search input[type="text"]::placeholder {
+  color: rgba(var(--fg-muted-rgb), 0.5);
 }
 
 /* Install */

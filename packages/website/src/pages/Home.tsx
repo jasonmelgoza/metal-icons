@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
-import { ChevronDownIcon } from 'metal-icons/16/solid';
+import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid';
 import Styles from '../styles/App.module.css';
 
 // Type definitions
@@ -72,6 +72,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
       onChange={onChange}
       aria-label="Search icons"
     />
+    <SearchIcon className="icon-search" aria-hidden="true" />
   </div>
 );
 
