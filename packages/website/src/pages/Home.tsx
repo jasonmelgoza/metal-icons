@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
 import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid';
+import { CircleCloseIcon } from 'metal-icons/24/outline';
 import Styles from '../styles/App.module.css';
 
 // Type definitions
@@ -26,6 +27,7 @@ interface VariantSelectorProps {
 interface SearchInputProps {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  totalIcons: number;
 }
 
 interface InstallCommandProps {
@@ -61,16 +63,16 @@ const VariantSelector: React.FC<VariantSelectorProps> = ({ value, onChange }) =>
   </div>
 );
 
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
+const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, totalIcons }) => (
   <div className={Styles.search}>
     <input
       id="search"
       name="search"
       type="text"
-      placeholder="Search icons..."
+      placeholder={`Search ${totalIcons} icons...`}
       value={value}
       onChange={onChange}
-      aria-label="Search icons"
+      aria-label={`Search ${totalIcons} icons`}
     />
     <SearchIcon className="icon-search" aria-hidden="true" />
   </div>
@@ -104,7 +106,8 @@ const IconGrid: React.FC<{
       ))
     ) : (
       <div className={Styles.empty} role="status">
-        No icons found
+        <CircleCloseIcon aria-hidden="true" />
+        <span>No icons found</span>
       </div>
     )}
   </div>
@@ -177,7 +180,11 @@ const Home: React.FC = () => {
     <Layout>
       <InstallCommand command="yarn add metal-icons" />
       <div className={Styles.controls}>
-        <SearchInput value={searchTerm} onChange={handleSearch} />
+        <SearchInput 
+          value={searchTerm} 
+          onChange={handleSearch} 
+          totalIcons={icons.length} 
+        />
         <div className={Styles.options}>
           <SizeSelector value={iconSize} onChange={setIconSize} />
           <VariantSelector value={iconVariant} onChange={setIconVariant} />
