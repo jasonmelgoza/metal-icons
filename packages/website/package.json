@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "metal-icons": "^0.2.8",
+    "motion": "^12.10.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
