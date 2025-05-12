@@ -91,10 +91,13 @@ export default function Hero() {
     const numIconsToShuffle = 3;
     const newOrder = [...order];
     
-    // Get unique random indices
+    // Get unique random indices, excluding index 13 (14th item)
     const indices = new Set<number>();
     while (indices.size < numIconsToShuffle) {
-      indices.add(Math.floor(Math.random() * order.length));
+      const randomIndex = Math.floor(Math.random() * order.length);
+      if (randomIndex !== 13) { // Skip the 14th item (index 13)
+        indices.add(randomIndex);
+      }
     }
     const uniqueIndices = Array.from(indices);
     
@@ -123,7 +126,10 @@ export default function Hero() {
 
   // Memoize the random icon selection
   const selectRandomIcon = useCallback(() => {
-    const randomIndex = Math.floor(Math.random() * order.length)
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * order.length);
+    } while (randomIndex === 13); // Skip the 14th item (index 13)
     setSelectedIconId(order[randomIndex].id)
   }, [order]);
 
@@ -138,21 +144,24 @@ export default function Hero() {
   }, [order, selectedIconId, selectRandomIcon])
 
   // Memoize the icon rendering function
-  const renderIcon = useCallback((iconType: IconType) => {
+  const renderIcon = useCallback((iconType: IconType, index: number) => {
+    if (index === 13) { // 14th item
+      return <span style={{ fontSize: '19px' }}>🤘</span>;
+    }
     const Icon = iconMap[iconType]
     return Icon ? <Icon /> : <FolderIcon />
   }, [iconMap])
 
   // Memoize the list of icons
   const iconList = useMemo(() => (
-    order.map((item) => (
+    order.map((item, index) => (
       <motion.li key={item.id} layout transition={spring} style={{ ...itemStyle }}>
         <motion.div
-          animate={selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 }}
+          animate={index === 13 ? {} : (selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 })}
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}
         >
-          {renderIcon(item.icon)}
+          {renderIcon(item.icon, index)}
         </motion.div>
       </motion.li>
     ))
