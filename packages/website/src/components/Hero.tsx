@@ -1,7 +1,7 @@
 "use client"
 
 import * as motion from "motion/react-client"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo, useCallback } from "react"
 import {
   ActivityIcon,
   AlarmIcon,
@@ -41,133 +41,131 @@ import {
   SearchIcon,
 } from "metal-icons/16/solid"
 
+type IconType = 'activity' | 'alarm' | 'alert' | 'annotation' | 'archive' | 'at' | 'battery' | 'beaker' | 'bell' | 'book-closed' | 'bookmark' | 'briefcase' | 'building' | 'bulb' | 'calendar' | 'camera' | 'cash' | 'chart-bar' | 'chat-bubble-round' | 'clock' | 'cloud-download' | 'cog' | 'credit-card' | 'dashboard' | 'document' | 'download' | 'flag' | 'folder' | 'globe' | 'heart' | 'inbox' | 'link' | 'location' | 'lock' | 'mail' | 'search'
+
 export default function Hero() {
   const [order, setOrder] = useState(initialOrder)
-  const [selectedIconId, setSelectedIconId] = useState(null)
+  const [selectedIconId, setSelectedIconId] = useState<string | null>(null)
+
+  const iconMap = useMemo(() => ({
+    activity: ActivityIcon,
+    alarm: AlarmIcon,
+    alert: AlertIcon,
+    annotation: AnnotationIcon,
+    archive: ArchiveIcon,
+    at: AtIcon,
+    battery: BatteryIcon,
+    beaker: BeakerIcon,
+    bell: BellIcon,
+    'book-closed': BookClosedIcon,
+    bookmark: BookmarkIcon,
+    briefcase: BriefcaseIcon,
+    building: BuildingIcon,
+    bulb: BulbIcon,
+    calendar: CalendarIcon,
+    camera: CameraIcon,
+    cash: CashIcon,
+    'chart-bar': ChartBarIcon,
+    'chat-bubble-round': ChatBubbleRoundIcon,
+    clock: ClockIcon,
+    'cloud-download': CloudDownloadIcon,
+    cog: CogIcon,
+    'credit-card': CreditCardIcon,
+    dashboard: DashboardIcon,
+    document: DocumentIcon,
+    download: DownloadIcon,
+    flag: FlagIcon,
+    folder: FolderIcon,
+    globe: GlobeIcon,
+    heart: HeartIcon,
+    inbox: InboxIcon,
+    link: LinkIcon,
+    location: LocationIcon,
+    lock: LockIcon,
+    mail: MailIcon,
+    search: SearchIcon,
+  }), [])
+
+  // Memoize the shuffle function
+  const shuffleIcons = useCallback(() => {
+    const numIconsToShuffle = 3;
+    const newOrder = [...order];
+    
+    // Get unique random indices
+    const indices = new Set<number>();
+    while (indices.size < numIconsToShuffle) {
+      indices.add(Math.floor(Math.random() * order.length));
+    }
+    const uniqueIndices = Array.from(indices);
+    
+    // Get the items to shuffle
+    const itemsToShuffle = uniqueIndices.map(i => newOrder[i]);
+    
+    // Shuffle the items
+    for (let i = itemsToShuffle.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [itemsToShuffle[i], itemsToShuffle[j]] = [itemsToShuffle[j], itemsToShuffle[i]];
+    }
+    
+    // Put the shuffled items back
+    uniqueIndices.forEach((originalIndex, i) => {
+      newOrder[originalIndex] = itemsToShuffle[i];
+    });
+    
+    setOrder(newOrder);
+  }, [order]);
 
   // Effect for shuffling icons
   useEffect(() => {
-    const shuffleTimeout = setTimeout(() => setOrder(shuffle([...order])), 6000)
-    return () => clearTimeout(shuffleTimeout)
-  }, [order])
+    const shuffleTimeout = setTimeout(shuffleIcons, 6000);
+    return () => clearTimeout(shuffleTimeout);
+  }, [shuffleIcons]);
+
+  // Memoize the random icon selection
+  const selectRandomIcon = useCallback(() => {
+    const randomIndex = Math.floor(Math.random() * order.length)
+    setSelectedIconId(order[randomIndex].id)
+  }, [order]);
 
   // Effect for rotating a random icon
   useEffect(() => {
-    const selectRandomIcon = () => {
-      const randomIndex = Math.floor(Math.random() * order.length)
-      setSelectedIconId(order[randomIndex].id)
-    }
-
-    // Select an icon immediately on first render
     if (selectedIconId === null) {
       selectRandomIcon()
     }
 
-    const rotationTimeout = setTimeout(() => {
-      selectRandomIcon()
-    }, 4000)
-
+    const rotationTimeout = setTimeout(selectRandomIcon, 4000)
     return () => clearTimeout(rotationTimeout)
-  }, [order, selectedIconId])
+  }, [order, selectedIconId, selectRandomIcon])
 
-  // Function to render the correct icon based on the icon type
-  const renderIcon = (iconType) => {
-    switch (iconType) {
-      case "activity":
-        return <ActivityIcon />
-      case "alarm":
-        return <AlarmIcon />
-      case "alert":
-        return <AlertIcon />
-      case "annotation":
-        return <AnnotationIcon />
-      case "archive":
-        return <ArchiveIcon />
-      case "at":
-        return <AtIcon />
-      case "battery":
-        return <BatteryIcon />
-      case "beaker":
-        return <BeakerIcon />
-      case "bell":
-        return <BellIcon />
-      case "book-closed":
-        return <BookClosedIcon />
-      case "bookmark":
-        return <BookmarkIcon />
-      case "briefcase":
-        return <BriefcaseIcon />
-      case "building":
-        return <BuildingIcon />
-      case "bulb":
-        return <BulbIcon />
-      case "calendar":
-        return <CalendarIcon />
-      case "camera":
-        return <CameraIcon />
-      case "cash":
-        return <CashIcon />
-      case "chart-bar":
-        return <ChartBarIcon />
-      case "chat-bubble-round":
-        return <ChatBubbleRoundIcon />
-      case "clock":
-        return <ClockIcon />
-      case "cloud-download":
-        return <CloudDownloadIcon />
-      case "cog":
-        return <CogIcon />
-      case "credit-card":
-        return <CreditCardIcon />
-      case "dashboard":
-        return <DashboardIcon />
-      case "document":
-        return <DocumentIcon />
-      case "download":
-        return <DownloadIcon />
-      case "flag":
-        return <FlagIcon />
-      case "folder":
-        return <FolderIcon />
-      case "globe":
-        return <GlobeIcon />
-      case "heart":
-        return <HeartIcon />
-      case "inbox":
-        return <InboxIcon />
-      case "link":
-        return <LinkIcon />
-      case "location":
-        return <LocationIcon />
-      case "lock":
-        return <LockIcon />
-      case "mail":
-        return <MailIcon />
-      case "search":
-        return <SearchIcon />
-      default:
-        return <FolderIcon />
-    }
-  }
+  // Memoize the icon rendering function
+  const renderIcon = useCallback((iconType: IconType) => {
+    const Icon = iconMap[iconType]
+    return Icon ? <Icon /> : <FolderIcon />
+  }, [iconMap])
+
+  // Memoize the list of icons
+  const iconList = useMemo(() => (
+    order.map((item) => (
+      <motion.li key={item.id} layout transition={spring} style={{ ...itemStyle }}>
+        <motion.div
+          animate={selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}
+        >
+          {renderIcon(item.icon)}
+        </motion.div>
+      </motion.li>
+    ))
+  ), [order, selectedIconId, renderIcon])
 
   return (
     <ul style={container}>
-      {order.map((item) => (
-        <motion.li key={item.id} layout transition={spring} style={{ ...itemStyle }}>
-          <motion.div
-            animate={selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}
-          >
-            {renderIcon(item.icon)}
-          </motion.div>
-        </motion.li>
-      ))}
+      {iconList}
     </ul>
   )
 }
 
-const initialOrder = [
+const initialOrder: { id: string; icon: IconType }[] = [
   { id: "item1", icon: "activity" },
   { id: "item2", icon: "alarm" },
   { id: "item3", icon: "alert" },
@@ -207,10 +205,15 @@ const initialOrder = [
 ]
 
 /**
- * ==============   Utils   ================
+ * Fisher-Yates shuffle algorithm
  */
-function shuffle([...array]) {
-  return array.sort(() => Math.random() - 0.05)
+function shuffle<T>(array: T[]): T[] {
+  const result = [...array]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
 }
 
 /**
@@ -226,8 +229,8 @@ const spring = {
 const container = {
   listStyle: "none",
   padding: 0,
-  margin: 0,
-  position: "relative",
+  margin: "0 0 4rem 0",
+  position: "relative" as const,
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(16px, 1fr))",
   gap: 32,
