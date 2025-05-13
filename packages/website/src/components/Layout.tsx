@@ -38,7 +38,7 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
+            duration: 0.9,
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01]
           }}
@@ -51,13 +51,13 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
+            duration: 0.9,
             delay: 0.4,
             ease: [0, 0.71, 0.2, 1.01]
           }}
         >
           <h1>Metal Icons</h1>
-          <p>A flexible and simple set of icons for your next project.</p>
+          <p>A solid collection of simple icons for your next project.</p>
         </motion.header>
 
         <motion.main 
@@ -65,7 +65,7 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
+            duration: 0.9,
             delay: 0.6,
             ease: [0, 0.71, 0.2, 1.01]
           }}
@@ -78,7 +78,7 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
+            duration: 0.9,
             delay: 0.8,
             ease: [0, 0.71, 0.2, 1.01]
           }}
