@@ -1,5 +1,7 @@
 // src/components/Layout.tsx
 import React, { ReactNode } from 'react';
+import * as motion from "motion/react-client";
+import Hero from './Hero';
 import versionData from '../data/version.json';
 import Styles from '../styles/App.module.css';
 
@@ -32,14 +34,55 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
   return (
     <div className={Styles.layout}>
       <div className={Styles.container}>
-        <header className={Styles.header}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
+          <Hero />
+        </motion.div>
+        
+        <motion.header 
+          className={Styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.4,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
           <h1>Metal Icons</h1>
-          <p>A flexible and simple set of icons for your next project.</p>
-        </header>
-        <main className={Styles.main}>
+          <p>A clean, reliable icon set built for modern projects.</p>
+        </motion.header>
+
+        <motion.main 
+          className={Styles.main}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.6,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
           {children}
-        </main>
-        <footer className={Styles.footer}>
+        </motion.main>
+
+        <motion.footer 
+          className={Styles.footer}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.8,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
           <div>
             <p>
               <a href="https://github.com/jasonmelgoza/metal-icons" target="_blank" rel="noopener noreferrer">
@@ -75,8 +118,10 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
               </a>
             </p>
           </div>
-        </footer>
+        </motion.footer>
       </div>
     </div>
   );
 }
+
+export default Layout;
