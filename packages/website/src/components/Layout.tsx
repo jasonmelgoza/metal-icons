@@ -57,7 +57,7 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
           }}
         >
           <h1>Metal Icons</h1>
-          <p>Strong, simple icons—ready for your next project.</p>
+          <p>A clean, reliable icon set built for modern projects.</p>
         </motion.header>
 
         <motion.main 
