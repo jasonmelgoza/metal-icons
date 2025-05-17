@@ -189,7 +189,7 @@ export default function Hero() {
     (iconType: IconType, index: number) => {
       if (index === 13) {
         // 14th item
-        return <span style={{ fontSize: '20px' }}>🤘</span>
+        return <span className={Styles["hero-emoji"]}>🤘</span>
       }
       const Icon = iconMap[iconType]
       return Icon ? <Icon /> : <FolderIcon />

@@ -421,3 +421,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.hero-emoji {
+  font-size: 20px;
+}
