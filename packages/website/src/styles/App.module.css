@@ -420,6 +420,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(var(--fg-rgb));
+}
+
+.hero-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--fg-rgb));
 }
 
 .hero-emoji {
