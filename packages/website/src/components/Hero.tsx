@@ -206,13 +206,8 @@ export default function Hero() {
             animate={
               index === 13 ? {} : selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 }
             }
+            className={Styles["hero-item-icon"]}
             transition={{ duration: 1, ease: 'easeInOut' }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-            }}
           >
             {renderIcon(item.icon, index)}
           </motion.div>

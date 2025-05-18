@@ -4,7 +4,7 @@
   --max-width: 1220px;
   --border-radius: 6px;
 
-  --fg-rgb: 32, 32, 32;
+  --fg-rgb: 7, 8, 10;
   --fg-muted-rgb: 100, 100, 100;
   --bg-rgb: 252, 252, 252;
 
@@ -16,7 +16,7 @@
   :root {
     --fg-rgb: 238, 238, 238;
     --fg-muted-rgb: 180, 180, 180;
-    --bg-rgb: 17, 17, 17; 
+    --bg-rgb: 7, 8, 10; 
 
     --surface-rgb: 26, 26, 26;
     --border-rgb: 48, 48, 48;
