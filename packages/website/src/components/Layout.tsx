@@ -61,6 +61,7 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
         </motion.header>
 
         <motion.main 
+          role="main"
           className={Styles.main}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
