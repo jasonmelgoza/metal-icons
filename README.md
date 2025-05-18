@@ -11,7 +11,7 @@
 <h3 align="center">Metal Icons</h3>
 
 <p align="center">
-  A versatile collection of icons designed for your next Figma or React project.
+  A clean, reliable icon set built for your next Figma or React project.
 </p>
 
 ## Goals
@@ -64,5 +64,13 @@ The Figma Metal-Icons component library is ready to be imported, with both sizes
 ## License
 
 Licensed under the MIT License. Copyright © 2023-present Jason Melgoza.
+
+## DeepWiki
+
+For comprehensive information and insights about this project, visit the [DeepWiki page](https://deepwiki.com/jasonmelgoza/metal-icons). 
+
+DeepWiki is an AI-powered resource offering valuable information, FAQs, and community contributions related to Metal Icons. If you have any questions or need further assistance, this page is an excellent starting point!
+
+Feel free to explore additional resources and documentation to enhance your understanding and usage of the project.
 
 See [LICENSE](./LICENSE) for more information.
