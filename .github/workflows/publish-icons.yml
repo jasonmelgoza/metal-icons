@@ -3,7 +3,7 @@ name: Publish to NPM
 on:
   push:
     tags:
-      - 'v*'
+      - 'icons-v*'
   workflow_dispatch:
     inputs:
       version:
