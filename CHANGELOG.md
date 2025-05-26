@@ -6,6 +6,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [v0.2.10] - 2025-05-26
+
+## 🚀 Features
+
+- Changelog Refactor
+   - PR: #55
+- Refactor Changelog Workflow
+   - PR: #56
+- Share Icon Update
+   - PR: #60
+- Bump metal-icons package version to 0.2.10 and update version in vers…
+   - PR: #61
+
+## 📝 Documentation
+
+- Update changelog for 0.2.9
+   - PR: #58
+- Bump metal-icons package version to 0.2.10 and update version in vers…
+   - PR: #61
+
+
+
+<details>
+<summary>Uncategorized</summary>
+
+- Bump package versions to 0.2.10 in root and website
+   - PR: #62
+
+</details>
 ## [0.2.9] - 2025-05-26
 
 ## 🚀 Features
