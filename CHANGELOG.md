@@ -6,6 +6,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.2.4] - 2025-05-26
+
+## 🚀 Features
+
+- Publishing Automation
+   - PR: #51
+- Added Print Icon
+   - PR: #52
+- Update Node.js version in GitHub Actions workflow from 18 to 20.x
+   - PR: #53
+
+
+
+<details>
+<summary>Uncategorized</summary>
+
+- Animated Hero
+   - PR: #46
+- Vite security update
+   - PR: #47
+- Update README files
+   - PR: #48
+- README update
+   - PR: #49
+- refactor: Site styling update
+   - PR: #50
+- Bump metal-icons and website version to 0.2.9
+   - PR: #54
+
+</details>
 
 - Nothing yet!
 
