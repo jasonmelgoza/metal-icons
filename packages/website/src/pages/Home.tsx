@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'sonner';
 import { Layout } from '../components/Layout';
 import { Icon, IconName } from '../components/Icon';
 import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid';
@@ -88,16 +89,22 @@ const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
   </div>
 );
 
-// Update IconGrid to support the variant prop
+// Update IconGrid to support the variant prop and click handler
 const IconGrid: React.FC<{ 
   icons: IconObject[]; 
   iconSize: IconSize;
   iconVariant: IconVariant;
-}> = ({ icons, iconSize, iconVariant }) => (
+  onIconClick: (iconName: IconName) => void;
+}> = ({ icons, iconSize, iconVariant, onIconClick }) => (
   <div className={Styles.grid} role="grid">
     {icons.length > 0 ? (
       icons.map((icon) => (
-        <div className={Styles.tile} key={icon.id} role="gridcell">
+        <div 
+          className={Styles.tile} 
+          key={icon.id} 
+          role="gridcell"
+          onClick={() => onIconClick(icon.name)}
+        >
           <Icon name={icon.name} size={iconSize} variant={iconVariant} aria-hidden="true" />
           <p>{icon.name}</p>
         </div>
@@ -146,6 +153,34 @@ const Home: React.FC = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleIconClick = async (iconName: IconName): Promise<void> => {
+    try {
+      // Fetch the SVG file from the optimized directory
+      const svgPath = `/optimized/${iconSize}/${iconVariant}/${iconName}.svg`;
+      const response = await fetch(svgPath);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch SVG');
+      }
+      
+      const svgContent = await response.text();
+      
+      // Copy to clipboard
+      await navigator.clipboard.writeText(svgContent);
+      
+      // Show toast with icon and message
+      toast(
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span>SVG copied to clipboard</span>
+          <Icon name={iconName} size={iconSize} variant={iconVariant} />
+        </div>
+      );
+    } catch (error) {
+      console.error('Failed to copy icon:', error);
+      toast.error('Failed to copy SVG');
+    }
+  };
+
   // Filter icons based on search term
   const filteredIcons = icons.filter((icon) =>
     icon.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -183,7 +218,12 @@ const Home: React.FC = () => {
           <VariantSelector value={iconVariant} onChange={setIconVariant} />
         </div>
       </div>
-      <IconGrid icons={filteredIcons} iconSize={iconSize} iconVariant={iconVariant} />
+      <IconGrid 
+        icons={filteredIcons} 
+        iconSize={iconSize} 
+        iconVariant={iconVariant} 
+        onIconClick={handleIconClick}
+      />
     </Layout>
   );
 };
