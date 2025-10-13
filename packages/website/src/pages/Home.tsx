@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom/client'
 import { toast } from 'sonner'
 import { Layout } from '../components/Layout'
 import { Icon, IconName } from '../components/Icon'
@@ -155,25 +156,41 @@ const Home: React.FC = () => {
 
   const handleIconClick = async (iconName: IconName): Promise<void> => {
     try {
-      // Fetch the SVG file from the optimized directory
-      const svgPath = `/optimized/${iconSize}/${iconVariant}/${iconName}.svg`
-      const response = await fetch(svgPath)
+      // Create a temporary container off-screen
+      const container = document.createElement('div')
+      container.style.position = 'absolute'
+      container.style.left = '-9999px'
+      document.body.appendChild(container)
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch SVG')
+      // Render the icon component
+      const root = ReactDOM.createRoot(container)
+      root.render(<Icon name={iconName} size={iconSize} variant={iconVariant} />)
+
+      // Wait for render to complete
+      await new Promise(resolve => setTimeout(resolve, 0))
+
+      // Get the SVG element
+      const svgElement = container.querySelector('svg')
+      if (!svgElement) {
+        throw new Error('SVG element not found')
       }
 
-      const svgContent = await response.text()
+      // Get the SVG markup
+      const svgContent = svgElement.outerHTML
+
+      // Clean up
+      root.unmount()
+      document.body.removeChild(container)
 
       // Copy to clipboard
       await navigator.clipboard.writeText(svgContent)
 
-      // Show toast with icon and message
+      // Show success toast
       toast(
         <>
           <span>SVG copied to clipboard</span>
           <Icon name={iconName} size={iconSize} variant={iconVariant} />
-        </>,
+        </>
       )
     } catch (error) {
       console.error('Failed to copy icon:', error)
