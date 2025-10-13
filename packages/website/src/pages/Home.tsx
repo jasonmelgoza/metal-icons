@@ -1,36 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { toast } from 'sonner';
-import { Layout } from '../components/Layout';
-import { Icon, IconName } from '../components/Icon';
-import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid';
-import Styles from '../styles/App.module.css';
+import React, { useState, useEffect } from 'react'
+import { toast } from 'sonner'
+import { Layout } from '../components/Layout'
+import { Icon, IconName } from '../components/Icon'
+import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid'
+import Styles from '../styles/App.module.css'
 
 // Type definitions
-type IconSize = '16' | '24';
-type IconVariant = 'solid' | 'outline';
+type IconSize = '16' | '24'
+type IconVariant = 'solid' | 'outline'
 
 interface IconObject {
-  id: string;
-  name: IconName;
+  id: string
+  name: IconName
 }
 
 interface SizeSelectorProps {
-  value: IconSize;
-  onChange: (value: IconSize) => void;
+  value: IconSize
+  onChange: (value: IconSize) => void
 }
 
 interface VariantSelectorProps {
-  value: IconVariant;
-  onChange: (value: IconVariant) => void;
+  value: IconVariant
+  onChange: (value: IconVariant) => void
 }
 
 interface SearchInputProps {
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 interface InstallCommandProps {
-  command: string;
+  command: string
 }
 
 // UI Components
@@ -46,7 +46,7 @@ const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
     </select>
     <ChevronDownIcon className="icon-chevron" aria-hidden="true" />
   </div>
-);
+)
 
 const VariantSelector: React.FC<VariantSelectorProps> = ({ value, onChange }) => (
   <div className={Styles.variant}>
@@ -60,7 +60,7 @@ const VariantSelector: React.FC<VariantSelectorProps> = ({ value, onChange }) =>
     </select>
     <ChevronDownIcon className="icon-chevron" aria-hidden="true" />
   </div>
-);
+)
 
 const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
   <div className={Styles.search}>
@@ -75,7 +75,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
     />
     <SearchIcon className="icon-search" aria-hidden="true" />
   </div>
-);
+)
 
 const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
   <div className={Styles.install}>
@@ -87,21 +87,21 @@ const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
       aria-label="Installation command"
     />
   </div>
-);
+)
 
 // Update IconGrid to support the variant prop and click handler
-const IconGrid: React.FC<{ 
-  icons: IconObject[]; 
-  iconSize: IconSize;
-  iconVariant: IconVariant;
-  onIconClick: (iconName: IconName) => void;
+const IconGrid: React.FC<{
+  icons: IconObject[]
+  iconSize: IconSize
+  iconVariant: IconVariant
+  onIconClick: (iconName: IconName) => void
 }> = ({ icons, iconSize, iconVariant, onIconClick }) => (
   <div className={Styles.grid} role="grid">
     {icons.length > 0 ? (
       icons.map((icon) => (
-        <div 
-          className={Styles.tile} 
-          key={icon.id} 
+        <div
+          className={Styles.tile}
+          key={icon.id}
           role="gridcell"
           onClick={() => onIconClick(icon.name)}
         >
@@ -115,76 +115,76 @@ const IconGrid: React.FC<{
       </div>
     )}
   </div>
-);
+)
 
 // Main component
 const Home: React.FC = () => {
   // Updated state to include variant
-  const [iconSize, setIconSize] = useState<IconSize>('16');
-  const [iconVariant, setIconVariant] = useState<IconVariant>('solid');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [icons, setIcons] = useState<IconObject[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [iconSize, setIconSize] = useState<IconSize>('16')
+  const [iconVariant, setIconVariant] = useState<IconVariant>('solid')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [icons, setIcons] = useState<IconObject[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   // Data fetching
   useEffect(() => {
     const fetchIcons = async () => {
       try {
-        const response = await fetch('/data/icons.json');
+        const response = await fetch('/data/icons.json')
         if (!response.ok) {
-          throw new Error('Failed to fetch icons');
+          throw new Error('Failed to fetch icons')
         }
-        const data = await response.json();
-        setIcons(data);
+        const data = await response.json()
+        setIcons(data)
       } catch (err) {
-        const errorMessage = err instanceof Error ? err.message : 'An error occurred';
-        setError(errorMessage);
-        console.error('Failed to load icons:', err);
+        const errorMessage = err instanceof Error ? err.message : 'An error occurred'
+        setError(errorMessage)
+        console.error('Failed to load icons:', err)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    fetchIcons();
-  }, []);
+    fetchIcons()
+  }, [])
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    setSearchTerm(event.target.value);
-  };
+    setSearchTerm(event.target.value)
+  }
 
   const handleIconClick = async (iconName: IconName): Promise<void> => {
     try {
       // Fetch the SVG file from the optimized directory
-      const svgPath = `/optimized/${iconSize}/${iconVariant}/${iconName}.svg`;
-      const response = await fetch(svgPath);
-      
+      const svgPath = `/optimized/${iconSize}/${iconVariant}/${iconName}.svg`
+      const response = await fetch(svgPath)
+
       if (!response.ok) {
-        throw new Error('Failed to fetch SVG');
+        throw new Error('Failed to fetch SVG')
       }
-      
-      const svgContent = await response.text();
-      
+
+      const svgContent = await response.text()
+
       // Copy to clipboard
-      await navigator.clipboard.writeText(svgContent);
-      
+      await navigator.clipboard.writeText(svgContent)
+
       // Show toast with icon and message
       toast(
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <>
           <span>SVG copied to clipboard</span>
           <Icon name={iconName} size={iconSize} variant={iconVariant} />
-        </div>
-      );
+        </>,
+      )
     } catch (error) {
-      console.error('Failed to copy icon:', error);
-      toast.error('Failed to copy SVG');
+      console.error('Failed to copy icon:', error)
+      toast.error('Failed to copy SVG')
     }
-  };
+  }
 
   // Filter icons based on search term
   const filteredIcons = icons.filter((icon) =>
-    icon.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    icon.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  )
 
   // Conditional rendering for loading and error states
   if (loading) {
@@ -194,7 +194,7 @@ const Home: React.FC = () => {
           Loading icons...
         </div>
       </Layout>
-    );
+    )
   }
 
   if (error) {
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
           {error}
         </div>
       </Layout>
-    );
+    )
   }
 
   // Main render
@@ -218,14 +218,14 @@ const Home: React.FC = () => {
           <VariantSelector value={iconVariant} onChange={setIconVariant} />
         </div>
       </div>
-      <IconGrid 
-        icons={filteredIcons} 
-        iconSize={iconSize} 
-        iconVariant={iconVariant} 
+      <IconGrid
+        icons={filteredIcons}
+        iconSize={iconSize}
+        iconVariant={iconVariant}
         onIconClick={handleIconClick}
       />
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

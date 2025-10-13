@@ -400,6 +400,39 @@
   clip: rect(0, 0, 0, 0);
 }
 
+/* Toast */
+
+.toast-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  background: rgb(var(--surface-rgb));
+  border: 1px solid rgb(var(--border-rgb));
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toast-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toast-description {
+  color: rgb(var(--fg-muted-rgb));
+  font-size: 0.875rem;
+}
+
 /* Hero */
 
 .hero {
