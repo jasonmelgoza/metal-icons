@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_U9pwERG15iw1W0gVQ7Xwmda6aTNq",
+  "orgId": "team_D2GjZD4cX6u242llVXUhNhny",
+  "projectName": "website",
+  "settings": {
+    "createdAt": 1760324024915,
+    "framework": "vite",
+    "devCommand": "yarn dev",
+    "installCommand": "cd ../.. && yarn install",
+    "buildCommand": "(cd ../.. && yarn build) && yarn build",
+    "outputDirectory": "dist",
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "22.x"
+  }
+}
