@@ -1,3 +1,5 @@
 .env
 .DS_Store
+.vercel
 /node_modules
+/packages/website/public/optimized

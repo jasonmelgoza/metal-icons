@@ -6,6 +6,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## 🚀 Features
+
+- Add toast notifications using Sonner package
+  - Implemented ToastProvider component for better notification management
+  - Enhanced icon click handling to copy SVG to clipboard with visual feedback
+- Improve icon copying functionality
+  - Render SVGs off-screen for better clipboard handling
+  - Provide user feedback through toast notifications
+
+## 📦 Dependencies
+
+- Update Vite from v6.3.5 to v7.1.9
+- Update @vitejs/plugin-react from v4.3.4 to v5.0.4
+- Update React from v18.2.0 to v18.3.1
+- Update React DOM from v18.2.0 to v18.3.1
+- Update @types/react from v18.2.0 to v18.3.12
+- Update @types/react-dom from v18.2.0 to v18.3.1
+- Update motion from v12.10.5 to v12.23.24
+- Add sonner v2.0.7 for toast notifications
+
+## 🔧 Improvements
+
+- Refactor toast notification system for better code organization
+- Simplify build process by removing optimized SVG copying from Vite config
+- Update Hero component with improved type safety using 'as const' for spring configuration
+- Add .vercel to .gitignore
+
 ## [v0.2.10] - 2025-05-26
 
 ## 🚀 Features
