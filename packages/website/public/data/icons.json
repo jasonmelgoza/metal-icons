@@ -622,5 +622,9 @@
   {
     "id": 156,
     "name": "zoom-in"
+  },
+  {
+    "id": 157,
+    "name": "zoom-out"
   }
 ]
