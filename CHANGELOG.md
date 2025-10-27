@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [v0.2.11] - 2025-10-27
+
+## 📝 Documentation
+
+- Update changelog for v0.2.10
+   - PR: #63
+
+
+
+<details>
+<summary>Uncategorized</summary>
+
+- Jason/vite update
+   - PR: #66
+- Update dependencies in package.json
+   - PR: #67
+
+</details>
 
 ## 🚀 Features
 
