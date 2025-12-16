@@ -4,6 +4,7 @@ import { toast } from 'sonner'
 import { Layout } from '../components/Layout'
 import { Icon, IconName } from '../components/Icon'
 import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid'
+import { DuplicateIcon } from 'metal-icons/16/outline'
 import Styles from '../styles/App.module.css'
 
 // Type definitions
@@ -78,17 +79,41 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
   </div>
 )
 
-const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => (
-  <div className={Styles.install}>
-    <input
-      readOnly
-      type="text"
-      value={command}
-      onClick={(e) => e.currentTarget.select()}
-      aria-label="Installation command"
-    />
-  </div>
-)
+const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => {
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(command)
+      toast('Command copied')
+    } catch (error) {
+      console.error('Failed to copy command:', error)
+      toast.error('Failed to copy command')
+    }
+  }
+
+  return (
+    <div className={Styles.install}>
+      <div className={Styles.installBox}>
+        <span className={Styles.installPrefix}>$</span>
+        <input
+          readOnly
+          type="text"
+          value={command}
+          onClick={(e) => e.currentTarget.select()}
+          aria-label="Installation command"
+          className={Styles.installInput}
+        />
+        <button
+          type="button"
+          onClick={handleCopy}
+          aria-label="Copy installation command"
+          className={Styles.installButton}
+        >
+          <DuplicateIcon className="icon-duplicate" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+  )
+}
 
 // Update IconGrid to support the variant prop and click handler
 const IconGrid: React.FC<{
@@ -227,7 +252,7 @@ const Home: React.FC = () => {
   // Main render
   return (
     <Layout>
-      <InstallCommand command="yarn add metal-icons" />
+      <InstallCommand command="npm i metal-icons" />
       <div className={Styles.controls}>
         <SearchInput value={searchTerm} onChange={handleSearch} />
         <div className={Styles.options}>
