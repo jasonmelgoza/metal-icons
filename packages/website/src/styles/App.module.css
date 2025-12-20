@@ -323,7 +323,7 @@
 }
 
 .installPrefix {
-  color: rgb(var(--fg-rgb));
+  color: rgba(var(--fg-rgb), 0.5);
   font-family: var(--font-mono);
   font-size: 0.875rem;
   user-select: none;

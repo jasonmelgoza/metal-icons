@@ -7,7 +7,6 @@ import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid'
 import { DuplicateIcon } from 'metal-icons/16/outline'
 import Styles from '../styles/App.module.css'
 
-// Type definitions
 type IconSize = '16' | '24'
 type IconVariant = 'solid' | 'outline'
 
@@ -35,7 +34,6 @@ interface InstallCommandProps {
   command: string
 }
 
-// UI Components
 const SizeSelector: React.FC<SizeSelectorProps> = ({ value, onChange }) => (
   <div className={Styles.size}>
     <select
@@ -79,11 +77,13 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
   </div>
 )
 
+/**
+ * Displays an installation command with copy functionality
+ */
 const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(command)
-      toast('Command copied')
     } catch (error) {
       console.error('Failed to copy command:', error)
       toast.error('Failed to copy command')
@@ -115,7 +115,6 @@ const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => {
   )
 }
 
-// Update IconGrid to support the variant prop and click handler
 const IconGrid: React.FC<{
   icons: IconObject[]
   iconSize: IconSize
@@ -143,9 +142,11 @@ const IconGrid: React.FC<{
   </div>
 )
 
-// Main component
+/**
+ * Main page component displaying the icon library browser
+ * Supports filtering, size/variant selection, and copying icons as SVG
+ */
 const Home: React.FC = () => {
-  // Updated state to include variant
   const [iconSize, setIconSize] = useState<IconSize>('16')
   const [iconVariant, setIconVariant] = useState<IconVariant>('solid')
   const [searchTerm, setSearchTerm] = useState('')
@@ -153,7 +154,6 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  // Data fetching
   useEffect(() => {
     const fetchIcons = async () => {
       try {
@@ -179,38 +179,31 @@ const Home: React.FC = () => {
     setSearchTerm(event.target.value)
   }
 
+  /**
+   * Copies the selected icon's SVG markup to clipboard
+   * Renders the icon off-screen to extract the raw SVG markup, then cleans up
+   */
   const handleIconClick = async (iconName: IconName): Promise<void> => {
+    const container = document.createElement('div')
+    container.style.position = 'absolute'
+    container.style.left = '-9999px'
+    document.body.appendChild(container)
+
+    const root = ReactDOM.createRoot(container)
+    
     try {
-      // Create a temporary container off-screen
-      const container = document.createElement('div')
-      container.style.position = 'absolute'
-      container.style.left = '-9999px'
-      document.body.appendChild(container)
-
-      // Render the icon component
-      const root = ReactDOM.createRoot(container)
       root.render(<Icon name={iconName} size={iconSize} variant={iconVariant} />)
-
-      // Wait for render to complete
+      
+      // Allow React to complete the render cycle
       await new Promise(resolve => setTimeout(resolve, 0))
 
-      // Get the SVG element
       const svgElement = container.querySelector('svg')
       if (!svgElement) {
         throw new Error('SVG element not found')
       }
 
-      // Get the SVG markup
-      const svgContent = svgElement.outerHTML
+      await navigator.clipboard.writeText(svgElement.outerHTML)
 
-      // Clean up
-      root.unmount()
-      document.body.removeChild(container)
-
-      // Copy to clipboard
-      await navigator.clipboard.writeText(svgContent)
-
-      // Show success toast
       toast(
         <>
           <span>SVG copied to clipboard</span>
@@ -220,15 +213,16 @@ const Home: React.FC = () => {
     } catch (error) {
       console.error('Failed to copy icon:', error)
       toast.error('Failed to copy SVG')
+    } finally {
+      root.unmount()
+      document.body.removeChild(container)
     }
   }
 
-  // Filter icons based on search term
   const filteredIcons = icons.filter((icon) =>
     icon.name.toLowerCase().includes(searchTerm.toLowerCase()),
   )
 
-  // Conditional rendering for loading and error states
   if (loading) {
     return (
       <Layout>
@@ -249,7 +243,6 @@ const Home: React.FC = () => {
     )
   }
 
-  // Main render
   return (
     <Layout>
       <InstallCommand command="npm i metal-icons" />
