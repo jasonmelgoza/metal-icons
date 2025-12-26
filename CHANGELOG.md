@@ -6,6 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [v0.2.12] - 2025-12-26
+
+## 📝 Documentation
+
+- Update changelog for v0.2.11
+   - PR: #69
+
+
+
+<details>
+<summary>Uncategorized</summary>
+
+- Zoom out icon
+   - PR: #68
+- Update SVG files for readme hero
+   - PR: #70
+- Jason/website install command
+   - PR: #71
+- Added Bolt Icon
+   - PR: #72
+
+</details>
 ## [v0.2.11] - 2025-10-27
 
 ## 📝 Documentation
