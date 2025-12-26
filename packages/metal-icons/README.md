@@ -11,6 +11,12 @@ All icons are available as individual React components.
 First, install `metal-icons` from npm:
 
 ```bash
+npm install metal-icons
+```
+
+or
+
+```bash
 yarn add metal-icons
 ```
 
