@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 import { Layout } from '../components/Layout'
 import { Icon, IconName } from '../components/Icon'
 import { ChevronDownIcon, SearchIcon } from 'metal-icons/16/solid'
-import { DuplicateIcon } from 'metal-icons/16/outline'
+import { DuplicateIcon, CircleCloseIcon } from 'metal-icons/16/outline'
 import Styles from '../styles/App.module.css'
 
 type IconSize = '16' | '24'
@@ -28,6 +28,7 @@ interface VariantSelectorProps {
 interface SearchInputProps {
   value: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  onClear: () => void
 }
 
 interface InstallCommandProps {
@@ -62,20 +63,49 @@ const VariantSelector: React.FC<VariantSelectorProps> = ({ value, onChange }) =>
   </div>
 )
 
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => (
-  <div className={Styles.search}>
-    <input
-      id="search"
-      name="search"
-      type="text"
-      placeholder="Search icons..."
-      value={value}
-      onChange={onChange}
-      aria-label="Search icons"
-    />
-    <SearchIcon className="icon-search" aria-hidden="true" />
-  </div>
-)
+const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, onClear }) => {
+  const hasValue = value.length > 0
+
+  const handleClear = (event: React.MouseEvent<HTMLButtonElement> | React.KeyboardEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    event.stopPropagation()
+    onClear()
+  }
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      handleClear(event)
+    }
+  }
+
+  return (
+    <div className={Styles.search}>
+      <input
+        id="search"
+        name="search"
+        type="text"
+        placeholder="Search icons..."
+        value={value}
+        onChange={onChange}
+        aria-label="Search icons"
+        className={hasValue ? Styles.searchInputWithClear : undefined}
+      />
+      <SearchIcon className="icon-search" aria-hidden="true" />
+      {hasValue && (
+        <button
+          type="button"
+          onClick={handleClear}
+          onKeyDown={handleKeyDown}
+          aria-label="Clear search"
+          className={Styles.searchClear}
+        >
+          <CircleCloseIcon className="icon-clear" aria-hidden="true" />
+        </button>
+      )}
+    </div>
+  )
+}
 
 /**
  * Displays an installation command with copy functionality
@@ -179,6 +209,10 @@ const Home: React.FC = () => {
     setSearchTerm(event.target.value)
   }
 
+  const handleClearSearch = (): void => {
+    setSearchTerm('')
+  }
+
   /**
    * Copies the selected icon's SVG markup to clipboard
    * Renders the icon off-screen to extract the raw SVG markup, then cleans up
@@ -247,7 +281,7 @@ const Home: React.FC = () => {
     <Layout>
       <InstallCommand command="npm i metal-icons" />
       <div className={Styles.controls}>
-        <SearchInput value={searchTerm} onChange={handleSearch} />
+        <SearchInput value={searchTerm} onChange={handleSearch} onClear={handleClearSearch} />
         <div className={Styles.options}>
           <SizeSelector value={iconSize} onChange={setIconSize} />
           <VariantSelector value={iconVariant} onChange={setIconVariant} />

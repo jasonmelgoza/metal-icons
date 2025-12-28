@@ -272,6 +272,10 @@
   font-size: 1rem;
 }
 
+.searchInputWithClear {
+  padding-right: 2.5em !important;
+}
+
 .search input[type="text"]:focus {
   --border-rgb: var(--fg-rgb);
   border-color: rgba(var(--border-rgb), 0.25);
@@ -294,6 +298,42 @@
 
 .search input[type="text"]::placeholder {
   color: rgba(var(--fg-muted-rgb), 0.5);
+}
+
+.searchClear {
+  all: unset;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  cursor: pointer;
+  color: rgb(var(--fg-muted-rgb));
+  transform: translateY(-50%);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.searchClear:hover {
+  color: rgb(var(--fg-rgb));
+}
+
+.searchClear:active {
+  opacity: 0.7;
+}
+
+.searchClear:focus-visible {
+  outline: 2px solid rgb(var(--fg-rgb));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.searchClear svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Install */
@@ -510,4 +550,17 @@
 
 .hero-emoji {
   font-size: 20px;
+}
+
+/* Screen reader only */
+.srOnly {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border-width: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
