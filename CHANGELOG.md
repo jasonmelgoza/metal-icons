@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [v0.2.13] - 2025-12-28
+
+## 📝 Documentation
+
+- Update changelog for v0.2.12
+   - PR: #74
+
+
+
+<details>
+<summary>Uncategorized</summary>
+
+- Update icon ID for 'book-open' in icons.json
+   - PR: #75
+- Add new SVG files for sidebar icon
+   - PR: #76
+
+</details>
 ## [v0.2.12] - 2025-12-26
 
 ## 📝 Documentation
