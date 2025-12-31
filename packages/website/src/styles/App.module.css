@@ -263,8 +263,7 @@
   width: 100%;
   max-width: 640px;
   height: 100%;
-  padding: 1rem;
-  padding-left: 2.5em;
+  padding: 1rem 2.5em 1rem 2.5em;
   border: 1px solid rgb(var(--border-rgb));
   border-radius: 0.5rem;
   color: rgb(var(--fg-rgb));
@@ -294,6 +293,40 @@
 
 .search input[type="text"]::placeholder {
   color: rgba(var(--fg-muted-rgb), 0.5);
+}
+
+.searchClear {
+  all: unset;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.searchClear:hover {
+  opacity: 0.7;
+}
+
+.searchClear:focus-visible {
+  outline: 2px solid rgb(var(--fg-rgb));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.searchClear svg {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: translate(0);
+  color: rgb(var(--fg-rgb));
 }
 
 /* Install */
@@ -510,4 +543,17 @@
 
 .hero-emoji {
   font-size: 20px;
+}
+
+/* Screen reader only */
+.srOnly {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border-width: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
