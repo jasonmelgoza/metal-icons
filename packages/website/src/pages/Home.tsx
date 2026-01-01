@@ -29,6 +29,7 @@ interface SearchInputProps {
   value: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   onClear: () => void
+  iconCount?: number
 }
 
 interface InstallCommandProps {
@@ -63,7 +64,7 @@ const VariantSelector: React.FC<VariantSelectorProps> = ({ value, onChange }) =>
   </div>
 )
 
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, onClear }) => {
+const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, onClear, iconCount }) => {
   const hasValue = value.length > 0
 
   const handleClear = (event: React.MouseEvent<HTMLButtonElement> | React.KeyboardEvent<HTMLButtonElement>) => {
@@ -79,13 +80,22 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, onClear }) =
     }
   }
 
+  const formatCount = (count: number | undefined): string => {
+    if (count === undefined) return ''
+    return count.toLocaleString()
+  }
+
+  const placeholder = iconCount !== undefined 
+    ? `Search ${formatCount(iconCount)} icons...`
+    : 'Search icons...'
+
   return (
     <div className={Styles.search}>
       <input
         id="search"
         name="search"
         type="text"
-        placeholder="Search icons..."
+        placeholder={placeholder}
         value={value}
         onChange={onChange}
         aria-label="Search icons"
@@ -281,7 +291,12 @@ const Home: React.FC = () => {
     <Layout>
       <InstallCommand command="npm i metal-icons" />
       <div className={Styles.controls}>
-        <SearchInput value={searchTerm} onChange={handleSearch} onClear={handleClearSearch} />
+        <SearchInput 
+          value={searchTerm} 
+          onChange={handleSearch} 
+          onClear={handleClearSearch}
+          iconCount={icons.length}
+        />
         <div className={Styles.options}>
           <SizeSelector value={iconSize} onChange={setIconSize} />
           <VariantSelector value={iconVariant} onChange={setIconVariant} />
