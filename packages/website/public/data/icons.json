@@ -634,5 +634,9 @@
   {
     "id": 159,
     "name": "zoom-out"
+  },
+  {
+    "id": 160,
+    "name": "align-left"
   }
 ]
