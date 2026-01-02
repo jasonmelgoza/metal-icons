@@ -638,5 +638,9 @@
   {
     "id": 160,
     "name": "align-left"
+  },
+  {
+    "id": 161,
+    "name": "align-right"
   }
 ]
