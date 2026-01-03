@@ -136,19 +136,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Re-added the `@babel/runtime` dependency to the metal-icons package.json for the time being
 
-## [0.1.25] - 2023-03-22
+## [v0.1.25] - 2023-03-22
 
 ### Changed
 
 - Removed the `@babel/runtime` dependency in the metal-icons package.json
 
-## [0.1.24] - 2023-03-21
+## [v0.1.24] - 2023-03-21
 
 ### Added
 
 - Zoom in icon
 
-## [0.1.23] - 2023-03-19
+## [v0.1.23] - 2023-03-19
 
 ### Added
 
@@ -162,7 +162,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **People Icons**: User icon
 - **Action Icons**: View icon
 
-## [0.1.22] - 2023-03-10
+## [v0.1.22] - 2023-03-10
 
 ### Added
 
@@ -181,7 +181,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated the license information in the icon package readme
 
-## [0.1.21] - 2023-03-10
+## [v0.1.21] - 2023-03-10
 
 ### Added
 
@@ -195,7 +195,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Commerce Icons**: Shopping bag icon
 - **Commerce Icons**: Shopping cart icon
 
-## [0.1.20] - 2023-12-28
+## [v0.1.20] - 2023-12-28
 
 ### Added
 
@@ -210,13 +210,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Action Icons**: Refresh icon
 - **Action Icons**: Reload icon
 
-## [0.1.19] - 2023-12-28
+## [v0.1.19] - 2023-12-28
 
 ### Fixed
 
 - Fixed build
 
-## [0.1.18] - 2023-12-28
+## [v0.1.18] - 2023-12-28
 
 ### Added
 
@@ -235,7 +235,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated the website popover component with additional documentation
 
-## [0.1.17] - 2023-12-18
+## [v0.1.17] - 2023-12-18
 
 ### Added
 
@@ -250,7 +250,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Layout Icons**: Layout rows icon
 - **Navigation Icons**: Link icon
 
-## [0.1.16] - 2023-12-16
+## [v0.1.16] - 2023-12-16
 
 ### Added
 
@@ -264,7 +264,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Action Icons**: Duplicate icon
 - **Action Icons**: Download icon
 
-## [0.1.15] - 2023-11-30
+## [v0.1.15] - 2023-11-30
 
 ### Added
 
@@ -273,7 +273,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **File Icons**: Document plus icon
 - **File Icons**: Documents icon
 
-## [0.1.14] - 2023-11-28
+## [v0.1.14] - 2023-11-28
 
 ### Added
 
@@ -288,7 +288,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated the main `README` with a new hero and revised copy
 
-## [0.1.13] - 2023-11-27
+## [v0.1.13] - 2023-11-27
 
 ### Added
 
@@ -298,7 +298,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added Tabs component to website package to display outline variants
 
-## [0.1.12] - 2023-11-23
+## [v0.1.12] - 2023-11-23
 
 ### Added
 
@@ -316,7 +316,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `preserveModules` to `rollup.config.js`
 
-## [0.1.11] - 2023-11-20
+## [v0.1.11] - 2023-11-20
 
 ### Added
 
@@ -336,7 +336,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated `tasks.json` for CodeSandbox
 
-## [0.1.10] - 2023-11-19
+## [v0.1.10] - 2023-11-19
 
 ### Added
 
@@ -348,13 +348,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Project Structure**: Restructured to a monorepo
 - **Project Structure**: Restructured to utilize workspaces
 
-## [0.1.9] - 2023-11-18
+## [v0.1.9] - 2023-11-18
 
 ### Fixed
 
 - Fixed issues with module build
 
-## [0.1.8] - 2023-11-18
+## [v0.1.8] - 2023-11-18
 
 ### Added
 
@@ -365,19 +365,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Navigation Icons**: Chevrons Right
 - **Navigation Icons**: Chevrons Up
 
-## [0.1.7] - 2023-11-12
+## [v0.1.7] - 2023-11-12
 
 ### Fixed
 
 - Fixed an issue with the small outline variant of the Building icon
 
-## [0.1.6] - 2023-11-12
+## [v0.1.6] - 2023-11-12
 
 ### Fixed
 
 - Fixed issues with module build
 
-## [0.1.5] - 2023-11-12
+## [v0.1.5] - 2023-11-12
 
 ### Added
 
@@ -392,7 +392,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Status Icons**: Check icons
 - **Navigation Icons**: Chevron Down icons
 
-## [0.1.4] - 2023-11-11
+## [v0.1.4] - 2023-11-11
 
 ### Added
 
@@ -406,7 +406,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Content Icons**: Bookmark icons
 - **Content Icons**: Bookmark Plus icons
 
-## [0.1.3] - 2023-11-04
+## [v0.1.3] - 2023-11-04
 
 ### Added
 
@@ -419,14 +419,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Navigation Icons**: Arrow Up Right icons
 - **Navigation Icons**: Arrow Up icons
 
-## [0.1.2] - 2023-11-02
+## [v0.1.2] - 2023-11-02
 
 ### Added
 
 - **Layout Icons**: Align Top icons
 - **Layout Icons**: Align Bottom icons
 
-## [0.1.1] - 2023-11-02
+## [v0.1.1] - 2023-11-02
 
 ### Added
 
