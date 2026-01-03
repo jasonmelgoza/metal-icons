@@ -1,20 +1,7 @@
 name: Publish to NPM
 
 on:
-  push:
-    tags:
-      - 'icons-v*'
   workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version to publish (e.g., patch, minor, major)'
-        required: true
-        default: 'patch'
-        type: choice
-        options:
-          - patch
-          - minor
-          - major
 
 jobs:
   publish:
@@ -39,17 +26,6 @@ jobs:
         
       - name: Build packages
         run: yarn build
-        
-      - name: Version bump (manual trigger only)
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          yarn version --${{ github.event.inputs.version }} --no-git-tag-version
-          git add .
-          git commit -m "chore: bump version to $(node -p "require('./package.json').version")"
-          git tag "v$(node -p "require('./package.json').version")"
-          git push origin main --tags
         
       - name: Publish to NPM
         run: |
