@@ -6,6 +6,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [v0.2.14] - 2026-01-03
+
+## 🚀 Features
+
+- Enhance SearchInput component
+   - PR: #78
+- Display icon count in SearchInput
+   - PR: #79
+- Add align-left and align-right icons
+   - PR: #80
+
+## 📝 Documentation
+
+- Update changelog for v0.2.13
+   - PR: #77
+
+
+
+<details>
+<summary>Uncategorized</summary>
+
+
+</details>
 ## [v0.2.13] - 2025-12-28
 
 ## 📝 Documentation
