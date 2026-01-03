@@ -85,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump package versions to 0.2.10 in root and website ([#62](https://github.com/jasonmelgoza/metal-icons/pull/62))
 - Update changelog for 0.2.9 ([#58](https://github.com/jasonmelgoza/metal-icons/pull/58))
 
-## [0.2.9] - 2025-05-26
+## [v0.2.9] - 2025-05-26
 
 ### Added
 
@@ -102,31 +102,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Node.js version in GitHub Actions workflow from 18 to 20.x ([#53](https://github.com/jasonmelgoza/metal-icons/pull/53))
 - Bump metal-icons and website version to 0.2.9 ([#54](https://github.com/jasonmelgoza/metal-icons/pull/54))
 
-## [0.2.3] - 2024-04-21
+## [v0.2.3] - 2024-04-21
 
 ### Added
 
 - Sparkles icon ([#37](https://github.com/jasonmelgoza/metal-icons/pull/37))
 
-## [0.2.2] - 2024-04-11
+## [v0.2.2] - 2024-04-11
 
 ### Changed
 
 - Updated website package responsive styles ([#35](https://github.com/jasonmelgoza/metal-icons/pull/35))
 
-## [0.2.1] - 2024-04-10
+## [v0.2.1] - 2024-04-10
 
 ### Changed
 
 - Updated metal-icons package readme ([#34](https://github.com/jasonmelgoza/metal-icons/pull/34))
 
-## [0.2.0] - 2024-04-08
+## [v0.2.0] - 2024-04-08
 
 ### Changed
 
 - **Build System**: New build script and refactored website ([#33](https://github.com/jasonmelgoza/metal-icons/pull/33))
 
-## [0.1.26] - 2023-03-23
+## [v0.1.26] - 2023-03-23
 
 ### Added
 
@@ -444,35 +444,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.2.13]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.12...v0.2.13
 [v0.2.12]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.11...v0.2.12
 [v0.2.11]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.10...v0.2.11
-[v0.2.10]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.9...v0.2.10
-[0.2.9]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.3...0.2.9
-[0.2.3]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.2...0.2.3
-[0.2.2]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.1...0.2.2
-[0.2.1]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.0...0.2.1
-[0.2.0]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.26...0.2.0
-[0.1.26]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.25...0.1.26
-[0.1.25]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.24...0.1.25
-[0.1.24]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.23...0.1.24
-[0.1.23]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.22...0.1.23
-[0.1.22]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.21...0.1.22
-[0.1.21]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.20...0.1.21
-[0.1.20]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.19...0.1.20
-[0.1.19]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.18...0.1.19
-[0.1.18]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.17...0.1.18
-[0.1.17]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.16...0.1.17
-[0.1.16]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.15...0.1.16
-[0.1.15]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.14...0.1.15
-[0.1.14]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.13...0.1.14
-[0.1.13]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.12...0.1.13
-[0.1.12]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.11...0.1.12
-[0.1.11]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.10...0.1.11
-[0.1.10]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.9...0.1.10
-[0.1.9]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.8...0.1.9
-[0.1.8]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.7...0.1.8
-[0.1.7]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.6...0.1.7
-[0.1.6]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.5...0.1.6
-[0.1.5]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.4...0.1.5
-[0.1.4]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.3...0.1.4
-[0.1.3]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.2...0.1.3
-[0.1.2]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.1...0.1.2
-[0.1.1]: https://github.com/jasonmelgoza/metal-icons/releases/tag/0.1.1
+[v0.2.10]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.9...v0.2.10
+[v0.2.9]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.3...v0.2.9
+[v0.2.3]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.2...v0.2.3
+[v0.2.2]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.1...v0.2.2
+[v0.2.1]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.0...v0.2.1
+[v0.2.0]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.26...v0.2.0
+[v0.1.26]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.25...v0.1.26
+[v0.1.25]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.24...v0.1.25
+[v0.1.24]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.23...v0.1.24
+[v0.1.23]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.22...v0.1.23
+[v0.1.22]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.21...v0.1.22
+[v0.1.21]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.20...v0.1.21
+[v0.1.20]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.19...v0.1.20
+[v0.1.19]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.18...v0.1.19
+[v0.1.18]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.17...v0.1.18
+[v0.1.17]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.16...v0.1.17
+[v0.1.16]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.15...v0.1.16
+[v0.1.15]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.14...v0.1.15
+[v0.1.14]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.13...v0.1.14
+[v0.1.13]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.12...v0.1.13
+[v0.1.12]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.11...v0.1.12
+[v0.1.11]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.10...v0.1.11
+[v0.1.10]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.9...v0.1.10
+[v0.1.9]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.8...v0.1.9
+[v0.1.8]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.7...v0.1.8
+[v0.1.7]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.6...v0.1.7
+[v0.1.6]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.5...v0.1.6
+[v0.1.5]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.4...v0.1.5
+[v0.1.4]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.3...v0.1.4
+[v0.1.3]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.2...v0.1.3
+[v0.1.2]: https://github.com/jasonmelgoza/metal-icons/compare/v0.1.1...v0.1.2
+[v0.1.1]: https://github.com/jasonmelgoza/metal-icons/releases/tag/v0.1.1
