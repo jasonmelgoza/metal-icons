@@ -6,176 +6,101 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ## [v0.2.14] - 2026-01-03
 
-## 🚀 Features
+### Added
 
-- Enhance SearchInput component
-   - PR: #78
-- Display icon count in SearchInput
-   - PR: #79
-- Add align-left and align-right icons
-   - PR: #80
+- Enhance SearchInput component ([#78](https://github.com/jasonmelgoza/metal-icons/pull/78))
+- Display icon count in SearchInput ([#79](https://github.com/jasonmelgoza/metal-icons/pull/79))
+- Add align-left and align-right icons ([#80](https://github.com/jasonmelgoza/metal-icons/pull/80))
 
-## 📝 Documentation
+### Changed
 
-- Update changelog for v0.2.13
-   - PR: #77
+- Update changelog for v0.2.13 ([#77](https://github.com/jasonmelgoza/metal-icons/pull/77))
 
-
-
-<details>
-<summary>Uncategorized</summary>
-
-
-</details>
 ## [v0.2.13] - 2025-12-28
 
-## 📝 Documentation
+### Changed
 
-- Update changelog for v0.2.12
-   - PR: #74
+- Update icon ID for 'book-open' in icons.json ([#75](https://github.com/jasonmelgoza/metal-icons/pull/75))
+- Add new SVG files for sidebar icon ([#76](https://github.com/jasonmelgoza/metal-icons/pull/76))
+- Update changelog for v0.2.12 ([#74](https://github.com/jasonmelgoza/metal-icons/pull/74))
 
-
-
-<details>
-<summary>Uncategorized</summary>
-
-- Update icon ID for 'book-open' in icons.json
-   - PR: #75
-- Add new SVG files for sidebar icon
-   - PR: #76
-
-</details>
 ## [v0.2.12] - 2025-12-26
 
-## 📝 Documentation
+### Added
 
-- Update changelog for v0.2.11
-   - PR: #69
+- Zoom out icon ([#68](https://github.com/jasonmelgoza/metal-icons/pull/68))
+- Added Bolt Icon ([#72](https://github.com/jasonmelgoza/metal-icons/pull/72))
 
+### Changed
 
+- Update SVG files for readme hero ([#70](https://github.com/jasonmelgoza/metal-icons/pull/70))
+- Update website install command ([#71](https://github.com/jasonmelgoza/metal-icons/pull/71))
+- Update changelog for v0.2.11 ([#69](https://github.com/jasonmelgoza/metal-icons/pull/69))
 
-<details>
-<summary>Uncategorized</summary>
-
-- Zoom out icon
-   - PR: #68
-- Update SVG files for readme hero
-   - PR: #70
-- Jason/website install command
-   - PR: #71
-- Added Bolt Icon
-   - PR: #72
-
-</details>
 ## [v0.2.11] - 2025-10-27
 
-## 📝 Documentation
+### Added
 
-- Update changelog for v0.2.10
-   - PR: #63
-
-
-
-<details>
-<summary>Uncategorized</summary>
-
-- Jason/vite update
-   - PR: #66
-- Update dependencies in package.json
-   - PR: #67
-
-</details>
-
-## 🚀 Features
-
-- Add toast notifications using Sonner package
+- Add toast notifications using Sonner package ([#66](https://github.com/jasonmelgoza/metal-icons/pull/66))
   - Implemented ToastProvider component for better notification management
   - Enhanced icon click handling to copy SVG to clipboard with visual feedback
 - Improve icon copying functionality
   - Render SVGs off-screen for better clipboard handling
   - Provide user feedback through toast notifications
 
-## 📦 Dependencies
+### Changed
 
-- Update Vite from v6.3.5 to v7.1.9
+- Update Vite from v6.3.5 to v7.1.9 ([#66](https://github.com/jasonmelgoza/metal-icons/pull/66))
 - Update @vitejs/plugin-react from v4.3.4 to v5.0.4
 - Update React from v18.2.0 to v18.3.1
 - Update React DOM from v18.2.0 to v18.3.1
 - Update @types/react from v18.2.0 to v18.3.12
 - Update @types/react-dom from v18.2.0 to v18.3.1
 - Update motion from v12.10.5 to v12.23.24
-- Add sonner v2.0.7 for toast notifications
-
-## 🔧 Improvements
-
+- Update dependencies in package.json ([#67](https://github.com/jasonmelgoza/metal-icons/pull/67))
 - Refactor toast notification system for better code organization
 - Simplify build process by removing optimized SVG copying from Vite config
 - Update Hero component with improved type safety using 'as const' for spring configuration
 - Add .vercel to .gitignore
+- Update changelog for v0.2.10 ([#63](https://github.com/jasonmelgoza/metal-icons/pull/63))
+
+### Fixed
+
+- Add sonner v2.0.7 for toast notifications
 
 ## [v0.2.10] - 2025-05-26
 
-## 🚀 Features
+### Added
 
-- Changelog Refactor
-   - PR: #55
-- Refactor Changelog Workflow
-   - PR: #56
-- Share Icon Update
-   - PR: #60
-- Bump metal-icons package version to 0.2.10 and update version in vers…
-   - PR: #61
+- Share Icon Update ([#60](https://github.com/jasonmelgoza/metal-icons/pull/60))
 
-## 📝 Documentation
+### Changed
 
-- Update changelog for 0.2.9
-   - PR: #58
-- Bump metal-icons package version to 0.2.10 and update version in vers…
-   - PR: #61
+- Changelog Refactor ([#55](https://github.com/jasonmelgoza/metal-icons/pull/55))
+- Refactor Changelog Workflow ([#56](https://github.com/jasonmelgoza/metal-icons/pull/56))
+- Bump metal-icons package version to 0.2.10 and update version ([#61](https://github.com/jasonmelgoza/metal-icons/pull/61))
+- Bump package versions to 0.2.10 in root and website ([#62](https://github.com/jasonmelgoza/metal-icons/pull/62))
+- Update changelog for 0.2.9 ([#58](https://github.com/jasonmelgoza/metal-icons/pull/58))
 
-
-
-<details>
-<summary>Uncategorized</summary>
-
-- Bump package versions to 0.2.10 in root and website
-   - PR: #62
-
-</details>
 ## [0.2.9] - 2025-05-26
 
-## 🚀 Features
+### Added
 
-- Publishing Automation
-   - PR: #51
-- Added Print Icon
-   - PR: #52
-- Update Node.js version in GitHub Actions workflow from 18 to 20.x
-   - PR: #53
+- Publishing Automation ([#51](https://github.com/jasonmelgoza/metal-icons/pull/51))
+- Added Print Icon ([#52](https://github.com/jasonmelgoza/metal-icons/pull/52))
 
+### Changed
 
-
-<details>
-<summary>Uncategorized</summary>
-
-- Animated Hero
-   - PR: #46
-- Vite security update
-   - PR: #47
-- Update README files
-   - PR: #48
-- README update
-   - PR: #49
-- refactor: Site styling update
-   - PR: #50
-- Bump metal-icons and website version to 0.2.9
-   - PR: #54
-
-</details>
-
-- Nothing yet!
+- Animated Hero ([#46](https://github.com/jasonmelgoza/metal-icons/pull/46))
+- Vite security update ([#47](https://github.com/jasonmelgoza/metal-icons/pull/47))
+- Update README files ([#48](https://github.com/jasonmelgoza/metal-icons/pull/48))
+- README update ([#49](https://github.com/jasonmelgoza/metal-icons/pull/49))
+- Site styling update ([#50](https://github.com/jasonmelgoza/metal-icons/pull/50))
+- Update Node.js version in GitHub Actions workflow from 18 to 20.x ([#53](https://github.com/jasonmelgoza/metal-icons/pull/53))
+- Bump metal-icons and website version to 0.2.9 ([#54](https://github.com/jasonmelgoza/metal-icons/pull/54))
 
 ## [0.2.3] - 2024-04-21
 
@@ -513,3 +438,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Build System**: Updated Rollup configuration so that inputs point to all types of icons
 - **Package Config**: Updated `package.json` configuration so that exports point to each set individually
+
+[Unreleased]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.14...HEAD
+[v0.2.14]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.13...v0.2.14
+[v0.2.13]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.12...v0.2.13
+[v0.2.12]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.11...v0.2.12
+[v0.2.11]: https://github.com/jasonmelgoza/metal-icons/compare/v0.2.10...v0.2.11
+[v0.2.10]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.9...v0.2.10
+[0.2.9]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.3...0.2.9
+[0.2.3]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.2...0.2.3
+[0.2.2]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.1...0.2.2
+[0.2.1]: https://github.com/jasonmelgoza/metal-icons/compare/0.2.0...0.2.1
+[0.2.0]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.26...0.2.0
+[0.1.26]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.25...0.1.26
+[0.1.25]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.24...0.1.25
+[0.1.24]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.23...0.1.24
+[0.1.23]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.22...0.1.23
+[0.1.22]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.21...0.1.22
+[0.1.21]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.20...0.1.21
+[0.1.20]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.19...0.1.20
+[0.1.19]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.18...0.1.19
+[0.1.18]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.17...0.1.18
+[0.1.17]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.16...0.1.17
+[0.1.16]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.15...0.1.16
+[0.1.15]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.14...0.1.15
+[0.1.14]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.13...0.1.14
+[0.1.13]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.12...0.1.13
+[0.1.12]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.11...0.1.12
+[0.1.11]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.10...0.1.11
+[0.1.10]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.9...0.1.10
+[0.1.9]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.8...0.1.9
+[0.1.8]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.7...0.1.8
+[0.1.7]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.6...0.1.7
+[0.1.6]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.5...0.1.6
+[0.1.5]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.4...0.1.5
+[0.1.4]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.3...0.1.4
+[0.1.3]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.2...0.1.3
+[0.1.2]: https://github.com/jasonmelgoza/metal-icons/compare/0.1.1...0.1.2
+[0.1.1]: https://github.com/jasonmelgoza/metal-icons/releases/tag/0.1.1
