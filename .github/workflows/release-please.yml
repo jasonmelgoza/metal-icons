@@ -1,4 +1,3 @@
-# .github/workflows/release-please.yml
 name: Release Please
 
 on:
@@ -15,5 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
+          # The release type determines how release-please parses your commits
           release-type: node
+          # Your package name
+          package-name: metal-icons
+          # Bump minor for features, patch for fixes
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
