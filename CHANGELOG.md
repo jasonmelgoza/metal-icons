@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.2.14...v0.3.0) (2026-01-05)
+
+
+### Added
+
+* **icons:** Add new 'sparkle-text' icon ([f417aad](https://github.com/jasonmelgoza/metal-icons/commit/f417aadf0723dc4a3b36a971eb579de80a6e854b))
+
+
+### Changed
+
+* Add config-file parameter to release-please workflow for enhanced configuration ([dc9d008](https://github.com/jasonmelgoza/metal-icons/commit/dc9d0087a7a36ddf0a9511b17642e47ffa32a8f2))
+* Bump version of metal-icons to 0.2.15 ([8a99cda](https://github.com/jasonmelgoza/metal-icons/commit/8a99cdaba208dca2a3dbe0c2b6e3f0fc6c830982))
+* Bump version to 0.2.15 in package.json ([4daf942](https://github.com/jasonmelgoza/metal-icons/commit/4daf942ac9a3b16805058185702ead5975bf9fc6))
+* Remove outdated changelog configurations and workflow files. Introduce a new release-please workflow for automated changelog generation. ([f1f2d68](https://github.com/jasonmelgoza/metal-icons/commit/f1f2d68a48f2b882585e18930428c52af04ce5c1))
+* Update package.json to version 0.2.15 and bump metal-icons dependency to 0.2.15 ([f8248ed](https://github.com/jasonmelgoza/metal-icons/commit/f8248eda9b2b6052b9a1d957eb58ac3b7db21991))
+* Update release-please configuration to change release type to node and streamline publish workflow by removing manual version bump steps. ([a27c886](https://github.com/jasonmelgoza/metal-icons/commit/a27c886d5e9bc67d193daf0a804ad6623f851c22))
+* Update release-please workflow configuration to include package name and bump settings for minor and patch versions. ([24edd3c](https://github.com/jasonmelgoza/metal-icons/commit/24edd3c75cfd3b5a87f8a99a264b399db9dd09d8))
+* Update release-please workflow to specify manifest file for release configuration ([6d4f6ab](https://github.com/jasonmelgoza/metal-icons/commit/6d4f6ab5dd6005c22b6eb452729c561033c30b8e))
+* Update version to 0.2.15 in version.json ([2c28409](https://github.com/jasonmelgoza/metal-icons/commit/2c284095d62d75944664511e887bc37b76bdaaa1))
+
 ## [Unreleased]
 
 ## [v0.2.14] - 2026-01-03
