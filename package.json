@@ -15,6 +15,7 @@
     "build-outline-24": "rimraf ./24/outline ./24/optimized/outline && svgo --config=svgo.config.mjs -q -p 8 -f ./src/24/outline -o ./optimized/24/outline",
     "build-solid-24": "rimraf ./24/solid ./24/optimized/solid && svgo --config=svgo.config.mjs -q -p 8 -f ./src/24/solid -o ./optimized/24/solid",
     "dev": "yarn --cwd ./packages/website dev",
+    "sort-icons": "node ./scripts/sort-icons.js",
     "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/ && rm yarn.lock && yarn cache clean"
   },
   "devDependencies": {
