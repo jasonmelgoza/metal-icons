@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.3.0...v0.4.0) (2026-01-17)
+
+
+### Added
+
+* Add new server icons in outline and solid styles for 16px and 24px sizes ([1dfa3f9](https://github.com/jasonmelgoza/metal-icons/commit/1dfa3f9155789e986904235152ba275e544dae4f))
+* Add Open Graph image meta tag and image ([d39f19b](https://github.com/jasonmelgoza/metal-icons/commit/d39f19b769cc2ab742bed5822bec01a2d8bb5eca))
+* Add Open Graph image meta tag and include og.jpg for social sharing ([f84fefc](https://github.com/jasonmelgoza/metal-icons/commit/f84fefcfc8ab619597f41f19a6724a1510f78254))
+* Introduce new server icons in both outline and solid styles ([7ae658e](https://github.com/jasonmelgoza/metal-icons/commit/7ae658e076354c367f79cbe7f26214e388021d9e))
+
+
+### Changed
+
+* Remove unused vite.svg file and update og.jpg image for improved social sharing ([16a6fe9](https://github.com/jasonmelgoza/metal-icons/commit/16a6fe9b73f8c0d71d2a07fb5cb1ea56b767acd7))
+
 ## [0.3.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.2.15...v0.3.0) (2026-01-11)
 
 
