@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.3.0...v0.3.1) (2026-01-18)
+
+
+### Changed
+
+* bump metal-icons package version to 0.4.0 ([4f8f42e](https://github.com/jasonmelgoza/metal-icons/commit/4f8f42eae8c961467c33fe258d6ca7e75a5f9930))
+* release main ([0ccc210](https://github.com/jasonmelgoza/metal-icons/commit/0ccc2102b4a2013a6769c01bb5a7747925667eeb))
+
 ## [0.3.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.2.15...v0.3.0) (2026-01-11)
 
 
