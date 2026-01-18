@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.0...v0.4.1) (2026-01-18)
+
+
+### Fixed
+
+* update links and installation instructions in README ([39aeb00](https://github.com/jasonmelgoza/metal-icons/commit/39aeb00ee23cef733d9eddbc5d98b29dc5ec34f1))
+* update links and installation instructions in README files for consistency ([1731d99](https://github.com/jasonmelgoza/metal-icons/commit/1731d9967ea600b3a382a70d43925d278b73c790))
+
 ## [0.4.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.3.0...v0.4.0) (2026-01-17)
 
 
