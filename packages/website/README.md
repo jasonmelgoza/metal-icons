@@ -1,6 +1,6 @@
 # Metal Icons Site
 
-This is the source code of the Metal-Icons site.
+This is the source code of the [Metal-Icons site](https://www.metal-icons.com/).
 
 ---
 

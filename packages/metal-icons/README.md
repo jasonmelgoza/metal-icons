@@ -1,6 +1,6 @@
 # Metal Icons
 
-  A clean, reliable icon set built for React.
+A clean, reliable icon set built for React.
 
 ---
 
@@ -8,7 +8,7 @@
 
 All icons are available as individual React components.
 
-First, install `metal-icons` from npm:
+First, install `metal-icons` in your project using your preferred JS package manager. 
 
 ```bash
 npm install metal-icons

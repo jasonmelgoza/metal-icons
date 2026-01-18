@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://metalicons.com" target="_blank">
+  <a href="https://www.metal-icons.com" target="_blank">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jasonmelgoza/metal-icons/HEAD/.github/hero-light.svg">
@@ -26,6 +26,12 @@
 ### React
 
 First, install `metal-icons` in your project using your preferred JS package manager. 
+
+```bash
+npm install metal-icons
+```
+
+or
 
 ```bash
 yarn add metal-icons
