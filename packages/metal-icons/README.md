@@ -39,7 +39,7 @@ Icons follow an `UpperCamelCase` naming convention and always end with the word 
 
 ## Icon Count
 
-165 icons
+166 icons
 
 ## License
 
