@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.1...v0.5.0) (2026-01-19)
+
+
+### Added
+
+* add AirPlay SVG icons in outline and solid styles for 16px and 24px sizes ([22b0f88](https://github.com/jasonmelgoza/metal-icons/commit/22b0f88fb53025d295a0e67148d89bc14e95c24d))
+* add new AirPlay SVG icons in outline and solid styles for 16px and 24px sizes ([1d34409](https://github.com/jasonmelgoza/metal-icons/commit/1d34409c322b734e1161ed3cc1431335c5847275))
+
 ## [0.4.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.0...v0.4.1) (2026-01-18)
 
 
