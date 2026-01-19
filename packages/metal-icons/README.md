@@ -37,6 +37,10 @@ export default function MyComponent() {
 
 Icons follow an `UpperCamelCase` naming convention and always end with the word "Icon."
 
+## Icon Count
+
+165 icons
+
 ## License
 
 Licensed under the MIT License, Copyright © 2023-present Jason Melgoza.
