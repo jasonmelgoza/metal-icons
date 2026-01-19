@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.1...v0.5.0) (2026-01-19)
+
+
+### Added
+
+* Added new airplay icon ([3b3e921](https://github.com/jasonmelgoza/metal-icons/commit/3b3e921047e93a1939f838196dea749d3392e5f5))
+
+
+### Documentation
+
+* add icon count to README for metal-icons package ([be390d7](https://github.com/jasonmelgoza/metal-icons/commit/be390d7178fe848a4b058b3dcd3d4fff516a366a))
+
 ## [0.4.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.0...v0.4.1) (2026-01-18)
 
 
