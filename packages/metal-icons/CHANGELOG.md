@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.5.0...v0.6.0) (2026-01-20)
+
+
+### Added
+
+* **metal-icons:** add size and style documentation ([57c4007](https://github.com/jasonmelgoza/metal-icons/commit/57c40077309931a7009ad81135e09cec85daa2e4))
+* **metal-icons:** add size and style documentation ([078e662](https://github.com/jasonmelgoza/metal-icons/commit/078e66247c9cf2869a8ab748e017cde698374108))
+
+
+### Documentation
+
+* update icon count in README for metal-icons package to reflect the addition of a new icon ([d51f502](https://github.com/jasonmelgoza/metal-icons/commit/d51f50297736e2f6c95613ecadc6ec94b9f54074))
+
 ## [0.5.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.1...v0.5.0) (2026-01-19)
 
 
