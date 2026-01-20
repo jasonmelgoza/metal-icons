@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.5.0...v0.5.1) (2026-01-20)
+
+
+### Documentation
+
+* update icon count in README for metal-icons package to reflect the addition of a new icon ([d51f502](https://github.com/jasonmelgoza/metal-icons/commit/d51f50297736e2f6c95613ecadc6ec94b9f54074))
+
 ## [0.5.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.1...v0.5.0) (2026-01-19)
 
 

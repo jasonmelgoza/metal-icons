@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.5.0...v0.6.0) (2026-01-20)
+
+
+### Added
+
+* add new cast SVG icons in outline and solid styles for 16px and 24px sizes ([701ab6a](https://github.com/jasonmelgoza/metal-icons/commit/701ab6a0efe4981da197ec88b24f3b65cf9ce456))
+
+
+### Documentation
+
+* update icon count in README for metal-icons package to reflect the addition of a new icon ([d51f502](https://github.com/jasonmelgoza/metal-icons/commit/d51f50297736e2f6c95613ecadc6ec94b9f54074))
+
 ## [0.5.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.4.1...v0.5.0) (2026-01-19)
 
 
