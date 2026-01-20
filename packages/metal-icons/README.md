@@ -2,6 +2,21 @@
 
 A clean, reliable icon set built for React.
 
+**166 icons** available in multiple sizes and styles.
+
+---
+
+## Available Sizes & Styles
+
+Metal Icons come in different sizes to fit your design needs:
+
+- **16px** - Perfect for inline text and compact UIs
+- **24px** - Ideal for buttons and larger touch targets
+
+Each size is available in:
+- **Solid** - Filled icons for primary actions
+- **Outline** - Stroke-based icons for secondary actions
+
 ---
 
 ## Basic Usage
