@@ -10,6 +10,12 @@
       "package-name": "metal-icons",
       "include-component-in-tag": false,
       "include-v-in-tag": true
+    },
+    "packages/website": {
+      "release-type": "node",
+      "package-name": "website",
+      "include-component-in-tag": false,
+      "include-v-in-tag": true
     }
   },
   "changelog-sections": [
