@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.7.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.6.0...v0.7.0) (2026-01-24)
+## [0.7.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.6.0...v0.7.0) (2026-01-25)
 
 
 ### Added
