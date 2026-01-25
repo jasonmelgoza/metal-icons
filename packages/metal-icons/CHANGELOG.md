@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.6.0...v0.7.0) (2026-01-25)
+
+
+### Added
+
+* update icon count in README to reflect the addition of 3 new icons ([611aae4](https://github.com/jasonmelgoza/metal-icons/commit/611aae4b113fbfc253055daf43b17350f02a8706))
+* update icon count in README to reflect the addition of 3 new icons ([849aa94](https://github.com/jasonmelgoza/metal-icons/commit/849aa944136e6c899e3b54349abec293ce555e95))
+
 ## [0.6.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.5.0...v0.6.0) (2026-01-20)
 
 

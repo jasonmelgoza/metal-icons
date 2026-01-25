@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.6.0...v0.7.0) (2026-01-25)
+
+
+### Added
+
+* add face-neutral SVG icons in outline and solid styles for 16px and 24px sizes ([b4ec34a](https://github.com/jasonmelgoza/metal-icons/commit/b4ec34aece369d3eee2446fda50001bddfb7d7e1))
+* add face-neutral SVG icons in outline and solid styles for 16px and 24px sizes ([6026200](https://github.com/jasonmelgoza/metal-icons/commit/60262007ad10d410fb4d1fc4da472c4a32763ff1))
+* add face-smile SVG icons in outline and solid styles for 16px and 24px sizes ([79a6dd1](https://github.com/jasonmelgoza/metal-icons/commit/79a6dd1111dae6a71256c4566d1931138cb66455))
+* add face-smile SVG icons in outline and solid styles for 16px and 24px sizes ([b96216a](https://github.com/jasonmelgoza/metal-icons/commit/b96216a74c5bab3ffea557e925976bf064fdf8bf))
+* add website package to release-please config ([f902bad](https://github.com/jasonmelgoza/metal-icons/commit/f902bad383c196f47538e2ac406fc36c10a81167))
+* enhance face-smile SVG icons with additional styles and improved sizes ([8366f16](https://github.com/jasonmelgoza/metal-icons/commit/8366f16ab6fd94fe05021326bd5b77cf61c1e8fb))
+* update face-smile SVG icons with new styles and sizes ([6c94081](https://github.com/jasonmelgoza/metal-icons/commit/6c94081a51bb22b3e20c2eca8676ee68e6cec0db))
+* update icon count in README to reflect the addition of 3 new icons ([611aae4](https://github.com/jasonmelgoza/metal-icons/commit/611aae4b113fbfc253055daf43b17350f02a8706))
+* update icon count in README to reflect the addition of 3 new icons ([849aa94](https://github.com/jasonmelgoza/metal-icons/commit/849aa944136e6c899e3b54349abec293ce555e95))
+
 ## [0.6.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.5.0...v0.6.0) (2026-01-20)
 
 
