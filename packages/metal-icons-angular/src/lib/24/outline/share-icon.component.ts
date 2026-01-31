@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-share-24-outline',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M8.295 6.765a.75.75 0 1 1-1.09-1.03l4.25-4.5a.75.75 0 0 1 1.09 0l4.25 4.5a.75.75 0 0 1-1.09 1.03L12.75 3.636V14.25a.75.75 0 1 1-1.5 0V3.636L8.295 6.765Z"/>
+  <path d="M5.75 10.5c-.69 0-1.25.56-1.25 1.25v8.5c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25v-8.5c0-.69-.56-1.25-1.25-1.25H15.5a.75.75 0 1 1 0-1.5h2.75A2.75 2.75 0 0 1 21 11.75v8.5A2.75 2.75 0 0 1 18.25 23H5.75A2.75 2.75 0 0 1 3 20.25v-8.5A2.75 2.75 0 0 1 5.75 9H8.5a.75.75 0 0 1 0 1.5H5.75Z"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class ShareIconComponent {}

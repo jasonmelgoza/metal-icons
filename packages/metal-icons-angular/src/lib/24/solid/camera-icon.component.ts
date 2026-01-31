@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-camera-24-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M8.2 2.245c-.27.16-.492.39-.643.667L6.543 4.77l-2.923.14A2.75 2.75 0 0 0 1 7.657V19.25A2.75 2.75 0 0 0 3.75 22h16.5A2.75 2.75 0 0 0 23 19.25V7.656a2.75 2.75 0 0 0-2.619-2.745l-2.924-.14-1.014-1.859A1.752 1.752 0 0 0 14.906 2H9.094a1.75 1.75 0 0 0-.894.245ZM12 17.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class CameraIconComponent {}

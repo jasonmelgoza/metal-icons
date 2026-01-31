@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-circle-caret-left-24-outline',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M21.5 12a9.5 9.5 0 1 0-19 0 9.5 9.5 0 0 0 19 0Zm1.5 0c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11Z" clip-rule="evenodd"/>
+  <path d="M8.291 11.426c-.388.258-.388.888 0 1.146l4.808 3.333c.397.265.901-.056.901-.573V8.668c0-.517-.504-.838-.901-.573l-4.808 3.33Z"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class CircleCaretLeftIconComponent {}

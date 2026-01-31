@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-grid-24-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M3.75 2A1.75 1.75 0 0 0 2 3.75v5.5c0 .966.784 1.75 1.75 1.75h5.5A1.75 1.75 0 0 0 11 9.25v-5.5A1.75 1.75 0 0 0 9.25 2h-5.5Zm11 0A1.75 1.75 0 0 0 13 3.75v5.5c0 .966.784 1.75 1.75 1.75h5.5A1.75 1.75 0 0 0 22 9.25v-5.5A1.75 1.75 0 0 0 20.25 2h-5.5ZM13 14.75c0-.966.784-1.75 1.75-1.75h5.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 20.25 22h-5.5A1.75 1.75 0 0 1 13 20.25v-5.5ZM3.75 13A1.75 1.75 0 0 0 2 14.75v5.5c0 .966.784 1.75 1.75 1.75h5.5A1.75 1.75 0 0 0 11 20.25v-5.5A1.75 1.75 0 0 0 9.25 13h-5.5Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class GridIconComponent {}

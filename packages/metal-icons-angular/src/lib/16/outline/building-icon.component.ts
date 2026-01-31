@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-building-16-outline',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.25.75A.75.75 0 0 1 2 0h12a.75.75 0 0 1 0 1.5v13h.25a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5H2v-13a.75.75 0 0 1-.75-.75Zm2.25.75v13h2v-2.625C5.5 10.84 6.34 10 7.375 10h1.25c1.035 0 1.875.84 1.875 1.875V14.5h2v-13h-9Zm5.5 13v-2.625a.375.375 0 0 0-.375-.375h-1.25a.375.375 0 0 0-.375.375V14.5h2Zm-4.5-10a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Zm4 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Zm-4 3a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Zm4 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class BuildingIconComponent {}

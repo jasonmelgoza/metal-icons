@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-slider-24-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M3.75 2.5a.75.75 0 0 1 .75.75v7a.75.75 0 1 1-1.5 0v-7a.75.75 0 0 1 .75-.75ZM3 14.5v6.25a.75.75 0 1 0 1.5 0V14.5h2a.75.75 0 1 0 0-1.5H1a.75.75 0 1 0 0 1.5h2Zm9.5-2.75a.75.75 0 1 0-1.5 0v9a.75.75 0 1 0 1.5 0v-9Zm-.75-9.25a.75.75 0 0 1 .75.75V7.5h2a.75.75 0 1 1 0 1.5H9a.75.75 0 0 1 0-1.5h2V3.25a.75.75 0 0 1 .75-.75ZM22.5 15a.75.75 0 1 1 0 1.5h-2v4.25a.75.75 0 1 1-1.5 0V16.5h-2a.75.75 0 1 1 0-1.5h5.5ZM19.75 2.5a.75.75 0 0 1 .75.75v9a.75.75 0 1 1-1.5 0v-9a.75.75 0 0 1 .75-.75Z"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class SliderIconComponent {}

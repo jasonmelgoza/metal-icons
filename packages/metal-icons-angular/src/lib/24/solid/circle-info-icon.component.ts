@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-circle-info-24-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M4.222 4.222a11 11 0 1 0 15.556 15.556A11 11 0 0 0 4.222 4.222Zm7.07 2.07A.995.995 0 0 1 11.996 6h.008A.995.995 0 0 1 13 7a1.002 1.002 0 0 1-.996 1h-.008A.995.995 0 0 1 11 7a1 1 0 0 1 .292-.707ZM9.5 9.75a.75.75 0 0 1 .75-.75h1.5a1 1 0 0 1 1 1v6.5h1a.75.75 0 0 1 0 1.5h-1.5a1 1 0 0 1-1-1v-6.5h-1a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class CircleInfoIconComponent {}

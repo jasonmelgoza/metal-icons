@@ -1,0 +1,7 @@
+{
+  "ngPackage": {
+    "lib": {
+      "entryFile": "../../src/lib/24/outline/index.ts"
+    }
+  }
+}

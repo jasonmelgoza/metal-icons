@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-shield-16-outline',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.26.213c.48-.167 1-.167 1.48 0l4.75 1.653A2.25 2.25 0 0 1 15 3.99V8c0 2.048-1.181 3.747-2.45 4.99-1.282 1.256-2.757 2.15-3.573 2.599a2.023 2.023 0 0 1-1.954 0c-.816-.447-2.291-1.342-3.572-2.598C2.18 11.748 1 10.05 1 8V3.99c0-.956.606-1.81 1.51-2.124L7.26.213Zm.986 1.417a.75.75 0 0 0-.493 0l-4.75 1.653a.75.75 0 0 0-.503.708V8c0 1.455.847 2.79 2 3.92 1.142 1.118 2.483 1.937 3.244 2.353.163.09.35.09.512 0 .761-.416 2.102-1.235 3.244-2.353 1.153-1.13 2-2.465 2-3.92V3.99a.75.75 0 0 0-.504-.708L8.246 1.63Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class ShieldIconComponent {}
