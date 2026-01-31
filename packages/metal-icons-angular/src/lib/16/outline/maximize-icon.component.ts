@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-maximize-16-outline',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.083 2.5a.75.75 0 0 1 0-1.5h4.167a.75.75 0 0 1 .75.75v4.167a.75.75 0 0 1-1.5 0V3.56l-3.234 3.233a.75.75 0 1 1-1.06-1.06L12.439 2.5h-2.356ZM6.794 9.206a.75.75 0 0 1 0 1.06L3.561 13.5h2.356a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75v-4.167a.75.75 0 0 1 1.5 0v2.356l3.234-3.233a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class MaximizeIconComponent {}

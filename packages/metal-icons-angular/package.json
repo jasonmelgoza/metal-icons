@@ -1,0 +1,35 @@
+{
+  "name": "metal-icons-angular",
+  "version": "1.0.0",
+  "description": "A clean, reliable icon set built for Angular. Available in multiple sizes and styles.",
+  "keywords": [
+    "angular",
+    "icons",
+    "svg",
+    "metal-icons",
+    "design",
+    "icon-library"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonmelgoza/metal-icons-angular"
+  },
+  "homepage": "https://github.com/jasonmelgoza/metal-icons-angular#readme",
+  "peerDependencies": {
+    "@angular/common": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@angular/core": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/compiler-cli": "^18.0.0",
+    "ng-packagr": "^18.0.0",
+    "typescript": "~5.4.0"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json"
+  }
+}

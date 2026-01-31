@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-bookmark-16-outline',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2 3.25A2.25 2.25 0 0 1 4.25 1h7.5A2.25 2.25 0 0 1 14 3.25v10.83a1 1 0 0 1-1.478.878L8.12 12.564a.25.25 0 0 0-.238 0l-4.403 2.394A1 1 0 0 1 2 14.08V3.25Zm2.25-.75a.75.75 0 0 0-.75.75v9.989l3.664-1.992a1.75 1.75 0 0 1 1.672 0l3.664 1.992V3.25a.75.75 0 0 0-.75-.75h-7.5Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class BookmarkIconComponent {}

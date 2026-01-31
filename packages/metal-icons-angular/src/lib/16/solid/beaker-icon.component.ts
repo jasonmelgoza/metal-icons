@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-beaker-16-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.608 2H3.75a.75.75 0 1 0 0 1.5h.394l.987 2.154c.03.065.03.14 0 .205l-2.948 6.685A1.75 1.75 0 0 0 3.783 15h8.433a1.75 1.75 0 0 0 1.6-2.456l-2.948-6.685a.252.252 0 0 1 0-.205l.988-2.154h.394a.75.75 0 1 0 0-1.5H4.608Zm5.598 1.5H5.794l.7 1.529c.209.455.213.977.01 1.435L5.828 8h4.346l-.678-1.536a1.75 1.75 0 0 1 .01-1.435l.7-1.529Z" clip-rule="evenodd"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class BeakerIconComponent {}

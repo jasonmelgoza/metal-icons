@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-align-bottom-16-solid',
+  standalone: true,
+  template: `
+    <svg  xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.75 1a.75.75 0 0 1 .75.75v7.614l2.955-3.129a.75.75 0 0 1 1.09 1.03l-4.25 4.5a.747.747 0 0 1-.533.235h-.024a.747.747 0 0 1-.51-.211l-.004-.005a.898.898 0 0 1-.02-.02l-4.25-4.499a.75.75 0 0 1 1.091-1.03L7 9.364V1.75A.75.75 0 0 1 7.75 1ZM2.5 13.5a.75.75 0 1 0 0 1.5H13a.75.75 0 1 0 0-1.5H2.5Z" fill="#000"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class AlignBottomIconComponent {}

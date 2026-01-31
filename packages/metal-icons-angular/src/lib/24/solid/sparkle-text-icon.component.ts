@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-sparkle-text-24-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+  <path fill="#000" d="M2.75 3a.75.75 0 0 0 0 1.5h18.5a.75.75 0 1 0 0-1.5H2.75Zm0 5a.75.75 0 0 0 0 1.5h18.5a.75.75 0 1 0 0-1.5H2.75ZM2 13.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 1 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75ZM2.75 18a.75.75 0 1 0 0 1.5h7.5a.75.75 0 1 0 0-1.5h-7.5ZM17 11a.5.5 0 0 1 .475.344l.957 2.909a.501.501 0 0 0 .322.321h.002l2.9.95a.5.5 0 0 1 0 .951l-2.909.957a.501.501 0 0 0-.321.322v.002l-.95 2.9a.5.5 0 0 1-.951 0l-.957-2.909a.501.501 0 0 0-.322-.321h-.002l-2.9-.95a.5.5 0 0 1 0-.951l2.909-.957a.501.501 0 0 0 .321-.322v-.002l.95-2.9A.5.5 0 0 1 17 11Z"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class SparkleTextIconComponent {}

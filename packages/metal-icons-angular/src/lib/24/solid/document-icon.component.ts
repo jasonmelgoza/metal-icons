@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'metal-icon-document-24-solid',
+  standalone: true,
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M5.75 1A2.75 2.75 0 0 0 3 3.75v16.5A2.75 2.75 0 0 0 5.75 23h12.5A2.75 2.75 0 0 0 21 20.25V9h-7.25a.75.75 0 0 1-.75-.75V1H5.75Z"/>
+  <path d="M14.5 1.5v6h6a1.056 1.056 0 0 0-.013-.013l-5.974-5.974A2.934 2.934 0 0 0 14.5 1.5Z"/>
+</svg>
+  `,
+  styles: [`
+    :host {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  `]
+})
+export class DocumentIconComponent {}
