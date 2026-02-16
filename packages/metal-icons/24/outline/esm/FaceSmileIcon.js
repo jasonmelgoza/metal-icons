@@ -1,0 +1,27 @@
+import * as React from "react";
+function FaceSmileIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    viewBox: "0 0 24 24",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    fillRule: "evenodd",
+    d: "M21.5 12a9.5 9.5 0 1 0-19 0 9.5 9.5 0 0 0 19 0m1.5 0c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M7.355 14.82c.216.264.534.617.948.971.82.7 2.077 1.46 3.69 1.46s2.87-.76 3.69-1.46a7.647 7.647 0 0 0 1.199-1.3l.099-.145a.875.875 0 1 0-1.475-.942c-.071.107-.15.21-.232.31a5.9 5.9 0 0 1-.73.747c-.64.55-1.508 1.04-2.551 1.04s-1.91-.49-2.552-1.04a5.894 5.894 0 0 1-.73-.747c-.083-.1-.16-.203-.232-.31a.875.875 0 0 0-1.474.942c.106.165.227.322.35.473Zm.936-6.527A1.003 1.003 0 0 0 8.995 10h.01a.993.993 0 0 0 .704-.293A1.003 1.003 0 0 0 9.005 8h-.01a.993.993 0 0 0-.704.293m6 0A.993.993 0 0 1 14.995 8h.01c.264 0 .517.105.704.293A1.003 1.003 0 0 1 15.005 10h-.01a.993.993 0 0 1-.704-.293 1.003 1.003 0 0 1 0-1.414"
+  }));
+}
+const ForwardRef = React.forwardRef(FaceSmileIcon);
+export default ForwardRef;

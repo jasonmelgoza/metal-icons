@@ -1,0 +1,22 @@
+import * as React from "react";
+function AlignRightIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M1 8a.75.75 0 0 1 .75-.75h7.614L6.235 4.295a.75.75 0 0 1 1.03-1.09l4.5 4.25a.747.747 0 0 1 .235.533v.024a.747.747 0 0 1-.211.51l-.005.004a.898.898 0 0 1-.02.02l-4.499 4.25a.751.751 0 0 1-1.03-1.091L9.364 8.75H1.75A.75.75 0 0 1 1 8m12.5 5.25a.75.75 0 1 0 1.5 0V2.75a.75.75 0 1 0-1.5 0z"
+  }));
+}
+const ForwardRef = React.forwardRef(AlignRightIcon);
+export default ForwardRef;

@@ -1,0 +1,27 @@
+const React = require("react");
+function FaceSmileIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    fillRule: "evenodd",
+    d: "M16 8A8 8 0 1 1-.001 8 8 8 0 0 1 16 8m-1.5 0a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M8 12c-1.01 0-1.782-.504-2.267-.945a4.718 4.718 0 0 1-.564-.614 3.301 3.301 0 0 1-.212-.305.75.75 0 0 1 1.284-.775c.143.214.31.41.5.584.341.31.769.555 1.259.555s.918-.246 1.258-.555c.19-.174.357-.37.5-.584a.75.75 0 1 1 1.285.775l-.212.305c-.128.167-.317.39-.564.614C9.782 11.495 9.01 12 8 12M5 6a1 1 0 0 1 1-1h.007a1 1 0 0 1 0 2H6a1 1 0 0 1-1-1m5-1a1 1 0 0 0 0 2h.007a1 1 0 1 0 0-2z"
+  }));
+}
+const ForwardRef = React.forwardRef(FaceSmileIcon);
+module.exports = ForwardRef;

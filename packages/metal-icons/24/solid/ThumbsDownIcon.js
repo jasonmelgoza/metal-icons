@@ -1,0 +1,22 @@
+const React = require("react");
+function ThumbsDownIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 23,
+    height: 22,
+    fill: "currentColor",
+    viewBox: "0 0 23 22",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    d: "M13.456 21.349 17.429 13V0H4.949a2.75 2.75 0 0 0-2.72 2.337l-1.443 9.5A2.75 2.75 0 0 0 3.506 15h5.173a.25.25 0 0 1 .25.25v3.225A3.525 3.525 0 0 0 12.454 22a1.097 1.097 0 0 0 1.002-.651M18.929 0v13h.75a2.75 2.75 0 0 0 2.75-2.75v-7.5A2.75 2.75 0 0 0 19.679 0z"
+  }));
+}
+const ForwardRef = React.forwardRef(ThumbsDownIcon);
+module.exports = ForwardRef;

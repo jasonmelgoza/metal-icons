@@ -1,0 +1,24 @@
+const React = require("react");
+function HouseIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    viewBox: "0 0 24 24",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    fillRule: "evenodd",
+    d: "M12 2c.389 0 .766.129 1.073.367l8.25 5.675c.427.332.677.842.677 1.382V21.25a.75.75 0 0 1-.747.749L15.25 22a.75.75 0 0 1-.75-.75v-5.5a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v5.5a.75.75 0 0 1-.747.749L2.75 22a.75.75 0 0 1-.75-.75V9.424a1.752 1.752 0 0 1 .677-1.382l8.25-5.675A1.75 1.75 0 0 1 12 2m0 1.5a.251.251 0 0 0-.153.053l-8.25 5.673a.25.25 0 0 0-.097.198V20.5H8v-4.75A1.75 1.75 0 0 1 9.75 14h4.5A1.75 1.75 0 0 1 16 15.75v4.75h4.5V9.424a.251.251 0 0 0-.097-.198l-8.25-5.673A.251.251 0 0 0 12 3.5"
+  }));
+}
+const ForwardRef = React.forwardRef(HouseIcon);
+module.exports = ForwardRef;

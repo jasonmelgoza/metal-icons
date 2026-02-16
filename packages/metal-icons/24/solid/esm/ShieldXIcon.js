@@ -1,0 +1,23 @@
+import * as React from "react";
+function ShieldXIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "currentColor",
+    viewBox: "0 0 24 24",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M12.96 1.307a2.75 2.75 0 0 0-1.92 0l-6.25 2.33A2.75 2.75 0 0 0 3 6.214V12c0 2.732 1.463 5.038 3.103 6.774 1.65 1.744 3.563 2.999 4.65 3.642a2.437 2.437 0 0 0 2.493 0c1.088-.642 3-1.898 4.65-3.642C19.538 17.038 21 14.732 21 12V6.214a2.75 2.75 0 0 0-1.79-2.577zM16 7.75a.75.75 0 0 0-1.28-.53L12 9.94 9.28 7.22a.75.75 0 0 0-1.06 1.06L10.94 11l-2.72 2.72a.75.75 0 0 0 1.06 1.06L12 12.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L13.06 11l2.72-2.72a.75.75 0 0 0 .22-.53"
+  }));
+}
+const ForwardRef = React.forwardRef(ShieldXIcon);
+export default ForwardRef;

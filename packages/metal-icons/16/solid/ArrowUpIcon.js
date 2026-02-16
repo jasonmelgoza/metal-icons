@@ -1,0 +1,23 @@
+const React = require("react");
+function ArrowUpIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M4.045 7.765a.75.75 0 1 1-1.09-1.03l4.25-4.5a.75.75 0 0 1 1.09 0l4.25 4.5a.75.75 0 0 1-1.09 1.03L8.5 4.636v8.614a.75.75 0 1 1-1.5 0V4.636z"
+  }));
+}
+const ForwardRef = React.forwardRef(ArrowUpIcon);
+module.exports = ForwardRef;

@@ -1,0 +1,27 @@
+import * as React from "react";
+function FaceSadIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    fillRule: "evenodd",
+    d: "M16 8A8 8 0 1 1-.001 8 8 8 0 0 1 16 8m-1.5 0a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M5 6a1 1 0 0 1 1-1h.007a1 1 0 0 1 0 2H6a1 1 0 0 1-1-1m5-1a1 1 0 0 0 0 2h.007a1 1 0 1 0 0-2zM5.733 9.943c.485-.44 1.257-.945 2.267-.945s1.782.505 2.267.945c.247.224.436.447.564.614l.212.305a.75.75 0 1 1-1.285.775 3.211 3.211 0 0 0-.5-.584c-.34-.309-.768-.555-1.258-.555s-.918.245-1.259.555c-.19.174-.357.37-.5.584a.75.75 0 0 1-1.284-.775c.065-.105.136-.207.212-.305.17-.22.358-.426.564-.614"
+  }));
+}
+const ForwardRef = React.forwardRef(FaceSadIcon);
+export default ForwardRef;

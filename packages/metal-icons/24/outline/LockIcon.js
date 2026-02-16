@@ -1,0 +1,25 @@
+const React = require("react");
+function LockIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "currentColor",
+    viewBox: "0 0 24 24",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    d: "M12 16.25a.75.75 0 0 1 .75.75v2a.75.75 0 1 1-1.5 0v-2a.75.75 0 0 1 .75-.75"
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M6 10.104V6.75c0-1.537.641-3.003 1.77-4.079A6.136 6.136 0 0 1 12 1c1.58 0 3.102.597 4.23 1.671A5.632 5.632 0 0 1 18 6.75v3.354a2.75 2.75 0 0 1 2 2.646v7.5A2.75 2.75 0 0 1 17.25 23H6.75A2.75 2.75 0 0 1 4 20.25v-7.5a2.75 2.75 0 0 1 2-2.646m2.805-6.346A4.636 4.636 0 0 1 12 2.5c1.205 0 2.354.456 3.195 1.258.84.8 1.305 1.877 1.305 2.992V10h-9V6.75c0-1.115.465-2.192 1.305-2.992M17.25 11.5H6.75c-.69 0-1.25.56-1.25 1.25v7.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-7.5c0-.69-.56-1.25-1.25-1.25"
+  }));
+}
+const ForwardRef = React.forwardRef(LockIcon);
+module.exports = ForwardRef;

@@ -1,0 +1,27 @@
+const React = require("react");
+function FaceNeutralIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    viewBox: "0 0 24 24",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    fillRule: "evenodd",
+    d: "M21.5 12a9.5 9.5 0 1 0-19 0 9.5 9.5 0 0 0 19 0m1.5 0c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11"
+  }), /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M8.291 8.293A1.003 1.003 0 0 0 8.995 10h.01a.993.993 0 0 0 .704-.293A1.003 1.003 0 0 0 9.005 8h-.01a.993.993 0 0 0-.704.293m6 0A.993.993 0 0 1 14.995 8h.01c.264 0 .517.105.704.293A1.003 1.003 0 0 1 15.005 10h-.01a.993.993 0 0 1-.704-.293 1.003 1.003 0 0 1 0-1.414m.96 6.707a.75.75 0 0 1 0 1.5H8.75a.75.75 0 0 1 0-1.5z"
+  }));
+}
+const ForwardRef = React.forwardRef(FaceNeutralIcon);
+module.exports = ForwardRef;

@@ -1,0 +1,23 @@
+const React = require("react");
+function AlignLeftIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "none",
+    viewBox: "0 0 16 16",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M15 8a.75.75 0 0 1-.75.75H6.636l3.129 2.955a.75.75 0 0 1-1.03 1.09l-4.5-4.25A.747.747 0 0 1 4 8.012v-.024a.747.747 0 0 1 .211-.51l.005-.004a.857.857 0 0 1 .02-.02l4.499-4.25a.75.75 0 0 1 1.03 1.091L6.636 7.25h7.614A.75.75 0 0 1 15 8M2.5 2.75a.75.75 0 0 0-1.5 0v10.5a.75.75 0 1 0 1.5 0z"
+  }));
+}
+const ForwardRef = React.forwardRef(AlignLeftIcon);
+module.exports = ForwardRef;

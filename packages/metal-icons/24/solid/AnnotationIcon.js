@@ -1,0 +1,23 @@
+const React = require("react");
+function AnnotationIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    fill: "none",
+    viewBox: "0 0 24 24",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fill: "currentColor",
+    d: "M20.25 3C21.7688 3 23 4.23122 23 5.75v9.5c0 1.5188-1.2312 2.75-2.75 2.75h-4.5001l-2.8301 3.5189c-.4481.6363-1.3915.6363-1.8396 0L8.24999 18H4.375C2.51104 18 1 16.489 1 14.625V5.75C1 4.23122 2.23122 3 3.75 3z"
+  }));
+}
+const ForwardRef = React.forwardRef(AnnotationIcon);
+module.exports = ForwardRef;

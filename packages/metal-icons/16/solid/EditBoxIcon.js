@@ -1,0 +1,25 @@
+const React = require("react");
+function EditBoxIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/React.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 16,
+    height: 16,
+    fill: "currentColor",
+    viewBox: "0 0 16 16",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M13.84 0c-.543 0-1.064.216-1.448.6l-1.03 1.03-6.493 6.493a.75.75 0 0 0-.197.348l-.65 2.597a.75.75 0 0 0 .91.91l2.597-.65a.749.749 0 0 0 .349-.197L15.4 3.608a2.048 2.048 0 0 0 0-2.896L15.288.6A2.049 2.049 0 0 0 13.84 0"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M1.72 3.72a.75.75 0 0 1 .53-.22h3a.75.75 0 0 0 0-1.5h-3A2.25 2.25 0 0 0 0 4.25v9.5A2.25 2.25 0 0 0 2.25 16h9.5A2.25 2.25 0 0 0 14 13.75v-4a.75.75 0 1 0-1.5 0v4a.75.75 0 0 1-.75.75h-9.5a.75.75 0 0 1-.75-.75v-9.5a.75.75 0 0 1 .22-.53"
+  }));
+}
+const ForwardRef = React.forwardRef(EditBoxIcon);
+module.exports = ForwardRef;
