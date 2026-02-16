@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.7.0...v0.8.0) (2026-02-16)
+
+
+### Added
+
+* add house SVG icons in outline and solid styles for 16px and 24px sizes ([b6e4609](https://github.com/jasonmelgoza/metal-icons/commit/b6e4609e5c99ac2f0b4ed1c01f3b115b1b08c8bb))
+* add house SVG icons in outline and solid styles for 16px and 24px sizes, update icon count in README to 170 ([215f44b](https://github.com/jasonmelgoza/metal-icons/commit/215f44be2f308bdda9b792e517ceaf1fe0476879))
+
 ## [0.7.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.6.0...v0.7.0) (2026-01-25)
 
 
