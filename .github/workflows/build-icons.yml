@@ -6,6 +6,7 @@ on:
       - 'src/**/*.svg'
 
 permissions:
+  contents: write
   pull-requests: write
 
 jobs:
@@ -15,6 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - name: Fetch base branch
@@ -34,6 +36,9 @@ jobs:
 
       - name: Lint
         run: yarn lint
+
+      - name: Sync website data
+        run: yarn sync-website
 
       - name: Get changed icon names
         id: new-icons
@@ -57,14 +62,43 @@ jobs:
             echo "all=" >> $GITHUB_OUTPUT
           fi
 
+      - name: Commit website data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add packages/website/public/data/icons.json packages/website/src/data/version.json
+
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No website data changes to commit"
+          else
+            ADDED_ICONS="${{ steps.new-icons.outputs.added }}"
+            if [ -n "$ADDED_ICONS" ]; then
+              MSG="chore(website): sync icons.json and version.json for ${ADDED_ICONS}"
+            else
+              MSG="chore(website): sync icons.json and version.json"
+            fi
+            git commit -m "$MSG"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "message<<EOF" >> $GITHUB_OUTPUT
+            echo "$MSG" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
       - name: Comment on PR
         uses: actions/github-script@v7
         with:
           script: |
             const iconNames = '${{ steps.new-icons.outputs.all }}';
+            const committed = '${{ steps.commit.outputs.changed }}' === 'true';
+            const commitMsg = `${{ steps.commit.outputs.message }}`;
             const body = `## Icon build validated ✓
 
             Build and lint completed successfully. Icons will be built at publish time via \`prepublishOnly\`.
+            ${committed ? `\n\n**Website data synced:** \`${commitMsg}\`` : ''}
 
             ${iconNames ? `**Icons in this PR:** ${iconNames.split(', ').map(n => `\`${n}\``).join(', ')}` : ''}
             `;
