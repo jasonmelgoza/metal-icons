@@ -1,0 +1,108 @@
+name: Build Icons
+
+on:
+  pull_request:
+    paths:
+      - 'src/**/*.svg'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch base branch
+        run: git fetch origin ${{ github.base_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build icons
+        run: yarn build
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Get new icon names
+        id: new-icons
+        run: |
+          ADDED_SVG_FILES=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD -- 'src/' | grep '\.svg$' || true)
+          ALL_SVG_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'src/' | grep '\.svg$' || true)
+          if [ -n "$ADDED_SVG_FILES" ]; then
+            ICON_NAMES=$(echo "$ADDED_SVG_FILES" | xargs -I {} basename {} .svg | sort -u | tr '\n' ', ' | sed 's/, $//')
+            echo "added<<EOF" >> $GITHUB_OUTPUT
+            echo "$ICON_NAMES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "added=" >> $GITHUB_OUTPUT
+          fi
+          if [ -n "$ALL_SVG_FILES" ]; then
+            ALL_NAMES=$(echo "$ALL_SVG_FILES" | xargs -I {} basename {} .svg | sort -u | tr '\n' ', ' | sed 's/, $//')
+            echo "all<<EOF" >> $GITHUB_OUTPUT
+            echo "$ALL_NAMES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "all=" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit build artifacts
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add packages/metal-icons/16/ packages/metal-icons/24/ packages/metal-icons/package.json
+
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No build artifacts to commit"
+          else
+            ADDED_ICONS="${{ steps.new-icons.outputs.added }}"
+            if [ -n "$ADDED_ICONS" ]; then
+              MSG="feat(icons): add ${ADDED_ICONS} (auto-generated)"
+            else
+              MSG="chore(build): update icon builds"
+            fi
+            git commit -m "$MSG"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "message<<EOF" >> $GITHUB_OUTPUT
+            echo "$MSG" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Comment on PR
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const iconNames = '${{ steps.new-icons.outputs.all }}';
+            const commitMsg = `${{ steps.commit.outputs.message }}`;
+            const body = `## Icon build complete
+
+            Build artifacts have been committed to this PR.
+
+            **Commit:** \`${commitMsg}\`
+
+            ${iconNames ? `**Icons in this PR:** ${iconNames.split(', ').map(n => `\`${n}\``).join(', ')}` : ''}
+            `;
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
