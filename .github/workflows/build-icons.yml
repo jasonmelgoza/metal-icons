@@ -64,7 +64,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add packages/metal-icons/16/ packages/metal-icons/24/ packages/metal-icons/package.json
+          git add -f packages/metal-icons/16/ packages/metal-icons/24/ packages/metal-icons/package.json
 
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
