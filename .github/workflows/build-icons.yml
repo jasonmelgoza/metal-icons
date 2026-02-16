@@ -6,7 +6,6 @@ on:
       - 'src/**/*.svg'
 
 permissions:
-  contents: write
   pull-requests: write
 
 jobs:
@@ -16,7 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
           fetch-depth: 0
 
       - name: Fetch base branch
@@ -37,7 +35,7 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Get new icon names
+      - name: Get changed icon names
         id: new-icons
         run: |
           ADDED_SVG_FILES=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD -- 'src/' | grep '\.svg$' || true)
@@ -59,44 +57,14 @@ jobs:
             echo "all=" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit build artifacts
-        id: commit
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add -f packages/metal-icons/16/ packages/metal-icons/24/ packages/metal-icons/package.json
-
-          if git diff --staged --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No build artifacts to commit"
-          else
-            ADDED_ICONS="${{ steps.new-icons.outputs.added }}"
-            if [ -n "$ADDED_ICONS" ]; then
-              MSG="feat(icons): add ${ADDED_ICONS} (auto-generated)"
-            else
-              MSG="chore(build): update icon builds"
-            fi
-            git commit -m "$MSG"
-            git push
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "message<<EOF" >> $GITHUB_OUTPUT
-            echo "$MSG" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          fi
-
       - name: Comment on PR
-        if: steps.commit.outputs.changed == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             const iconNames = '${{ steps.new-icons.outputs.all }}';
-            const commitMsg = `${{ steps.commit.outputs.message }}`;
-            const body = `## Icon build complete
+            const body = `## Icon build validated ✓
 
-            Build artifacts have been committed to this PR.
-
-            **Commit:** \`${commitMsg}\`
+            Build and lint completed successfully. Icons will be built at publish time via \`prepublishOnly\`.
 
             ${iconNames ? `**Icons in this PR:** ${iconNames.split(', ').map(n => `\`${n}\``).join(', ')}` : ''}
             `;
