@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.7.0...v0.8.0) (2026-02-16)
+
+
+### Added
+
+* add house SVG icons in outline and solid styles for 16px and 24px sizes, update icon count in README to 170 ([215f44b](https://github.com/jasonmelgoza/metal-icons/commit/215f44be2f308bdda9b792e517ceaf1fe0476879))
+
 ## [0.7.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.6.0...v0.7.0) (2026-01-25)
 
 
