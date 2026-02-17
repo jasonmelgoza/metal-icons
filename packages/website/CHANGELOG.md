@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.8.0...v0.8.1) (2026-02-17)
+
+
+### Changed
+
+* release main ([638bd63](https://github.com/jasonmelgoza/metal-icons/commit/638bd63aeceab2c078997b4232f78ea25527c33c))
+* release main ([47c30e5](https://github.com/jasonmelgoza/metal-icons/commit/47c30e51fce1ece35156ef6c162fce6b2349758d))
+* **website:** sync icons.json and version.json for circle, ([eef0233](https://github.com/jasonmelgoza/metal-icons/commit/eef023339246e7c1bc9571f672471380e4f9b957))
+
 ## [0.8.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.7.0...v0.8.0) (2026-02-16)
 
 
