@@ -1,5 +1,5 @@
 {
-  ".": "0.9.0",
+  ".": "0.9.1",
   "packages/metal-icons": "0.9.0",
-  "packages/website": "0.9.0"
+  "packages/website": "0.9.1"
 }
