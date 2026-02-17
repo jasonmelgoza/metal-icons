@@ -8,25 +8,28 @@
     {
       "type": "linked-versions",
       "groupName": "metal-icons-monorepo",
-      "components": [".", "packages/metal-icons", "packages/website"]
+      "components": ["root", "metal-icons", "website"]
     }
   ],
   "packages": {
     ".": {
       "release-type": "simple",
-      "changelog-path": "CHANGELOG.md"
+      "changelog-path": "CHANGELOG.md",
+      "component": "root"
     },
     "packages/metal-icons": {
       "release-type": "node",
       "package-name": "metal-icons",
       "include-component-in-tag": false,
-      "include-v-in-tag": true
+      "include-v-in-tag": true,
+      "component": "metal-icons"
     },
     "packages/website": {
       "release-type": "node",
       "package-name": "website",
       "include-component-in-tag": false,
-      "include-v-in-tag": true
+      "include-v-in-tag": true,
+      "component": "website"
     }
   },
   "changelog-sections": [
