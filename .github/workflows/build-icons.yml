@@ -1,0 +1,111 @@
+name: Build Icons
+
+on:
+  pull_request:
+    paths:
+      - 'src/**/*.svg'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Fetch base branch
+        run: git fetch origin ${{ github.base_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build icons
+        run: yarn build
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Sync website data
+        run: yarn sync-website
+
+      - name: Get changed icon names
+        id: new-icons
+        run: |
+          ADDED_SVG_FILES=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD -- 'src/' | grep '\.svg$' || true)
+          ALL_SVG_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'src/' | grep '\.svg$' || true)
+          if [ -n "$ADDED_SVG_FILES" ]; then
+            ICON_NAMES=$(echo "$ADDED_SVG_FILES" | xargs -I {} basename {} .svg | sort -u | tr '\n' ', ' | sed 's/, $//')
+            echo "added<<EOF" >> $GITHUB_OUTPUT
+            echo "$ICON_NAMES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "added=" >> $GITHUB_OUTPUT
+          fi
+          if [ -n "$ALL_SVG_FILES" ]; then
+            ALL_NAMES=$(echo "$ALL_SVG_FILES" | xargs -I {} basename {} .svg | sort -u | tr '\n' ', ' | sed 's/, $//')
+            echo "all<<EOF" >> $GITHUB_OUTPUT
+            echo "$ALL_NAMES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "all=" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit website data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add packages/website/public/data/icons.json packages/website/src/data/version.json
+
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No website data changes to commit"
+          else
+            ADDED_ICONS="${{ steps.new-icons.outputs.added }}"
+            if [ -n "$ADDED_ICONS" ]; then
+              MSG="chore(website): sync icons.json and version.json for ${ADDED_ICONS}"
+            else
+              MSG="chore(website): sync icons.json and version.json"
+            fi
+            git commit -m "$MSG"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "message<<EOF" >> $GITHUB_OUTPUT
+            echo "$MSG" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const iconNames = '${{ steps.new-icons.outputs.all }}';
+            const committed = '${{ steps.commit.outputs.changed }}' === 'true';
+            const commitMsg = `${{ steps.commit.outputs.message }}`;
+            const body = `## Icon build validated ✓
+
+            Build and lint completed successfully. Icons will be built at publish time via \`prepublishOnly\`.
+            ${committed ? `\n\n**Website data synced:** \`${commitMsg}\`` : ''}
+
+            ${iconNames ? `**Icons in this PR:** ${iconNames.split(', ').map(n => `\`${n}\``).join(', ')}` : ''}
+            `;
+
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
