@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.8.0...v0.9.0) (2026-02-17)
+
+
+### Added
+
+* add circle SVG icons in outline and solid styles for 16px and 24px sizes ([15ca0c7](https://github.com/jasonmelgoza/metal-icons/commit/15ca0c71b510c17359f2a104380eb47fe17a0049))
+* add circle SVG icons in outline and solid styles for 16px and 24px sizes ([54abbc8](https://github.com/jasonmelgoza/metal-icons/commit/54abbc89f61e86cbc464e1a83f2552912d46dbae))
+
+
+### Changed
+
+* add GitHub Actions workflow for publishing metal-icons to npm on release ([82564c8](https://github.com/jasonmelgoza/metal-icons/commit/82564c8ffe19a3bd9f7d47d1ca4ca3d818c3d7bb))
+* add scripts for generating icons and version, and create GitHub Actions workflow for building icons ([36f7d65](https://github.com/jasonmelgoza/metal-icons/commit/36f7d657cc16307db39a357d3c0dfdc050dfc0df))
+* ignore optimized build artifacts ([fc5dc57](https://github.com/jasonmelgoza/metal-icons/commit/fc5dc57c92dd455b4a9fe9d70fd5f49db86671e6))
+* release main ([638bd63](https://github.com/jasonmelgoza/metal-icons/commit/638bd63aeceab2c078997b4232f78ea25527c33c))
+* release main ([47c30e5](https://github.com/jasonmelgoza/metal-icons/commit/47c30e51fce1ece35156ef6c162fce6b2349758d))
+* update release-please configuration to include node-workspace plugin ([6198d98](https://github.com/jasonmelgoza/metal-icons/commit/6198d98a232502e005d62820a7e0b0a67cb0abfd))
+* **website:** sync icons.json and version.json for circle, ([eef0233](https://github.com/jasonmelgoza/metal-icons/commit/eef023339246e7c1bc9571f672471380e4f9b957))
+
 ## [0.8.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.7.0...v0.8.0) (2026-02-16)
 
 
