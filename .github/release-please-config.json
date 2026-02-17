@@ -1,36 +1,32 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-  "plugins": [
-    {
-      "type": "linked-versions",
-      "groupName": "metal-icons-monorepo",
-      "components": ["root", "metal-icons", "website"]
-    },
-    {
-      "type": "node-workspace",
-      "merge": false
-    }
-  ],
   "packages": {
     ".": {
       "release-type": "simple",
       "changelog-path": "CHANGELOG.md",
-      "component": "root",
-      "include-component-in-tag": false
-    },
-    "packages/metal-icons": {
-      "release-type": "node",
-      "package-name": "metal-icons",
       "include-component-in-tag": false,
-      "include-v-in-tag": true,
-      "component": "metal-icons"
-    },
-    "packages/website": {
-      "release-type": "node",
-      "package-name": "website",
-      "include-component-in-tag": false,
-      "include-v-in-tag": true,
-      "component": "website"
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/metal-icons/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/website/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "packages/website/package.json",
+          "jsonpath": "$.dependencies.metal-icons"
+        }
+      ]
     }
   },
   "changelog-sections": [
