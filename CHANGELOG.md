@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.0...v0.9.1) (2026-02-17)
+
+
+### Fixed
+
+* **release:** add explicit component names for linked-versions ([1ec8c37](https://github.com/jasonmelgoza/metal-icons/commit/1ec8c374a92f88f35a6280b0e4453311d8655d1e))
+* **release:** add explicit component names for linked-versions ([d272539](https://github.com/jasonmelgoza/metal-icons/commit/d27253954a36fa2324378251833d410dcdc8e05d))
+* **release:** fix tag format and plugin order for linked releases ([c488d66](https://github.com/jasonmelgoza/metal-icons/commit/c488d66dd27464beb989c3936fc9169a796d72a9))
+* **release:** fix tag format and plugin order for linked releases ([f140c3e](https://github.com/jasonmelgoza/metal-icons/commit/f140c3e5c70ff39c58594870ee62c3b4d517e4e1))
+* simplify release-please to single-package config with extra-files ([d16295b](https://github.com/jasonmelgoza/metal-icons/commit/d16295b9899376cf40c23bea07de6c7de2806d59))
+* simplify release-please to single-package config with extra-files ([ba022c3](https://github.com/jasonmelgoza/metal-icons/commit/ba022c3dcbf75575b81cfdcc0ebb2315d73fadbe))
+
+
+### Changed
+
+* release main ([85c2b30](https://github.com/jasonmelgoza/metal-icons/commit/85c2b3073e54338021ad52efcfaf99dcc39217c7))
+* release main ([8e2c42f](https://github.com/jasonmelgoza/metal-icons/commit/8e2c42fd8b60ba039719361b850b9d0bac1438a3))
+* sync metal-icons version ([39ea8bf](https://github.com/jasonmelgoza/metal-icons/commit/39ea8bf8813b8844b68c5fed01ecc5d9189e9c45))
+* sync metal-icons version ([bfae4ce](https://github.com/jasonmelgoza/metal-icons/commit/bfae4cefa68a28367956f01981b89836ed4b68c0))
+
 ## [0.9.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.8.0...v0.9.0) (2026-02-17)
 
 
