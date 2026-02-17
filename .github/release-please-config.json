@@ -2,7 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "plugins": [
     {
-      "type": "node-workspace"
+      "type": "node-workspace",
+      "merge": false
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "metal-icons-monorepo",
+      "components": [".", "packages/metal-icons", "packages/website"]
     }
   ],
   "packages": {
