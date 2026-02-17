@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.9.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.0...v0.9.1) (2026-02-17)
+
+
+### Changed
+
+* release main ([85c2b30](https://github.com/jasonmelgoza/metal-icons/commit/85c2b3073e54338021ad52efcfaf99dcc39217c7))
+* release main ([8e2c42f](https://github.com/jasonmelgoza/metal-icons/commit/8e2c42fd8b60ba039719361b850b9d0bac1438a3))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * metal-icons bumped from 0.8.0 to 0.10.0
+
 ## [0.9.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.8.1...v0.9.0) (2026-02-17)
 
 
