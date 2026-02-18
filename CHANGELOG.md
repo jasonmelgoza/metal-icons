@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.1...v0.10.0) (2026-02-18)
+
+
+### Added
+
+* add pause SVG icons in outline and solid styles for 16px and 24px sizes ([f9743b5](https://github.com/jasonmelgoza/metal-icons/commit/f9743b586f4c437edabb93756da7f1ef29fcf3e8))
+* add pause SVG icons in outline and solid styles for 16px and 24px sizes ([a6a2118](https://github.com/jasonmelgoza/metal-icons/commit/a6a2118a71c20d9174c1cac9ee6507ff37400803))
+
+
+### Changed
+
+* **website:** sync icons.json and version.json for pause, ([a6343c4](https://github.com/jasonmelgoza/metal-icons/commit/a6343c458325156f933998699d176279c95fd1d3))
+
 ## [0.9.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.0...v0.9.1) (2026-02-17)
 
 
