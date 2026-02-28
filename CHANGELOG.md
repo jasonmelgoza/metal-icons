@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.10.0...v0.10.1) (2026-02-28)
+
+
+### Changed
+
+* **website:** extract magic numbers in Hero component ([346da71](https://github.com/jasonmelgoza/metal-icons/commit/346da71764ba16f8566309b422192a395b25680f))
+
+
+### Documentation
+
+* add CLAUDE.md with project commands and architecture ([f2533b5](https://github.com/jasonmelgoza/metal-icons/commit/f2533b5803d8db34ef048277572e63269920f005))
+
 ## [0.10.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.1...v0.10.0) (2026-02-18)
 
 
