@@ -80,6 +80,10 @@ type IconType =
   | 'mail'
   | 'search'
 
+const EMOJI_INDEX = 13
+const SHUFFLE_INTERVAL = 6000
+const ROTATION_INTERVAL = 4000
+
 export default function Hero() {
   const [order, setOrder] = useState(initialOrder)
   const [selectedIconId, setSelectedIconId] = useState<string | null>(null)
@@ -131,12 +135,11 @@ export default function Hero() {
     const numIconsToShuffle = 3
     const newOrder = [...order]
 
-    // Get unique random indices, excluding index 13 (14th item)
+    // Get unique random indices, excluding the emoji position
     const indices = new Set<number>()
     while (indices.size < numIconsToShuffle) {
       const randomIndex = Math.floor(Math.random() * order.length)
-      if (randomIndex !== 13) {
-        // Skip the 14th item (index 13)
+      if (randomIndex !== EMOJI_INDEX) {
         indices.add(randomIndex)
       }
     }
@@ -161,7 +164,7 @@ export default function Hero() {
 
   // Effect for shuffling icons
   useEffect(() => {
-    const shuffleTimeout = setTimeout(shuffleIcons, 6000)
+    const shuffleTimeout = setTimeout(shuffleIcons, SHUFFLE_INTERVAL)
     return () => clearTimeout(shuffleTimeout)
   }, [shuffleIcons])
 
@@ -170,7 +173,7 @@ export default function Hero() {
     let randomIndex
     do {
       randomIndex = Math.floor(Math.random() * order.length)
-    } while (randomIndex === 13) // Skip the 14th item (index 13)
+    } while (randomIndex === EMOJI_INDEX)
     setSelectedIconId(order[randomIndex].id)
   }, [order])
 
@@ -180,15 +183,14 @@ export default function Hero() {
       selectRandomIcon()
     }
 
-    const rotationTimeout = setTimeout(selectRandomIcon, 4000)
+    const rotationTimeout = setTimeout(selectRandomIcon, ROTATION_INTERVAL)
     return () => clearTimeout(rotationTimeout)
   }, [order, selectedIconId, selectRandomIcon])
 
   // Memoize the icon rendering function
   const renderIcon = useCallback(
     (iconType: IconType, index: number) => {
-      if (index === 13) {
-        // 14th item
+      if (index === EMOJI_INDEX) {
         return <span className={Styles["hero-emoji"]}>🤘</span>
       }
       const Icon = iconMap[iconType]
@@ -204,7 +206,7 @@ export default function Hero() {
         <motion.li key={item.id} layout transition={spring} className={Styles["hero-item"]}>
           <motion.div
             animate={
-              index === 13 ? {} : selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 }
+              index === EMOJI_INDEX ? {} : selectedIconId === item.id ? { rotate: 360 } : { rotate: 0 }
             }
             className={Styles["hero-item-icon"]}
             transition={{ duration: 1, ease: 'easeInOut' }}
