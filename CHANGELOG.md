@@ -5,7 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.10.0...v0.10.1) (2026-02-28)
+
+
+### Changed
+
+* **website:** extract magic numbers in Hero component ([346da71](https://github.com/jasonmelgoza/metal-icons/commit/346da71764ba16f8566309b422192a395b25680f))
+
+
+### Documentation
+
+* add CLAUDE.md with project commands and architecture ([f2533b5](https://github.com/jasonmelgoza/metal-icons/commit/f2533b5803d8db34ef048277572e63269920f005))
+
+## [0.10.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.1...v0.10.0) (2026-02-18)
+
+
+### Added
+
+* add pause SVG icons in outline and solid styles for 16px and 24px sizes ([f9743b5](https://github.com/jasonmelgoza/metal-icons/commit/f9743b586f4c437edabb93756da7f1ef29fcf3e8))
+* add pause SVG icons in outline and solid styles for 16px and 24px sizes ([a6a2118](https://github.com/jasonmelgoza/metal-icons/commit/a6a2118a71c20d9174c1cac9ee6507ff37400803))
+
+
+### Changed
+
+* **website:** sync icons.json and version.json for pause, ([a6343c4](https://github.com/jasonmelgoza/metal-icons/commit/a6343c458325156f933998699d176279c95fd1d3))
+
 ## [0.9.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.9.0...v0.9.1) (2026-02-17)
+
+
+### Fixed
+
+* **release:** add explicit component names for linked-versions ([1ec8c37](https://github.com/jasonmelgoza/metal-icons/commit/1ec8c374a92f88f35a6280b0e4453311d8655d1e))
+* **release:** add explicit component names for linked-versions ([d272539](https://github.com/jasonmelgoza/metal-icons/commit/d27253954a36fa2324378251833d410dcdc8e05d))
+* **release:** fix tag format and plugin order for linked releases ([c488d66](https://github.com/jasonmelgoza/metal-icons/commit/c488d66dd27464beb989c3936fc9169a796d72a9))
+* **release:** fix tag format and plugin order for linked releases ([f140c3e](https://github.com/jasonmelgoza/metal-icons/commit/f140c3e5c70ff39c58594870ee62c3b4d517e4e1))
+* simplify release-please to single-package config with extra-files ([d16295b](https://github.com/jasonmelgoza/metal-icons/commit/d16295b9899376cf40c23bea07de6c7de2806d59))
+* simplify release-please to single-package config with extra-files ([ba022c3](https://github.com/jasonmelgoza/metal-icons/commit/ba022c3dcbf75575b81cfdcc0ebb2315d73fadbe))
 
 
 ### Changed
