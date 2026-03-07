@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import * as TooltipPrimitive from '@radix-ui/react-tooltip'
+import { motion, AnimatePresence } from 'motion/react'
 import ReactDOM from 'react-dom/client'
 import { toast } from 'sonner'
 import { Layout } from '../components/Layout'
@@ -121,6 +123,8 @@ const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, onClear, ico
  * Displays an installation command with copy functionality
  */
 const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => {
+  const [tooltipOpen, setTooltipOpen] = useState(false)
+
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(command)
@@ -142,14 +146,37 @@ const InstallCommand: React.FC<InstallCommandProps> = ({ command }) => {
           aria-label="Installation command"
           className={Styles.installInput}
         />
-        <button
-          type="button"
-          onClick={handleCopy}
-          aria-label="Copy installation command"
-          className={Styles.installButton}
-        >
-          <DuplicateIcon className="icon-duplicate" aria-hidden="true" />
-        </button>
+        <TooltipPrimitive.Provider delayDuration={300}>
+          <TooltipPrimitive.Root open={tooltipOpen} onOpenChange={setTooltipOpen}>
+            <TooltipPrimitive.Trigger asChild>
+              <button
+                type="button"
+                onClick={handleCopy}
+                aria-label="Copy installation command"
+                className={Styles.installButton}
+              >
+                <DuplicateIcon className="icon-duplicate" aria-hidden="true" />
+              </button>
+            </TooltipPrimitive.Trigger>
+            <AnimatePresence>
+              {tooltipOpen && (
+                <TooltipPrimitive.Portal forceMount>
+                  <TooltipPrimitive.Content asChild sideOffset={6} side="top">
+                    <motion.div
+                      className={Styles.tooltipContent}
+                      initial={{ opacity: 0, y: 4, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 4, scale: 0.95 }}
+                      transition={{ duration: 0.15, ease: 'easeOut' }}
+                    >
+                      Copy to clipboard
+                    </motion.div>
+                  </TooltipPrimitive.Content>
+                </TooltipPrimitive.Portal>
+              )}
+            </AnimatePresence>
+          </TooltipPrimitive.Root>
+        </TooltipPrimitive.Provider>
       </div>
     </div>
   )
