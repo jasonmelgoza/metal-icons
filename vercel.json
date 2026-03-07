@@ -2,5 +2,6 @@
   "framework": null,
   "installCommand": "yarn install --frozen-lockfile",
   "buildCommand": "yarn build && yarn workspace website build",
-  "outputDirectory": "packages/website/dist"
+  "outputDirectory": "packages/website/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
