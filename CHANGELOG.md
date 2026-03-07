@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.10.1...v0.11.0) (2026-03-07)
+
+
+### Added
+
+* **website:** add animated tooltip on copy installation command button ([#139](https://github.com/jasonmelgoza/metal-icons/issues/139)) ([e44d29b](https://github.com/jasonmelgoza/metal-icons/commit/e44d29b8cfc7a75256cc5bbfd116e75d6aa42108))
+
 ## [0.10.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.10.0...v0.10.1) (2026-02-28)
 
 
