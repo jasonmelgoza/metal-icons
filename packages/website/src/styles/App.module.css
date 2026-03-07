@@ -545,6 +545,21 @@
   font-size: 20px;
 }
 
+/* Tooltip */
+
+.tooltipContent {
+  padding: 0.375rem 0.625rem;
+  border: 1px solid rgb(var(--border-rgb));
+  border-radius: 0.375rem;
+  background-color: rgb(var(--surface-rgb));
+  color: rgb(var(--fg-rgb));
+  font-size: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transform-origin: var(--radix-tooltip-content-transform-origin);
+  user-select: none;
+  pointer-events: none;
+}
+
 /* Screen reader only */
 .srOnly {
   position: absolute;
