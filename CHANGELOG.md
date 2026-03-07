@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.11.0...v0.12.0) (2026-03-07)
+
+
+### Added
+
+* **website:** add 404 not found page ([#143](https://github.com/jasonmelgoza/metal-icons/issues/143)) ([3d1a50e](https://github.com/jasonmelgoza/metal-icons/commit/3d1a50e78fab8519e6f53cb7d973a6b84cf424dc))
+
 ## [0.11.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.10.1...v0.11.0) (2026-03-07)
 
 
