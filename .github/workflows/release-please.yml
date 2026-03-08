@@ -37,8 +37,32 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ needs.release-please.outputs.tag_name }}
+          fetch-depth: 0
+
+      - name: Check if package source changed
+        id: source-check
+        run: |
+          CURRENT_TAG="${{ needs.release-please.outputs.tag_name }}"
+          PREV_TAG=$(git tag --sort=-version:refname | grep -v "^${CURRENT_TAG}$" | head -1)
+          if [ -z "$PREV_TAG" ]; then
+            echo "No previous tag found — treating as first release"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "Comparing ${PREV_TAG}..${CURRENT_TAG}"
+            CHANGED=$(git diff --name-only "$PREV_TAG" "$CURRENT_TAG" -- src/ packages/metal-icons/ \
+              | grep -v '^packages/metal-icons/package\.json$' || true)
+            if [ -n "$CHANGED" ]; then
+              echo "Package source changed:"
+              echo "$CHANGED"
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
+              echo "No package source changes detected — skipping publish"
+              echo "changed=false" >> $GITHUB_OUTPUT
+            fi
+          fi
 
       - name: Setup Node.js
+        if: steps.source-check.outputs.changed == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -46,12 +70,15 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
+        if: steps.source-check.outputs.changed == 'true'
         run: yarn install --frozen-lockfile
 
       - name: Build
+        if: steps.source-check.outputs.changed == 'true'
         run: yarn build
 
       - name: Publish metal-icons
+        if: steps.source-check.outputs.changed == 'true'
         run: npm publish -w metal-icons --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
