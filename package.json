@@ -17,8 +17,7 @@
     "dev": "yarn --cwd ./packages/website dev",
     "sort-icons": "node ./scripts/sort-icons.js",
     "generate-icons": "node ./scripts/generate-icons.js",
-    "generate-version": "node ./scripts/generate-version.js",
-    "sync-website": "yarn generate-icons && yarn sort-icons && yarn generate-version",
+    "sync-website": "yarn generate-icons && yarn sort-icons",
     "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/ && rm yarn.lock && yarn cache clean"
   },
   "devDependencies": {

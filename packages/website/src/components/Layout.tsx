@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 import * as motion from "motion/react-client";
 import Hero from './Hero';
-import versionData from '../data/version.json';
+import metalIconsPkg from 'metal-icons/package.json';
 import Styles from '../styles/App.module.css';
 
 const SOCIAL_LINKS = [
@@ -87,7 +87,7 @@ export function Layout({ children }: LayoutProps): React.ReactElement {
           <div>
             <p>
               <a href="https://github.com/jasonmelgoza/metal-icons" target="_blank" rel="noopener noreferrer">
-                metal-icons {versionData.version}
+                metal-icons v{metalIconsPkg.version}
               </a>
             </p>
           </div>
