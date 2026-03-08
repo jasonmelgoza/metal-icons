@@ -29,7 +29,7 @@ jobs:
         run: yarn build
 
       - name: Install Vercel CLI
-        run: yarn global add vercel@latest
+        run: yarn global add vercel@50
 
       - name: Pull Vercel environment
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
