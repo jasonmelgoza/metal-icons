@@ -1,4 +1,5 @@
 {
+  "ignoreCommand": "git diff HEAD~1 --name-only | grep -qE '^(packages/website/|src/)' && exit 1 || exit 0",
   "framework": null,
   "installCommand": "yarn install --frozen-lockfile",
   "buildCommand": "yarn build && yarn workspace website build",
