@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.15.0...v0.15.1) (2026-03-09)
+
+
+### Changed
+
+* **build:** add commitlint and husky git hooks ([#158](https://github.com/jasonmelgoza/metal-icons/issues/158)) ([82f056f](https://github.com/jasonmelgoza/metal-icons/commit/82f056fbaa239e02ca45cfe938aa5172adcf3741))
+
 ## [0.15.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.14.0...v0.15.0) (2026-03-09)
 
 
