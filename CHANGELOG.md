@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.14.0...v0.15.0) (2026-03-09)
+
+
+### Added
+
+* add sun icon ([31dbb77](https://github.com/jasonmelgoza/metal-icons/commit/31dbb776a76587e7dd83b65db9c57bf6fb4fbfea))
+
 ## [0.14.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.13.0...v0.14.0) (2026-03-09)
 
 
