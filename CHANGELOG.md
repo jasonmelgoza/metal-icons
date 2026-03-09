@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.14.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.13.0...v0.14.0) (2026-03-09)
+
+
+### Added
+
+* **svg:** add video icons in outline and solid styles for 16px and 2… ([#154](https://github.com/jasonmelgoza/metal-icons/issues/154)) ([1639077](https://github.com/jasonmelgoza/metal-icons/commit/16390779c5ba60f9fb1143ea9d24d8ee2e0b1a62))
+
 ## [0.13.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.12.0...v0.13.0) (2026-03-08)
 
 
