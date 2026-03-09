@@ -18,13 +18,18 @@
     "sort-icons": "node ./scripts/sort-icons.js",
     "generate-icons": "node ./scripts/generate-icons.js",
     "sync-website": "yarn generate-icons && yarn sort-icons",
-    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/ && rm yarn.lock && yarn cache clean"
+    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/ && rm yarn.lock && yarn cache clean",
+    "commitlint": "commitlint",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
     "@svgr/core": "^5.5.0",
     "camelcase": "^8.0.0",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "react": "^18.2.0",
     "rimraf": "^6.0.1",
