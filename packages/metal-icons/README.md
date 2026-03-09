@@ -2,8 +2,6 @@
 
 A clean, reliable icon set built for React.
 
-**170 icons** available in multiple sizes and styles.
-
 ---
 
 ## Available Sizes & Styles
@@ -51,10 +49,6 @@ export default function MyComponent() {
 ```
 
 Icons follow an `UpperCamelCase` naming convention and always end with the word "Icon."
-
-## Icon Count
-
-170 icons
 
 ## License
 
