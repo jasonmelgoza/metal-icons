@@ -677,14 +677,18 @@
   },
   {
     "id": 170,
-    "name": "view"
+    "name": "video"
   },
   {
     "id": 171,
-    "name": "zoom-in"
+    "name": "view"
   },
   {
     "id": 172,
+    "name": "zoom-in"
+  },
+  {
+    "id": 173,
     "name": "zoom-out"
   }
 ]
