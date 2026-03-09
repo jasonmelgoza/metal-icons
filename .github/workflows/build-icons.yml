@@ -68,7 +68,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add packages/website/public/data/icons.json packages/website/src/data/version.json
+          git add packages/website/public/data/icons.json
 
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -76,9 +76,9 @@ jobs:
           else
             ADDED_ICONS="${{ steps.new-icons.outputs.added }}"
             if [ -n "$ADDED_ICONS" ]; then
-              MSG="chore(website): sync icons.json and version.json for ${ADDED_ICONS}"
+              MSG="chore(website): sync icons.json for ${ADDED_ICONS}"
             else
-              MSG="chore(website): sync icons.json and version.json"
+              MSG="chore(website): sync icons.json"
             fi
             git commit -m "$MSG"
             git push
