@@ -621,74 +621,78 @@
   },
   {
     "id": 156,
-    "name": "swap-horizontal"
+    "name": "sun"
   },
   {
     "id": 157,
-    "name": "swap-vertical"
+    "name": "swap-horizontal"
   },
   {
     "id": 158,
-    "name": "tablet"
+    "name": "swap-vertical"
   },
   {
     "id": 159,
-    "name": "tag"
+    "name": "tablet"
   },
   {
     "id": 160,
-    "name": "text"
+    "name": "tag"
   },
   {
     "id": 161,
-    "name": "text-align-center"
+    "name": "text"
   },
   {
     "id": 162,
-    "name": "text-align-justify"
+    "name": "text-align-center"
   },
   {
     "id": 163,
-    "name": "text-align-left"
+    "name": "text-align-justify"
   },
   {
     "id": 164,
-    "name": "text-align-right"
+    "name": "text-align-left"
   },
   {
     "id": 165,
-    "name": "thumbs-down"
+    "name": "text-align-right"
   },
   {
     "id": 166,
-    "name": "thumbs-up"
+    "name": "thumbs-down"
   },
   {
     "id": 167,
-    "name": "trash"
+    "name": "thumbs-up"
   },
   {
     "id": 168,
-    "name": "upload"
+    "name": "trash"
   },
   {
     "id": 169,
-    "name": "user"
+    "name": "upload"
   },
   {
     "id": 170,
-    "name": "video"
+    "name": "user"
   },
   {
     "id": 171,
-    "name": "view"
+    "name": "video"
   },
   {
     "id": 172,
-    "name": "zoom-in"
+    "name": "view"
   },
   {
     "id": 173,
+    "name": "zoom-in"
+  },
+  {
+    "id": 174,
     "name": "zoom-out"
   }
 ]
