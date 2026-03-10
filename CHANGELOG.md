@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.16.0...v0.17.0) (2026-03-10)
+
+
+### Added
+
+* add play icon ([#162](https://github.com/jasonmelgoza/metal-icons/issues/162)) ([417921e](https://github.com/jasonmelgoza/metal-icons/commit/417921e2116082f02eb1c10939a52e245232aaac))
+
 ## [0.16.0](https://github.com/jasonmelgoza/metal-icons/compare/v0.15.1...v0.16.0) (2026-03-10)
 
 
