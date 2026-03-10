@@ -529,174 +529,178 @@
   },
   {
     "id": 133,
-    "name": "plus"
+    "name": "play"
   },
   {
     "id": 134,
-    "name": "printer"
+    "name": "plus"
   },
   {
     "id": 135,
-    "name": "redirect"
+    "name": "printer"
   },
   {
     "id": 136,
-    "name": "reload"
+    "name": "redirect"
   },
   {
     "id": 137,
-    "name": "repeat"
+    "name": "reload"
   },
   {
     "id": 138,
-    "name": "rows"
+    "name": "repeat"
   },
   {
     "id": 139,
-    "name": "search"
+    "name": "rows"
   },
   {
     "id": 140,
-    "name": "send"
+    "name": "search"
   },
   {
     "id": 141,
-    "name": "server"
+    "name": "send"
   },
   {
     "id": 142,
-    "name": "share"
+    "name": "server"
   },
   {
     "id": 143,
-    "name": "shield"
+    "name": "share"
   },
   {
     "id": 144,
-    "name": "shield-alert"
+    "name": "shield"
   },
   {
     "id": 145,
-    "name": "shield-check"
+    "name": "shield-alert"
   },
   {
     "id": 146,
-    "name": "shield-x"
+    "name": "shield-check"
   },
   {
     "id": 147,
-    "name": "shopping-bag"
+    "name": "shield-x"
   },
   {
     "id": 148,
-    "name": "shopping-cart"
+    "name": "shopping-bag"
   },
   {
     "id": 149,
-    "name": "sidebar"
+    "name": "shopping-cart"
   },
   {
     "id": 150,
-    "name": "slash"
+    "name": "sidebar"
   },
   {
     "id": 151,
-    "name": "slider"
+    "name": "slash"
   },
   {
     "id": 152,
-    "name": "smartphone"
+    "name": "slider"
   },
   {
     "id": 153,
-    "name": "sparkle-text"
+    "name": "smartphone"
   },
   {
     "id": 154,
-    "name": "sparkles"
+    "name": "sparkle-text"
   },
   {
     "id": 155,
-    "name": "star"
+    "name": "sparkles"
   },
   {
     "id": 156,
-    "name": "stop"
+    "name": "star"
   },
   {
     "id": 157,
-    "name": "sun"
+    "name": "stop"
   },
   {
     "id": 158,
-    "name": "swap-horizontal"
+    "name": "sun"
   },
   {
     "id": 159,
-    "name": "swap-vertical"
+    "name": "swap-horizontal"
   },
   {
     "id": 160,
-    "name": "tablet"
+    "name": "swap-vertical"
   },
   {
     "id": 161,
-    "name": "tag"
+    "name": "tablet"
   },
   {
     "id": 162,
-    "name": "text"
+    "name": "tag"
   },
   {
     "id": 163,
-    "name": "text-align-center"
+    "name": "text"
   },
   {
     "id": 164,
-    "name": "text-align-justify"
+    "name": "text-align-center"
   },
   {
     "id": 165,
-    "name": "text-align-left"
+    "name": "text-align-justify"
   },
   {
     "id": 166,
-    "name": "text-align-right"
+    "name": "text-align-left"
   },
   {
     "id": 167,
-    "name": "thumbs-down"
+    "name": "text-align-right"
   },
   {
     "id": 168,
-    "name": "thumbs-up"
+    "name": "thumbs-down"
   },
   {
     "id": 169,
-    "name": "trash"
+    "name": "thumbs-up"
   },
   {
     "id": 170,
-    "name": "upload"
+    "name": "trash"
   },
   {
     "id": 171,
-    "name": "user"
+    "name": "upload"
   },
   {
     "id": 172,
-    "name": "video"
+    "name": "user"
   },
   {
     "id": 173,
-    "name": "view"
+    "name": "video"
   },
   {
     "id": 174,
-    "name": "zoom-in"
+    "name": "view"
   },
   {
     "id": 175,
+    "name": "zoom-in"
+  },
+  {
+    "id": 176,
     "name": "zoom-out"
   }
 ]
