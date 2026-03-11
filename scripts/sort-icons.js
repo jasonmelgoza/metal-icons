@@ -1,8 +1,10 @@
+// Importing required modules
 const fs = require('fs').promises
 const path = require('path')
 
 const iconsJsonPath = path.resolve(__dirname, '../packages/website/public/data/icons.json')
 
+// Main function
 async function main() {
   try {
     // Read the icons.json file

@@ -1,3 +1,4 @@
+// Importing required modules
 const fs = require('fs').promises
 const path = require('path')
 
@@ -6,13 +7,16 @@ const srcPaths = {
   outline: path.resolve(__dirname, '../src/16/outline/'),
 }
 
+// Main function
 async function main() {
+  // Read SVG file lists for each style
   let files = await Promise.all(
     Object.entries(srcPaths).map(async ([name, path]) => {
       return { name, files: (await fs.readdir(path)).filter((file) => file.endsWith('.svg')) }
     })
   )
 
+  // Find any icons that exist in one style but not the other
   let diffs = []
   for (let current of files) {
     for (let other of files) {
