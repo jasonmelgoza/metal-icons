@@ -1,7 +1,7 @@
 {
   "name": "website",
   "private": true,
-  "version": "0.17.1",
+  "version": "0.17.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.2.8",
-    "metal-icons": "0.17.1",
+    "metal-icons": "0.17.2",
     "motion": "^12.23.24",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

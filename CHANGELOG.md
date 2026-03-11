@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.2](https://github.com/jasonmelgoza/metal-icons/compare/v0.17.1...v0.17.2) (2026-03-11)
+
+
+### Changed
+
+* **build:** apply consistent comments across scripts ([#166](https://github.com/jasonmelgoza/metal-icons/issues/166)) ([cef0020](https://github.com/jasonmelgoza/metal-icons/commit/cef0020c98918ca7a72f21dcb274ca0527dc0291))
+
 ## [0.17.1](https://github.com/jasonmelgoza/metal-icons/compare/v0.17.0...v0.17.1) (2026-03-10)
 
 
