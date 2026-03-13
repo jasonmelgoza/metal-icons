@@ -147,7 +147,8 @@
 .controls {
   display: flex;
   align-items: center;
-  height: 58px;
+  width: 100%;
+  max-width: 500px;
   margin-top: 4rem;
   margin-bottom: 1rem;
   gap: 1rem;
@@ -157,7 +158,26 @@
   display: flex;
   align-items: center;
   height: 58px;
+  max-width: 221px;
+  flex-shrink: 0;
   gap: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .options {
+    max-width: none;
+    width: 100%;
+  }
+
+  .size,
+  .variant {
+    flex: 1;
+  }
 }
 
 /* Size control */
@@ -172,6 +192,7 @@
 }
 
 .size select {
+  width: 100%;
   height: 100%;
   padding: 1rem;
   padding-right: 2.5em;
@@ -215,6 +236,7 @@
 }
 
 .variant select {
+  width: 100%;
   height: 100%;
   padding: 1rem;
   padding-right: 2.5em;
@@ -254,14 +276,12 @@
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
-  max-width: var(--max-width);
-  height: 100%;
+  flex: 1;
+  height: 58px;
 }
 
 .search input[type="text"] {
   width: 100%;
-  max-width: 640px;
   height: 100%;
   padding: 1rem 2.5em 1rem 2.5em;
   border: 1px solid rgb(var(--border-rgb));
