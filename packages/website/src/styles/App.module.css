@@ -148,7 +148,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 500px;
   margin-top: 4rem;
   margin-bottom: 1rem;
   gap: 1rem;
@@ -167,10 +167,6 @@
   .controls {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .search {
-    max-width: none;
   }
 
   .options {
@@ -281,7 +277,6 @@
   flex-direction: row;
   justify-content: center;
   flex: 1;
-  max-width: 500px;
   height: 58px;
 }
 
