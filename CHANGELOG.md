@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.3](https://github.com/jasonmelgoza/metal-icons/compare/v0.17.2...v0.17.3) (2026-03-13)
+
+
+### Fixed
+
+* **website:** make controls area responsive for mobile ([#168](https://github.com/jasonmelgoza/metal-icons/issues/168)) ([bd220fd](https://github.com/jasonmelgoza/metal-icons/commit/bd220fdb09f029058d7a47991a3b1f60776684c6))
+
 ## [0.17.2](https://github.com/jasonmelgoza/metal-icons/compare/v0.17.1...v0.17.2) (2026-03-11)
 
 
